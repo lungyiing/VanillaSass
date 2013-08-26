@@ -1,73 +1,70 @@
 /* ============================= Error Messages */
-.Errors {
-   text-align: left;
-   position: inherit;
-   top: auto;
-   left: auto;
-   z-index: auto;
-	margin: 0 0 10px !important;
-}
 * html .Errors {
-  position: inherit;
-  width: auto;
-  top: auto;
-  left: auto;
-  overflow: auto; 
+	position: inherit;
+	width: auto;
+	top: auto;
+	left: auto;
+	overflow: auto; 
 }
-.Errors ul {
-	border: 1px solid #a00 !important;
-   background: #d50a0a !important;
-	padding: 6px 10px;
-	display: block;
-   border-radius: 2px;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-}
-.Errors a {
-   color: #fff;
-   text-decoration: underline;
-}
-.Errors ul li {
-   color: #fff !important;
-   background: #d50a0a !important;
+.Errors {
 	text-align: left;
+	position: inherit;
+	top: auto;
+	left: auto;
+	z-index: auto;
+	margin: 0 0 10px !important;
+	ul {
+		border: 1px solid #a00 !important;
+		background: #d50a0a !important;
+		padding: 6px 10px;
+		display: block;
+		@include borderRadius(2px);
+		li {
+		color: #fff !important;
+		background: #d50a0a !important;
+		text-align: left;
+		}
+	}
+	a {
+		color: #fff;
+		text-decoration: underline;
+	}
+	pre {
+		margin: 10px 0 5px;
+		padding: 4px 8px;
+		display: block;
+		@include borderRadius(2px);
+		white-space: pre;
+		overflow: auto;
+	}
+	pre,
+	pre * {
+		background: #ffa !important;
+		font-size: 12px !important;
+		font-weight: normal !important;
+		font-family: monospace !important;
+		text-shadow: none !important;
+		color: #333  !important;
+		line-height: 1.4 !important;
+	}
+	pre * {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
 }
-div.Popup .Errors ul {
-	display: block;
-   border-radius: 2px;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	border: 1px solid #a00 !important;
-}
+
+/* Popups */
+
 div.Popup .Errors {
-   text-align: left;
-   position: inherit;
-   top: auto;
-   left: auto;
-   z-index: auto;
+	text-align: left;
+	position: inherit;
+	top: auto;
+	left: auto;
+	z-index: auto;
 	margin: 10px 0 !important;
-}
-.Errors pre {
-	margin: 10px 0 5px;
-	padding: 4px 8px;
-	display: block;
-   border-radius: 2px;
-   -moz-border-radius: 2px;
-   -webkit-border-radius: 2px;
-   white-space: pre;
-   overflow: auto;
-}
-.Errors pre,
-.Errors pre * {
-	background: #ffa !important;
-	font-size: 12px !important;
-	font-weight: normal !important;
-	font-family: monospace !important;
-	text-shadow: none !important;
-	color: #333  !important;
-	line-height: 1.4 !important;
-}
-.Errors pre * {
-	margin: 0 !important;
-	padding: 0 !important;
+	ul {
+		display: block;
+		@include borderRadius(2px);
+		border: 1px solid #a00 !important;
+	}
 }

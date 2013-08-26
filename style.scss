@@ -1,3 +1,9 @@
+@mixin borderRadius($r) {
+	-webkit-border-radius: $r;
+	-moz-border-radius: $r;
+	border-radius: $r;
+}
+
 /* ================================ Garden ================================= */
 
 @import "includes/_reset";
