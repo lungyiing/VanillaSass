@@ -1,23 +1,25 @@
 /* ==================================================================== Legal */
-.Legal h3 {
-	padding: 0;
-	margin: 20px 0 0;
-	font-size: 120%;
-	font-weight: bold;
-}
-.Legal ol {
-	list-style-position:outside;
-	list-style-type:decimal;
-	margin:0 30px 10px;
-}
-.Legal ul {
-	list-style-position:outside;
-	list-style-type:disc;
-	margin:0 30px 10px;
-}
-.Legal li {
-	padding: 5px 0;
-}
-.Legal strong {
-	font-weight: bold;
+.Legal
+	h3 {
+		padding: 0;
+		margin: 20px 0 0;
+		font-size: 120%;
+		font-weight: bold;
+	}
+	ol {
+		list-style-position:outside;
+		list-style-type:decimal;
+		margin:0 30px 10px;
+	}
+	ul {
+		list-style-position:outside;
+		list-style-type:disc;
+		margin:0 30px 10px;
+	}
+	li {
+		padding: 5px 0;
+	}
+	strong {
+		font-weight: bold;
+	}
 }
