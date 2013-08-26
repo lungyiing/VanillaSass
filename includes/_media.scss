@@ -1,53 +1,54 @@
 /* ============================================== Videos & Media */
 /* Embedded Video Preview Hide/Reveal */
-.Video.YouTube .VideoPlayer {
-    display: none;
-}
-.Video.YouTube .VideoPreview {
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-}
-.Video.YouTube .VideoPreview:after {
-    background: url('http://cdn.vanillaforums.com/images/youtube-overlay-button.png') 0 -44px no-repeat transparent;
-    position: absolute;
-    display: block;
-    content: '';
-    top: 50%;
-    left: 50%;
-    margin-left: -30px;
-    margin-top: -22px;
-    height: 44px;
-    width: 60px;
-}
-.Video.YouTube .VideoPreview:hover:after {
-    background-position: 0 0;
+.Video.YouTube {
+	.VideoPlayer {
+		display: none;
+	}
+	.VideoPreview {
+		cursor: pointer;
+    	position: relative;
+    	display: inline-block;
+		&:after {
+			background: url('http://cdn.vanillaforums.com/images/youtube-overlay-button.png') 0 -44px no-repeat transparent;
+    		position: absolute;
+    		display: block;
+    		content: '';
+    		top: 50%;
+    		left: 50%;
+    		margin-left: -30px;
+    		margin-top: -22px;
+    		height: 44px;
+    		width: 60px;
+		}
+		&:hover:after {
+    		background-position: 0 0;
+		}
+	}
 }
 
 /* Media */
-
-.Media {
-  margin: 5px 0 10px;
-}
 .Media, .Media .Media-Body {
-  overflow: hidden;
-  _overflow: visible;
-  zoom: 1;
+	overflow: hidden;
+	_overflow: visible;
+	zoom: 1;
 }
-.Media .Img {
-  float: left;
-  margin-right: 10px;
-}
-.Media .Img img {
-  display: block;
-}
-.Media .ImgExt {
-  float: right;
-  margin-left: 10px;
+.Media {
+	margin: 5px 0 10px;
+	.Img {
+		float: left;
+		margin-right: 10px;
+	
+		img {
+			display: block;
+		}
+	}
+	.ImgExt {
+		float: right;
+		margin-left: 10px;
+	}
 }
 
 .Item h2 + .Media,
 .Item h3 + .Media  {
    margin-top: 0;
 }
-
