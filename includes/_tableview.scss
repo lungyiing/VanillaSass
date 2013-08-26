@@ -1,0 +1,110 @@
+/* ======================================= Category & Discussions Table Views */
+.DataTable {
+	width: 100%;
+   table-layout: fixed;
+}
+.DataTable td {
+	padding: 4px;
+	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	vertical-align: top;
+}
+.DataTable thead td {
+	font-weight: bold;
+   vertical-align: bottom;
+}
+.CheckBoxColumn {
+   width: 24px;
+}
+.DataTable .BlockColumn {
+   width: 25%;
+}
+tbody .BlockColumn {
+   padding: 8px 4px; /* compensate for line-height 1 */
+}
+.DataTable .BlockColumn-User {
+   width: 15%;
+}
+td.BigCount {
+   width: 90px;
+   text-align: center;
+   font-weight: bold;
+}
+.DiscussionsTable td.BigCount {
+   width: 70px;
+}
+tbody td.BigCount {
+   font-size: 16px;
+   padding: 8px 4px;
+}
+.DataTable .Meta,
+.DataTable .MItem {
+   font-size: 11px;
+}
+.DataTable .Title {
+	font-size: 13px;
+	font-weight: bold;
+}
+td.Opts {
+	white-space: nowrap;
+	text-align: right;
+   width: 1px;
+}
+.MiniPager {
+   display: inline-block;
+	margin-left: 3px;
+	font-size: 11px;
+	color: #333;
+}
+.MiniPager a,
+.MiniPager span {
+	margin: 0 1px;
+}
+tr.CategoryHeading td {
+	font-weight: bold;
+	background: #f7f7f7;
+	background: rgba(0, 0, 0, 0.03);
+}
+.CategoryTable .ChildCategories {
+	font-size: 11px;
+}
+
+/* Discussion Sorter */
+.DiscussionSorter {
+   float: right;
+   margin-right: 24px;
+   font-size: 11px; 
+}
+.DiscussionSorter:hover {
+   cursor: pointer;
+   background: #f3f3f3;
+}
+.DiscussionSorter .MenuItems { 
+   padding: 0; 
+   width: 130px;
+   border-top: none;
+   border-radius: 0; 
+}
+.DiscussionSorter .Selected {
+   padding: 0 0 0 15px;
+   display: inline-block;
+   width: 115px;
+   border: 1px solid transparent;
+   border-bottom: none;
+}
+.DiscussionSorter .Open .Selected {
+   border: 1px solid #999;
+   border-bottom: none;  
+}
+.DiscussionSorter .SpMenu { 
+   background-position: -32px -20px;
+   height: 8px; 
+   width: 12px; 
+   margin-top: 8px;
+}
+.DiscussionSorter .Flyout:before, .DiscussionSorter .Flyout:after { 
+   border: none; 
+}
+.DiscussionSorter .ToggleFlyout .Flyout { 
+   top: 18px; 
+}

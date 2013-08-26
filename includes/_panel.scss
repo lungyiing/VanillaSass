@@ -1,0 +1,24 @@
+/* ==================== Pages that hide the panel and have full-width content */
+body.NoPanel #Panel,
+body.Entry #Panel,
+body.Conversations.add #Panel,
+body.Vanilla.Post #Panel {
+   display: none;
+}
+body.NoPanel #Content,
+body.Conversations.add #Content,
+body.Vanilla.Post #Content {
+   width: auto;
+   margin: 0;
+}
+body.NoPanel #Content {
+   margin: auto;
+}
+body.NarrowForm #Content {
+   max-width: 700px;
+}
+body.Entry #Content {
+   float: none;
+   margin: 0 auto;
+   max-width: 500px;
+}

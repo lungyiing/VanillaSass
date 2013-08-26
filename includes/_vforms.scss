@@ -1,0 +1,140 @@
+/* ================================= Conversation, Discussion & Comment Forms */
+.SpNewConversation,
+.SpAskQuestion,
+.SpNewPoll,
+.SpNewDiscussion {
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	background: url('images/sprites.png') 0 -68px no-repeat;
+	margin: 0 5px 2px 0;
+	vertical-align: middle;
+}
+.SpNewConversation { background-position: -64px -68px; }
+.SpAskQuestion { background-position: -48px -68px; }
+.SpNewPoll { background-position: -32px -68px; }
+.SpRSS {
+   background: url("images/sprites.png") no-repeat -27px -46px transparent;
+   display: inline-block;
+   height: 14px;
+   vertical-align: middle;
+   width: 14px;
+}
+
+/*
+.SpAdd,
+.SpDelete {
+   position: relative;
+}
+
+.SpAdd:after, .SpDelete:after {
+   display: block;
+   position: absolute;
+   content: ' ';
+   overflow: hidden;
+   background: url('images/sprites.png') -72px -38px no-repeat;
+   height: 7px;
+   width: 7px;
+   right: -1px;
+   bottom: -1px;
+}
+
+.SpDelete:after {
+   background-position: -79px -38px;
+}
+
+Obselete in favour of .FilterMenu for style and .ToggleMenu for functionality.
+
+.FormType {
+	margin: 0 0 10px;
+}
+.FormType li {
+	display: inline-block;
+   white-space: nowrap;
+}
+.FormType li a {
+	margin: 0 6px;
+	padding: 4px 0;
+}
+.FormType li.Active a {
+	color: #000;
+	border-bottom: 2px solid #ddd;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+*/
+.DiscussionForm label {
+   font-size: 14px;
+   font-weight: bold;
+   color: #666;
+}
+.FormWrapper {
+	background: #f7f7f7;
+   background: rgba(0, 0, 0, 0.03);
+   margin: 0;
+   padding: 13px 20px;
+}
+label.B {
+   font-weight: bold;
+}
+.FormWrapper-Condensed {
+   padding: 5px;
+}
+.DiscussionForm textarea {
+   width: 100%;
+   height: 100px;
+   min-height: 100px;
+   margin: 0 0 6px;
+}
+.DiscussionForm .Category,
+.DiscussionForm input.InputBox {
+   width: 100%;
+	margin-bottom: 10px;
+}
+.DiscussionForm .Category label {
+   padding: 0 8px 0 0;
+}
+.DiscussionForm .PostOptions li {
+   display: inline;
+   padding: 0 8px 0 0;
+}
+.DiscussionForm .PostOptions label {
+   display: inline;
+   font-weight: normal;
+   font-size: 95%;
+}
+
+.FormWrapper.StructuredForm {
+   padding-top: 5px;
+}
+.StructuredForm label {
+   font-weight: bold;
+   font-size: 14px;
+   display: block;
+}
+
+.StructuredForm .P {
+   margin: 15px 0;
+}
+
+.StructuredForm label.RadioLabel,
+.StructuredForm label.CheckBoxLabel,
+.StructuredForm label.Unstyled
+{
+   font-size: 100%;
+   font-weight: normal;
+}
+
+.StructuredForm input.hasDatepicker, .StructuredForm input.hasDatepicker:focus {
+   background-image: url('images/calendar.png');
+   background-repeat: no-repeat;
+   background-position: center right;
+   padding-right: 24px;
+}
+
+.List.Inline {
+   display: inline;
+}
+
+.List.Inline * {
+   line-height: 16px;
+}

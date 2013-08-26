@@ -1,0 +1,119 @@
+/* ============================================================== MessageList */
+
+.Author .PhotoWrap {
+   margin: 0 10px 4px 0;
+   float: left;
+/*   overflow: hidden;*/
+}
+.Popup .Preview {
+	padding: 8px;
+	margin: 0;
+}
+body.Post .Popup a.Close {
+	color: #1e79a7;
+}
+.Message {
+   line-height: 140%;
+   font-size: 100%;
+	word-wrap: break-word;
+   margin-top: 5px;
+}
+.Message h1, .Message h2, .Message h3, .Message p, .Message .P {
+   margin: 10px 0;
+}
+blockquote {
+   margin: 1em 0 1em 40px;
+}
+
+blockquote.Quote, blockQuote.UserQuote {
+   padding: 1ex 16px;
+   margin: 1em 0;
+	background: #f3f3f3;
+   background: rgba(0, 0, 0, 0.05);
+   border-left: 4px solid rgba(0, 0, 0, 0.1);
+}
+.Message small {
+	font-size: 11px;
+	color: #777;
+}
+.EmbeddedContent {
+   overflow: hidden;
+}
+
+.Message img.LeftAlign,
+img.LeftAlign {
+   float: left;
+   margin: 0 10px 5px 0;
+   max-width: 300px;
+}
+
+.Message dt {
+    font-weight: bold;
+    margin: 10px 0 4px;
+}
+
+.Message dd {
+    margin-left: 30px;
+}
+
+.Message dd > p {
+    margin-top: 4px;
+}
+
+.Message li {
+    margin: 5px 0;
+}
+
+.ClearFix {
+   clear: both;
+}
+code, pre {
+   border-radius: 2px;
+   -moz-border-radius: 2px;
+   -webkit-border-radius: 2px;
+   background: #ff9;
+   padding: 4px 8px;
+   white-space: pre;
+   font-family: monospace;
+   overflow: auto;
+	border: 1px solid #eec;
+}
+pre {
+   display: block;
+   margin: 1em 0;
+}
+pre code {
+   border: none;
+   padding: 0;
+}
+mark {
+    padding: 0 2px;
+    color: inherit;
+    background: #ff6;
+}
+.Message strong, .Message b {
+   font-weight: bold;
+}
+.Message em,
+.Message i {
+   font-style: oblique;
+}
+.Message ul,
+.Message ol {
+   margin: 1em 0 1em 3em;
+}
+.Message ol li {
+  list-style: decimal !important;
+}
+.Message ul li {
+  list-style: disc !important;
+}
+.Message img {
+    max-width: 100%;
+}
+.Message .ImageResized {
+	font-size: 11px;
+	font-weight: normal;
+	cursor: pointer;
+	margin-bottom: 10px;
+}

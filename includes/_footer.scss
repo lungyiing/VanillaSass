@@ -1,0 +1,27 @@
+/* =================================================================== Footer */
+#Foot {
+   clear: both;
+   text-align: center;
+   margin: 20px 0 0;
+   padding: 4px 9px;
+   font-size: 13px;
+   color: #ddd;
+   line-height: 1;
+}
+#Foot a {
+   color: #ccc;
+}
+#Foot a:hover {
+   color: #aaa;
+}
+.PoweredByVanilla {
+   display: inline-block;
+   height: 33px;
+   width: 70px;
+   background: url('images/vanilla-forums-dark-bg-70x33.png') center center no-repeat;
+   background: url('images/vanilla-forums-light-bg-70x33.png') center center no-repeat;
+   line-height: 999px;
+   color: transparent;
+   overflow: hidden;
+   font-size: 0;
+}

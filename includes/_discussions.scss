@@ -1,0 +1,67 @@
+/* ============================================================== Discussions */
+
+/* Note: The Vanilla Discussion List has the following classes applied to
+  individual list elements and can be styled:
+  + Bookmarked: the user has bookmarked that topic
+  + Announcement: the discussion has been announced
+  + Mine: the user created the discussion
+  + New: there are new comments since the last viewed the discussion
+*/
+.Tag {
+   background: #777777;
+   border-radius: 2px;
+   -moz-border-radius: 2px;
+   -webkit-border-radius: 2px;
+   color: #FFFFFF;
+   padding: 1px 4px;
+/*   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);*/
+/*   font-weight: bold;*/
+   line-height: 14px;
+}
+.Tag a {
+   color: #FFFFFF;
+}
+.Tag.Closed {
+	background: #555555;
+}
+.Tag.Category {
+   background: #f0f0f0;
+   font-weight: normal;
+}
+.Tag.Category a {
+   color: #000;
+}
+.Tag.Tag-Banned {
+   background-color: #C70028;
+}
+.Discussion .PageTitle h1 {
+	font-size: 24px;
+	line-height: 1.2;
+}
+.ItemDiscussion {
+   margin-bottom: 12px;
+   padding: 8px;
+}
+/*
+.ItemDiscussion .Message {
+   margin-top: 20px;
+}
+.ItemDiscussion .MItem a {
+   font-size: 11px; 
+}
+.ItemDiscussion .ProfilePhotoMedium {
+	height: 24px;
+	width: 24px;
+   margin: 0 5px 5px 0;
+}
+*/
+.ItemDiscussion .Message {
+	margin-bottom: 5px; /* Consistency with when only h1 starts page */
+	font-size: 110%;
+}
+.DiscussionHeader {
+   margin: 5px 0 10px;
+}
+.BeforeCommentHeading {
+   float: right;
+}

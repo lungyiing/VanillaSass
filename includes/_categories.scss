@@ -1,0 +1,29 @@
+/* =============================================================== Categories */
+.ChildCategories {
+	border-top: 1px dotted #ddd;
+	display: block;
+}
+.DataList .Meta .RSS {
+	margin-right: 6px;
+}
+.Meta .RSS img {
+	vertical-align: text-bottom;
+}
+.CategoryHeading .ItemContent {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.RssButton {
+   display: inline-block;
+   background: url(images/rss.gif) no-repeat center center;
+   height: 16px;
+   width: 16px;
+   vertical-align: bottom;
+   color: transparent;
+   overflow: hidden;
+   text-indent: -100px;
+}
+.DataTable .RssButton {
+   float: right;
+}

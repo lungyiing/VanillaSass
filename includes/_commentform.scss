@@ -1,0 +1,39 @@
+/* ================================================= CommentForm */
+.Preview {
+	background: #fff;
+   color: #000;
+	padding: 4px;
+   min-height: 100px;
+}
+.EditCommentForm .Buttons,
+.CommentForm .Buttons {
+	position: relative;
+   text-align: right; 
+	margin: 0;
+	padding: 6px 0;
+}
+.CommentForm .WriteButton,
+.CommentForm .PreviewButton,
+.CommentForm .DraftButton {
+	margin: 0 6px;
+}
+.Form-Header .Username {
+    display: none;
+}
+.Form-Header .Author .PhotoWrap {
+    margin: 10px 0 0 10px;
+}
+.EditCommentForm .FormWrapper {
+   padding: 10px;
+}
+.CommentForm .FormWrapper {
+    padding: 10px 10px 10px 60px;
+}
+.EditCommentForm textarea.TextBox,
+.CommentForm textarea.TextBox {
+    min-height: 50px;
+    height: 50px;
+}
+.EditCommentForm {
+   margin: 10px 0;
+}

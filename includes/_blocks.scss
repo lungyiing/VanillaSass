@@ -1,0 +1,25 @@
+/* ======================================= Blocks */
+.Block {
+   line-height: 1;
+}
+.BlockTitle {
+   display: block;
+   font-weight: bold;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   padding-bottom: 3px;
+   font-size: 12px;
+}
+.Block .PhotoWrap {
+	float: left;
+	margin: 0 5px 0 0;
+}
+/*.Block img {
+   height: 24px;
+	width: 24px;
+}*/
+.Block .MItem {
+   font-size: 10px;
+   margin: 0;
+}

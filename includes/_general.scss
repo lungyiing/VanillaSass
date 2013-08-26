@@ -1,0 +1,90 @@
+/* ============================================== General Styles & Typography */
+body {
+	color: #000;
+	font-family: 'lucida grande','Lucida Sans Unicode', tahoma, sans-serif;
+	font-size: 75%;
+	line-height: 1.7em;
+	background: #fff;
+	margin: 0;
+	padding: 0;
+	font-size: small;
+}
+#Body {
+	zoom: 1; /* hasLayout for IE6/7 */
+	&:after { /* clearfix */
+		visibility: hidden;
+		display: block;
+		content: "";
+		clear: both;
+		height: 0;
+	}
+}
+.Invisible {
+   opacity: 0;
+}
+.ClearFix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+.ClearFix { display: inline-table; }
+/* Hides from IE-mac \*/
+* html .ClearFix { height: 1%; }
+.ClearFix { display: block; }
+/* End hide from IE-mac */
+.nowrap {
+   white-space: nowrap;
+}
+.Center {
+	text-align: center;
+}
+.Right {
+	text-align: right;
+}
+h1, h2, h3, h4, h5, h6 {
+   font-family: "Helvetica Neue",Helvetica,arial,sans-serif;
+   font-weight: bold;
+   margin: 5px 0;
+}
+p {
+   margin: 5px 0;
+}
+.P {
+   margin: 5px 0;
+}
+h1 {
+   font-size:140%;
+}
+h2 {
+   font-size:120%;
+}
+h3 {
+   font-size:110%;
+}
+h4 {
+   font-size: 110%;
+}
+h5 {
+   font-size: 100%;
+}
+a {
+   text-decoration: none;
+   color: #1e79a7;
+	&:hover,
+	&.TextColor:hover,
+	&:hover .TextColor {
+   		color: #ff0084;
+	}
+}
+a.TextColor, a .TextColor {
+   color: black;
+}
+img.Thumbnail {
+	max-height: 300px;
+	max-width: 100px;
+	float: left;
+	margin: 0 16px 0 0;
+}
