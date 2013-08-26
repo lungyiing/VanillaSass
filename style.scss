@@ -1,12 +1,4 @@
-// Mixins - mostly used for cross browser hacks in this case
-
-@mixin borderRadius($r) {
-	-webkit-border-radius: $r;
-	-moz-border-radius: $r;
-	border-radius: $r;
-}
-
-// Variables - colours gradients etc.
+@import "_config";
 
 /* ================================ Garden ================================= */
 
@@ -14,18 +6,18 @@
 @import "includes/_grid"; /* Done */
 @import "includes/_panel"; /* Done */
 @import "includes/_general"; /* Done */
-@import "includes/_input";
+@import "includes/_input"; /* Done */
 @import "includes/_buttons";
-@import "includes/_msic";
+@import "includes/_misc";
 @import "includes/_header";
 @import "includes/_fperrors"; /* Done */
-@import "includes/_siderbars";
+@import "includes/_sidebars";
 @import "includes/_datalist";
 @import "includes/_activity"; /* Done - hg*/
 @import "includes/_messagelist"; /* Done */
 @import "includes/_categories"; /* Done */
 @import "includes/_profile";
-@import "includes/_cropper";
+@import "includes/_cropper"; /* Done */
 @import "includes/_commentform"; /* Done */
 @import "includes/_popups";
 @import "includes/_legal"; /* Done */
@@ -36,14 +28,14 @@
 @import "includes/_discussions"; /* Done */
 @import "includes/_tableview"; /* Done */
 @import "includes/_blocks"; /* Done */
-@import "includes/_vforms";
+@import "includes/_vforms"; /* Done */
 @import "includes/_conversations";
 @import "includes/_entry";
 @import "includes/_error"; /* Done */
 @import "includes/_inform"; /* Done */
 @import "includes/_sprites"; /* Done */
 @import "includes/_embed"; /* Done */
-@import "includes/_reactions";
+@import "includes/_reactions"; /* Done */
 @import "includes/_media"; /* Done */
 @import "includes/_overrides"; /* Done */
 @import "includes/_token-input"; /* Done */

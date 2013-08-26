@@ -1,8 +1,5 @@
 /* ================================= Conversation, Discussion & Comment Forms */
-.SpNewConversation,
-.SpAskQuestion,
-.SpNewPoll,
-.SpNewDiscussion {
+.SpNewConversation, .SpAskQuestion, .SpNewPoll, .SpNewDiscussion {
 	display: inline-block;
 	height: 16px;
 	width: 16px;
@@ -10,89 +7,107 @@
 	margin: 0 5px 2px 0;
 	vertical-align: middle;
 }
-.SpNewConversation { background-position: -64px -68px; }
-.SpAskQuestion { background-position: -48px -68px; }
-.SpNewPoll { background-position: -32px -68px; }
+.SpNewConversation {
+	background-position: -64px -68px;
+}
+.SpAskQuestion {
+	background-position: -48px -68px;
+}
+.SpNewPoll {
+	background-position: -32px -68px;
+}
 .SpRSS {
-   background: url("images/sprites.png") no-repeat -27px -46px transparent;
-   display: inline-block;
-   height: 14px;
-   vertical-align: middle;
-   width: 14px;
+	background: url("images/sprites.png") no-repeat -27px -46px transparent;
+	display: inline-block;
+	height: 14px;
+	vertical-align: middle;
+	width: 14px;
 }
+
 .DiscussionForm label {
-   font-size: 14px;
-   font-weight: bold;
-   color: #666;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666;
 }
+
 .FormWrapper {
 	background: #f7f7f7;
-   background: rgba(0, 0, 0, 0.03);
-   margin: 0;
-   padding: 13px 20px;
+	background: rgba(0, 0, 0, 0.03);
+	margin: 0;
+	padding: 13px 20px;
+	&.StructuredForm {
+		padding-top: 5px;
 }
+
+}
+
 label.B {
-   font-weight: bold;
+	font-weight: bold;
 }
+
 .FormWrapper-Condensed {
-   padding: 5px;
-}
-.DiscussionForm textarea {
-   width: 100%;
-   height: 100px;
-   min-height: 100px;
-   margin: 0 0 6px;
-}
-.DiscussionForm .Category,
-.DiscussionForm input.InputBox {
-   width: 100%;
-	margin-bottom: 10px;
-}
-.DiscussionForm .Category label {
-   padding: 0 8px 0 0;
-}
-.DiscussionForm .PostOptions li {
-   display: inline;
-   padding: 0 8px 0 0;
-}
-.DiscussionForm .PostOptions label {
-   display: inline;
-   font-weight: normal;
-   font-size: 95%;
+	padding: 5px;
 }
 
-.FormWrapper.StructuredForm {
-   padding-top: 5px;
-}
-.StructuredForm label {
-   font-weight: bold;
-   font-size: 14px;
-   display: block;
+.DiscussionForm {
+	textarea {
+		width: 100%;
+		height: 100px;
+		min-height: 100px;
+		margin: 0 0 6px;
+	}
+	.Category, input.InputBox {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.Category label {
+		padding: 0 8px 0 0;
+	}
+	.PostOptions {
+		li {
+			display: inline;
+			padding: 0 8px 0 0;
+		}
+		label {
+			display: inline;
+			font-weight: normal;
+			font-size: 95%;
+		}
+	}
 }
 
-.StructuredForm .P {
-   margin: 15px 0;
-}
-
-.StructuredForm label.RadioLabel,
-.StructuredForm label.CheckBoxLabel,
-.StructuredForm label.Unstyled
-{
-   font-size: 100%;
-   font-weight: normal;
-}
-
-.StructuredForm input.hasDatepicker, .StructuredForm input.hasDatepicker:focus {
-   background-image: url('images/calendar.png');
-   background-repeat: no-repeat;
-   background-position: center right;
-   padding-right: 24px;
+.StructuredForm {
+	label {
+		font-weight: bold;
+		font-size: 14px;
+		display: block;
+	}
+	.P {
+		margin: 15px 0;
+	}
+	label {
+		&.RadioLabel, &.CheckBoxLabel, &.Unstyled {
+			font-size: 100%;
+			font-weight: normal;
+		}
+	}
+	input.hasDatepicker {
+		background-image: url('images/calendar.png');
+		background-repeat: no-repeat;
+		background-position: center right;
+		padding-right: 24px;
+		&:focus {
+			background-image: url('images/calendar.png');
+			background-repeat: no-repeat;
+			background-position: center right;
+			padding-right: 24px;
+		}
+	}
 }
 
 .List.Inline {
-   display: inline;
-}
-
-.List.Inline * {
-   line-height: 16px;
+	display: inline;
+	* {
+		line-height: 16px;
+	}
 }

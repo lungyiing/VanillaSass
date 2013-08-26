@@ -1,0 +1,9 @@
+// Mixins - mostly used for cross browser hacks in this case
+
+@mixin borderRadius($r) {
+	-webkit-border-radius: $r;
+	-moz-border-radius: $r;
+	border-radius: $r;
+}
+
+// Variables - colours gradients etc.
