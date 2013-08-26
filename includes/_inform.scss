@@ -12,6 +12,77 @@
    font-size: 12px;
    display: block;
    width: auto;
+   .InformMessage {
+		color: #fff !important;
+		text-shadow: 0 1px 1px #000;
+		text-align: left !important;
+		@include borderRadius(2px);
+		background: rgb(0, 0, 0) !important;
+		background: rgba(0, 0, 0, 0.7) !important;
+		border: none !important;
+		width: auto;
+			max-width: 400px;
+		padding: 9px 14px 8px;
+		display:-moz-inline-stack;
+		display:inline-block;
+		zoom:1;
+		*display:inline;
+		position: relative;
+		line-height: 1.6;
+		&:hover {
+			background: #333;
+			background: rgba(0, 0, 0, 0.8) !important;
+			a.Close {
+				display: block;
+			}
+		}
+		a {
+			color: #aff;
+			&:hover {
+				color: #cff;
+				text-decoration: underline;
+			}
+		}
+		strong {
+			font-weight: bold;
+		}
+		&.Close {
+			border: none;
+			background: transparent;
+			-webkit-border-top-right-radius: 2px;
+			-moz-border-radius-topright: 2px;
+				border-top-right-radius: 2px;	
+			color: #ddd;
+			font-size: 14px;
+			text-align: center;
+			display: none;
+			height: 12px;
+			width: 12px;
+			line-height: 1;
+			text-decoration: none;
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			span {
+				display: inline;
+			}
+			&:hover {
+				background: #000;
+				color: #fff;
+			}
+		}
+	}
+   .Actions a {
+		margin-right: 4px;
+		a {
+			&:last-child {
+				margin-right: 0;
+			}
+			&.CancelAction {
+				color: #aaa;
+			}
+		}
+	}
 }
 * html .InformMessages {
   position: absolute;
@@ -22,70 +93,10 @@
 }
 .InformWrapper {
 	display: block;
-   margin: 10px;
+	margin: 10px;
 }
-.InformMessages .InformMessage {
-   color: #fff !important;
-	text-shadow: 0 1px 1px #000;
-   text-align: left !important;
-   border-radius: 2px;
-   -moz-border-radius: 2px;
-   -webkit-border-radius: 2px;
-	background: rgb(0, 0, 0) !important;
-	background: rgba(0, 0, 0, 0.7) !important;
-   border: none !important;
-   width: auto;
-	max-width: 400px;
-   padding: 9px 14px 8px;
-   display:-moz-inline-stack;
-   display:inline-block;
-   zoom:1;
-   *display:inline;
-	position: relative;
-	line-height: 1.6;
-}
-.InformMessages .InformMessage:hover {
-	background: #333;
-	background: rgba(0, 0, 0, 0.8) !important;
-}
-.InformMessages .InformMessage a {
-	color: #aff;
-}
-.InformMessages .InformMessage a:hover {
-	color: #cff;
-	text-decoration: underline;
-}
-.InformMessages .InformMessage strong {
-	font-weight: bold;
-}
-.InformMessages .InformMessage a.Close {
-	border: none;
-	background: transparent;
-   border-top-right-radius: 2px;
-   -webkit-border-top-right-radius: 2px;
-   -moz-border-radius-topright: 2px;
-	color: #ddd;
-	font-size: 14px;
-	text-align: center;
-	display: none;
-	height: 12px;
-	width: 12px;
-	line-height: 1;
-	text-decoration: none;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-}
-.InformMessages .InformMessage a.Close span {
-	display: inline;
-}
-.InformMessages .InformMessage a.Close:hover {
-	background: #000;
-	color: #fff;
-}
-.InformMessages .InformMessage:hover a.Close {
-	display: block;
-}
+
+
 
 /* iPad/iPhone */
 @media only screen and (device-width: 768px),
@@ -104,19 +115,18 @@ only screen and (max-device-width: 480px) {
 @media (max-width: 500px) {
    .InformMessages {
       width: 100%;
+	  .InformMessage {
+		display: block;
+		max-width: inherit;
+	  }
    }
    .InformWrapper {
       margin: 5px;
    }
-   .InformMessages .InformMessage {
-      display: block;
-      max-width: inherit;
-   }
+   
 }
 
-.InformMessages .Actions a { margin-right: 4px; }
-.InformMessages .Actions a:last-child { margin-right: 0; }
-.InformMessages .Actions a.CancelAction {	color: #aaa; }
+
 
 /* Inform Sprites */
 .InformMessages .InformWrapper.HasIcon .InformMessage {
@@ -133,10 +143,10 @@ only screen and (max-device-width: 480px) {
 	left: 5px;
 	height: 28px;
 	width: 28px;
-}
-.InformMessages .InformMessage a.Icon img {
-	height: 28px;
-	width: 28px;
+	img {
+		height: 28px;
+		width: 28px;
+	}
 }
 span.InformSprite {
 	background: url('images/inform-sprites.png') -9px -9px no-repeat;
