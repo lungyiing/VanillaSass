@@ -1,8 +1,39 @@
-/* Vanilla SASS */
+/* ================================ Garden ================================= */
+
 @import "includes/_reset";
 @import "includes/_grid";
 @import "includes/_panel";
 @import "includes/_general";
+@import "includes/_input";
+@import "includes/_buttons";
+@import "includes/_msic";
+@import "includes/_header";
+@import "includes/_fperrors";
+@import "includes/_siderbars";
+@import "includes/_datalist";
+@import "includes/_activity";
+@import "includes/_messagelist";
+@import "includes/_categories";
+@import "includes/_profile";
+@import "includes/_cropper";
+@import "includes/_commentform";
+@import "includes/_popups";
+@import "includes/_legal";
+@import "includes/_footer";
 
-/* Plugins */
+/* ================================ Vanilla ================================= */
+
+@import "includes/_discussions";
+@import "includes/_tableview";
+@import "includes/_blocks";
+@import "includes/_vforms";
+@import "includes/_conversations";
+@import "includes/_entry";
+@import "includes/_error";
+@import "includes/_inform";
+@import "includes/_sprites";
+@import "includes/_embed";
 @import "includes/_reactions";
+@import "includes/_media";
+@import "includes/_overrides";
+@import "includes/_token-input";
