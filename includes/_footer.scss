@@ -7,12 +7,12 @@
    font-size: 13px;
    color: #ddd;
    line-height: 1;
-}
-#Foot a {
-   color: #ccc;
-}
-#Foot a:hover {
-   color: #aaa;
+	a {
+   	color: #ccc;
+		&:hover {
+  		 color: #aaa;
+		}
+	}
 }
 .PoweredByVanilla {
    display: inline-block;
