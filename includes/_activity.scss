@@ -1,52 +1,56 @@
 /* =============================================================== Activities */
-.Activities li.HasPhoto .Title {
-	padding: 0;
-}
-.Activities a.Title,
-.Activities .Title,
-.Activities .Title a {
-	font-size: 14px;
-}
-.Activities li.Condensed .Excerpt {
-	color: #000;
-	font-size: 13px;
-}
-.Activities ul.DataList {
-	margin-left: 50px;
-}
-.Activities .ItemContent {
-	margin: 0 0 0 53px;
-}
-.Activities .ActivityComments .ItemContent {
-	margin: 0 0 0 42px;
-}
-.Activities .DataList li {
-	background: #f3f3f3;
-	background: rgba(0, 0, 0, 0.05);
-	margin-bottom: 2px;
-	padding: 6px;
-}
-.Activities .DataList a.Title,
-.Activities .DataList .Title,
-.Activities .DataList .Title a,
-.Activities .DataList .Excerpt p {
-	font-size: 13px;
-	line-height: 1;
-}
-.Activities .DataList .Photo img {
-	height: 32px;
-	width: 32px;
-}
-.Activities a.CommentLink,
-.Activities a.CommentLink:hover {
-	font-size: 12px;
-   cursor: text;
-   background: #fff;
-   color: #bbb !important;
-   padding: 5px;
-   text-decoration: none;
-   border: 1px solid #aaa;
-   display: block;
-   line-height: 100%;
-   font-weight: normal;
+.Activities {
+	ul.DataList {
+		margin-left: 50px;
+	}
+	li.HasPhoto .Title {
+		padding: 0;
+	}
+	li.Condensed .Excerpt {
+		color: #000;
+		font-size: 13px;
+	}
+	a.Title,
+	.Title,
+	.Title a {
+		font-size: 14px;
+	}
+	.ItemContent {
+		margin: 0 0 0 53px;
+	}
+	.ActivityComments .ItemContent {
+		margin: 0 0 0 42px;
+	}
+	.DataList {
+		li {
+			background: #f3f3f3;
+			background: rgba(0, 0, 0, 0.05);
+			margin-bottom: 2px;
+			padding: 6px;
+		}
+		a.Title,
+		.Title,
+		.Title a,
+		.Excerpt p {
+			font-size: 13px;
+			line-height: 1;
+		}
+		.Photo img {
+			height: 32px;
+			width: 32px;
+		}
+	}
+	a.CommentLink,
+	a.CommentLink:hover {
+		font-size: 12px;
+		cursor: text;
+		background: #fff;
+		color: #bbb !important;
+		padding: 5px;
+		text-decoration: none;
+		border: 1px solid #aaa;
+		display: block;
+		line-height: 100%;
+		font-weight: normal;
+	}
 }
