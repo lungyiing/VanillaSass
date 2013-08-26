@@ -1,65 +1,59 @@
 /* ============================= Embedded Discussion & Comment Customizations */
-/*body.embed {
-	text-align: left;
-}*/
-body.embed #Content {
-   float: none;
-   margin: 0;
-   width: auto;
+body.embed {
+	#Content {
+		float: none;
+  	 	margin: 0;
+		width: auto;
+	}
+	.InformMessages {
+		display: none;
+	}
 }
-body.embed .InformMessages {
-	display: none;
-}
-/*.Embed a.Button,
-.Embed a.Button:hover {
-	color: #333 !important;
-	text-decoration: none !important;
-	font-weight: bold;
-}*/
+
 .EmbedCommentForm {
 	padding: 0;
-   border-top: 1px solid #ffffff;
+	border-top: 1px solid #ffffff;
+	.TextBox {
+		width: 100%;
+		height: 50px;
+		min-height: 50px;
+		padding: 3px;
+		@include borderRadius(0);
+		font-size: 12px;
+	}
+	.Author {
+		display: inline-block;
+		font-size: 11px;
+		color: #777;
+		padding: 0 8px 0 0;
+	}
+	input.Button {
+		font-size: 12px;
+	}
 }
-.EmbedCommentForm .TextBox {
-	width: 100%;
-	height: 50px;
-	min-height: 50px;
-	padding: 3px;
-	border-radius: 0;
-	-moz-border-radius: 0;
-	-webkit-border-radius: 0;
-	font-size: 12px;
-}
-.Embed .Buttons {
-	font-size: 11px;
-	text-align: right;
-}
-.EmbedCommentForm .Author {
-	display: inline-block;
-	font-size: 11px;
-	color: #777;
-	padding: 0 8px 0 0;
-}
-.Embed .CommentForm input.Button {
-	font-size: 12px;
-}
-.Embed .Foot {
-   background: none;
-   border: none;
-   text-align: right;
-}
-.Embed .MorePager a {
-	background: none;
-	border: none;
-	padding: 0;
-}
-.Embed .MorePager a.Loading,
-.Embed .MorePager a.Loading:hover {
-	text-decoration: none !important;
-}
-.Embed .Administration {
-	display: none;
-}
-.Embed .MorePager {
-	padding: 2px 8px 4px;
+.Embed {
+	.Buttons {
+		font-size: 11px;
+		text-align: right;
+	}
+	.Foot {
+		background: none;
+		border: none;
+		text-align: right;
+	}
+	.MorePager {
+		padding: 2px 8px 4px;
+		a {
+			background: none;
+			border: none;
+			padding: 0;
+			&.Loading,
+			&.Loading:hover {
+				text-decoration: none !important;
+			}	
+		}
+	}
+	.Administration {
+		display: none;
+	}
 }
