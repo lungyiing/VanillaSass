@@ -1,8 +1,12 @@
+// Mixins - mostly used for cross browser hacks in this case
+
 @mixin borderRadius($r) {
 	-webkit-border-radius: $r;
 	-moz-border-radius: $r;
 	border-radius: $r;
 }
+
+// Variables - colours gradients etc.
 
 /* ================================ Garden ================================= */
 
@@ -17,7 +21,7 @@
 @import "includes/_fperrors"; /* Done */
 @import "includes/_siderbars";
 @import "includes/_datalist";
-@import "includes/_activity";
+@import "includes/_activity"; /* Done - hg*/
 @import "includes/_messagelist";
 @import "includes/_categories";
 @import "includes/_profile";
