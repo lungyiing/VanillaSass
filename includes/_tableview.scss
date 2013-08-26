@@ -1,64 +1,68 @@
 /* ======================================= Category & Discussions Table Views */
 .DataTable {
 	width: 100%;
-   table-layout: fixed;
-}
-.DataTable td {
-	padding: 4px;
-	border-bottom: 1px solid #ddd;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-	vertical-align: top;
-}
-.DataTable thead td {
-	font-weight: bold;
-   vertical-align: bottom;
+	table-layout: fixed;
+	.DataTable td {
+		padding: 4px;
+		border-bottom: 1px solid #ddd;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		vertical-align: top;
+	}
+	thead td {
+		font-weight: bold;
+		vertical-align: bottom;
+	}
+	.Meta,
+	.MItem {
+		font-size: 11px;
+	}
+	.Title {
+		font-size: 13px;
+		font-weight: bold;
+	}
+	.BlockColumn {
+		width: 25%;
+	}
+	.BlockColumn-User {
+	   width: 15%;
+	}
 }
 .CheckBoxColumn {
    width: 24px;
 }
-.DataTable .BlockColumn {
-   width: 25%;
+
+tbody {
+	.BlockColumn {
+		padding: 8px 4px; /* compensate for line-height 1 */
+	}
+	td.BigCount {
+		font-size: 16px;
+		padding: 8px 4px;
+	}
 }
-tbody .BlockColumn {
-   padding: 8px 4px; /* compensate for line-height 1 */
-}
-.DataTable .BlockColumn-User {
-   width: 15%;
-}
-td.BigCount {
-   width: 90px;
-   text-align: center;
-   font-weight: bold;
+td {
+	.BigCount {
+		width: 90px;
+		text-align: center;
+		font-weight: bold;
+   .Opts {
+		white-space: nowrap;
+		text-align: right;
+		width: 1px;
+	}
 }
 .DiscussionsTable td.BigCount {
    width: 70px;
-}
-tbody td.BigCount {
-   font-size: 16px;
-   padding: 8px 4px;
-}
-.DataTable .Meta,
-.DataTable .MItem {
-   font-size: 11px;
-}
-.DataTable .Title {
-	font-size: 13px;
-	font-weight: bold;
-}
-td.Opts {
-	white-space: nowrap;
-	text-align: right;
-   width: 1px;
 }
 .MiniPager {
    display: inline-block;
 	margin-left: 3px;
 	font-size: 11px;
 	color: #333;
-}
-.MiniPager a,
-.MiniPager span {
-	margin: 0 1px;
+	a,
+	span {
+		margin: 0 1px;
+	}
 }
 tr.CategoryHeading td {
 	font-weight: bold;
@@ -71,40 +75,40 @@ tr.CategoryHeading td {
 
 /* Discussion Sorter */
 .DiscussionSorter {
-   float: right;
-   margin-right: 24px;
-   font-size: 11px; 
-}
-.DiscussionSorter:hover {
-   cursor: pointer;
-   background: #f3f3f3;
-}
-.DiscussionSorter .MenuItems { 
-   padding: 0; 
-   width: 130px;
-   border-top: none;
-   border-radius: 0; 
-}
-.DiscussionSorter .Selected {
-   padding: 0 0 0 15px;
-   display: inline-block;
-   width: 115px;
-   border: 1px solid transparent;
-   border-bottom: none;
-}
-.DiscussionSorter .Open .Selected {
-   border: 1px solid #999;
-   border-bottom: none;  
-}
-.DiscussionSorter .SpMenu { 
-   background-position: -32px -20px;
-   height: 8px; 
-   width: 12px; 
-   margin-top: 8px;
-}
-.DiscussionSorter .Flyout:before, .DiscussionSorter .Flyout:after { 
-   border: none; 
-}
-.DiscussionSorter .ToggleFlyout .Flyout { 
-   top: 18px; 
+	float: right;
+	margin-right: 24px;
+	font-size: 11px; 
+	&:hover {
+		cursor: pointer;
+		background: #f3f3f3;
+	}
+	.MenuItems { 
+		padding: 0; 
+		width: 130px;
+		border-top: none;
+		border-radius: 0; 
+	}
+	.Selected {
+		padding: 0 0 0 15px;
+		display: inline-block;
+		width: 115px;
+		border: 1px solid transparent;
+		border-bottom: none;
+	}
+	.Open .Selected {
+		border: 1px solid #999;
+		border-bottom: none;  
+	}
+	.SpMenu { 
+		background-position: -32px -20px;
+		height: 8px; 
+		width: 12px; 
+		margin-top: 8px;
+	}
+	.Flyout:before, .DiscussionSorter .Flyout:after { 
+		border: none; 
+	}
+	.ToggleFlyout .Flyout { 
+		top: 18px; 
+	}
 }
