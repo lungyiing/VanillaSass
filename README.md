@@ -5,6 +5,7 @@ This project aims to port the style.css file located in `applications/dashboard/
 ##End Goals
 * Advanced manipulation of css using SASS variables and mixins
 * Makes themeing Vanilla easier, by splitting features and interfaces into different files `/include` folder
+* Provide some basic documenation in each file to kickstart theme development
 
 ##Contributing
 1. [Fork the repo](https://github.com/Tama63/VanillaSass/fork)
