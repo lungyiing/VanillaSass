@@ -6,3 +6,36 @@ div.FileUpload .CurrentImage {
    margin: 5px 0;
    max-width: 100%;
 }
+
+/* Upload Progress Bar */
+.UploadProgress {
+	margin: 10px 0;
+	background: url('images/upload-progress-back.gif') repeat;
+	width: 200px;
+	z-index: 0;
+	color: #fff;
+	text-shadow: 0 1px 1px #333;
+	border: 1px solid #0c3c7e;
+	@include borderRadius(2px);
+	div {
+		padding: 2px 0;
+		strong {
+			font-weight: bold;
+		}
+	}
+	.Foreground {
+		position: absolute;
+	}
+	.Background {
+		position: absolute;
+		width: 0;
+		background: url('images/upload-bg.gif') repeat;
+		z-index: 1;
+	}
+	.Foreground {
+		text-indent: 6px;
+		overflow: visible;
+		white-space: nowrap;
+		z-index: 2;
+	}
+}
