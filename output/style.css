@@ -723,7 +723,7 @@ a.Small img {
   margin: 10px 0;
   padding: 10px; }
   .DismissMessage a.Dismiss {
-    font-family: arial;
+    font-family: "helvetica neue", helvetica, arial, sans-serif;
     position: absolute;
     font-size: 16px;
     font-weight: bold;
@@ -1515,7 +1515,7 @@ td.CheckBoxColumn {
   margin: 0;
   padding: 2px 4px;
   width: auto;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
   font-size: 16px;
   font-weight: bold;
   line-height: 1;
@@ -2093,7 +2093,7 @@ a.Close {
   line-height: 1;
   color: #000;
   cursor: pointer;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
   font-size: 22px;
   font-weight: bold;
   padding: 0; }
@@ -3905,7 +3905,7 @@ li.token-input-token {
     margin-left: 5px;
     font-weight: bold;
     cursor: pointer;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: "helvetica neue", helvetica, arial, sans-serif;
     font-size: 13px;
     vertical-align: middle; }
 li.token-input-selected-token {
