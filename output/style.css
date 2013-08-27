@@ -174,7 +174,7 @@ img.Thumbnail {
   margin: 0 16px 0 0; }
 
 /* Done */
-/* ============================================== Plugin styles */
+/* ============================================== Iputs and Form values */
 input.DateBox, input.InputBox, input.SmallInput {
   font-family: "lucida grande", "Lucida Sans Unicode", tahoma, sans-serif;
   color: #333;
@@ -396,6 +396,12 @@ select {
   .Button:hover {
     color: #111;
     border-color: #666; }
+  .Button:focus, .Button:active {
+    border-color: #aaa;
+    background: #f7f7f7;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
   .Button.Disabled {
     opacity: .5; }
   .Button.FileInput {
@@ -428,12 +434,6 @@ select {
   -moz-box-shadow: none;
   box-shadow: none; }
 
-.Button:focus, .Button:active {
-  border-color: #aaa;
-  background: #f7f7f7;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none; }
 .Button.FileInput > input {
   position: absolute;
   top: 0;
@@ -3841,11 +3841,6 @@ body.embed .InformMessages {
   margin-top: 0; }
 
 /* Done */
-/* ============================================== Overrides*/
-.Hidden {
-  display: none; }
-
-/* Done */
 /* ============================================== token-input */
 ul.token-input-list {
   -webkit-box-sizing: border-box;
@@ -3944,5 +3939,10 @@ div.token-input-dropdown {
         font-style: none; }
       div.token-input-dropdown ul li.token-input-selected-dropdown-item {
         background-color: #eee; }
+
+/* Done */
+/* ============================================== Overrides*/
+.Hidden {
+  display: none; }
 
 /* Done */

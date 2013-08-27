@@ -1,4 +1,5 @@
 /* =================================================================== Footer */
+// This is the footer container, it generally only contains the watermark. However it could be used to link your site's terms.
 #Foot {
    clear: both;
    text-align: center;
@@ -14,6 +15,7 @@
 		}
 	}
 }
+// This is the watermark that appears in the footer, you can set the size of it here, you could even redesign it to fit with you site's theme. But using css to hide it; seems a little unkind to the dev team
 .PoweredByVanilla {
    display: inline-block;
    height: 33px;

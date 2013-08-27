@@ -1,4 +1,6 @@
 /* ============================================== Plugin styles */
+// If you want to modify anything that plugins load from their stylesheets do it here; for example transparent backgrounds on ButtonBar
+// - You may need to use the !important flag for some cases
 div.FileUpload .CurrentImage {
    display: block;
    margin: 5px 0;

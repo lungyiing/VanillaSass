@@ -1,5 +1,5 @@
 /* =================================================== Misc Styles */
-
+// Everything else goes here, if it doesn't belong but it here!
 .ActivateSlider {
 	display: inline-block;
 	background: #bbb;
@@ -22,6 +22,7 @@
 	color: #666;
 }
 
+// Can be customized here for site theme ( change images and then maybe height/width
 .Loading {
 	height: 100px;
 	padding: 0 20px;
@@ -66,6 +67,7 @@ span.Warning, div.Warning {
 	@include borderRadius(2px);
 }
 
+// On the Sidebar next to Categories
 .Count {
 	background: #444;
 	background-color: rgba(0, 0, 0, 0.6);
@@ -76,6 +78,7 @@ span.Warning, div.Warning {
 	padding: 1px .8ex;
 }
 
+// Used for meBox
 .Alert {
 	font-size: 80%;
 	background: #d00;

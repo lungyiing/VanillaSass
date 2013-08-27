@@ -1,4 +1,6 @@
 /* =============================================================== Activities */
+// This is the styling for the activity feed, both the standalone page and the feature on profiles
+// Changes should be made here for a light/dark theme swap
 .Activities {
 	ul.DataList {
 		margin-left: 50px;
@@ -22,6 +24,7 @@
 		margin: 0 0 0 42px;
 	}
 	.DataList {
+		// Replies to activity posts
 		li {
 			background: #f3f3f3;
 			background: rgba(0, 0, 0, 0.05);

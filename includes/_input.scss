@@ -1,4 +1,7 @@
-/* ============================================== Plugin styles */
+/* ============================================== Iputs and Form values */
+// This is where the inputs for forms are styled, most people will change borders, to help match themes.
+// I recommend you add "@include borderRadius(1px);" if you want rounded edges, change "1px" to suit your needs; it can even use .em or .ex
+// @include boxShadow(args); could be used on :hover and :focus for some inputs
 input {
 	&.DateBox, &.InputBox, &.SmallInput {
 		font-family: $font;

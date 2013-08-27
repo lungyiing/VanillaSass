@@ -1,4 +1,5 @@
 /* ============================================================ Entry Screens */
+// These are more of utility pages: Sign Up, Login, Reset Password etc. The most you would usually have to do here, would be to edit background colours and text formatting
 body.Entry form ul li label {
 	font-size: 14px;
 	/* color: #474747; */
@@ -46,6 +47,7 @@ body {
 	width: 180px;
 }
 
+// The password strength checker, not much use in editing this :)
 .PasswordStrength {
 	position: relative;
 	margin-top: 2px;

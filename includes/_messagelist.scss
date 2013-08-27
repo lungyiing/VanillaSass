@@ -1,4 +1,5 @@
 /* ============================================================== MessageList */
+// Styles for a discussions page : The first post and comments; this can be manipulated to create drastic changes to your site compared with the standard Vanilla theme; make sure to check for conflicts
 .Author .PhotoWrap {
 	margin: 0 10px 4px 0;
 	float: left;
@@ -10,7 +11,7 @@
 }
 
 body.Post .Popup a.Close {
-	color: #1e79a7;
+	color: $link;
 }
 
 blockquote {
@@ -83,6 +84,7 @@ mark {
 	background: #ff6;
 }
 
+// Styling here only applies in post containers, if you need to override any page elements for posts, make sure to do it here; to reduce conflicts with other pages.
 .Message {
 	line-height: 140%;
 	font-size: 100%;
@@ -125,6 +127,7 @@ mark {
 	img {
 		max-width: 100%;
 	}
+	// This the style for larger images that get shrunk using javascript
 	.ImageResized {
 		font-size: 11px;
     	font-weight: normal;

@@ -1,5 +1,6 @@
 /* ================================================ DataList */
 /* Note: DataList is used in search results, vanilla discussions & drafts */
+// Format Search forms and bar, useful if you want to add :hover and :focus effects that apply only to search
 .SearchForm {
 	margin: 20px auto;
 	.InputBox {
@@ -92,6 +93,7 @@
 	}
 }
 
+// A little yellow highlight box if there is new content since you last viewed it
 .HasNew {
 	@include borderRadius(2px);
 	background: #FF0;
@@ -106,6 +108,7 @@
 	display: none;
 }
 
+// Useful for formatting Read, Alt and other settings 
 .Item {
 	&.Read {
 		background: #f3f3f3;
@@ -232,6 +235,7 @@
 }
 
 /* /me actions */
+// You could add a :before that uses an image
 .MeAction {
 	.AuthorAction {
 		display: inline;
@@ -247,6 +251,7 @@
 	}
 }
 
+// A hero unit, much like that of bootstraps
 .Hero {
 	background: #f7f7f7;
 	background: rgba(0, 0, 0, 0.03);

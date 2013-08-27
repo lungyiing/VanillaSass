@@ -1,4 +1,5 @@
 /* ===================================== Buttons and everything inbetween */
+// This is the styling for all the buttons "whiteGradient" can be edited in _config and is only used in this sub stylsheet, using an element inspector you can discover more elements to style that use the button base class "Button.Primary, Button.Cancel, Button.Preview" and a few others; you could also add sprites using the :before selector for the element that holds the text in a button
 .Button {
 	display: inline-block;
 	cursor: pointer;
@@ -20,6 +21,11 @@
 		color: #111;
 		border-color: #666;
 	}
+	&:focus, &:active {
+		border-color: #aaa;
+		background: #f7f7f7;
+		@include boxShadow(none);
+	}
 	&.Disabled {
 		opacity: .5;
 	}
@@ -28,6 +34,7 @@
 		overflow: hidden;
 	}
 }
+
 
 .NavLabel {
 	font-weight: bold;
@@ -46,6 +53,9 @@
 	}
 }
 
+// Basically Dropdowns
+
+
 .Button.Active, .ButtonGroup.Open .Button.Handle {
 	border-color: #aaa;
 	background: #f7f7f7;
@@ -53,11 +63,6 @@
 }
 
 .Button {
-	&:focus, &:active {
-		border-color: #aaa;
-		background: #f7f7f7;
-		@include boxShadow(none);
-	}
 	&.FileInput > input {
 		position: absolute;
 		top: 0;
@@ -73,6 +78,7 @@
 	}
 }
 
+// More of utility classes here, not much use changing these
 .BigButton {
 	display: block;
 	text-align: center;
@@ -91,6 +97,7 @@
 	}
 }
 
+// The button on the profile page
 .NavButton {
 	color: #333;
 	text-shadow: 0 0 1px #fff;
@@ -108,6 +115,7 @@
 	@include boxShadow (0 1px 1px #ddd);
 }
 
+// More Dropdowns
 .ButtonGroup {
 	&.Open .NavButton.Handle {
 		background: #eee;

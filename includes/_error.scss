@@ -1,4 +1,5 @@
 /* ============================= Error Messages */
+// This is where error messages are styled, remember to style both .Errors ul and .Errors ul li; as for some reason they contain duplicate formatting. This only styles a single element ( the red box on forms ).
 * html .Errors {
 	position: inherit;
 	width: auto;
