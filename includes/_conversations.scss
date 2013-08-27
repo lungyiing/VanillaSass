@@ -152,9 +152,7 @@ ul.Tabs {
 			margin-left: 4px;
 			border: 1px solid #aaa;
 			border-width: 1px 1px 0 1px;
-			border-radius: 3px 3px 0 0;
-			-moz-border-radius: 3px 3px 0 0;
-			-webkit-border-radius: 3px 3px 0 0;
+			@include borderRadius(3px 3px 0 0);
 			background: #eee;
 			color: #888;
 			position: relative;

@@ -85,7 +85,7 @@ body.Entry #Content {
 /* ============================================== General Styles & Typography */
 body {
   color: #000;
-  font-family: 'lucida grande','Lucida Sans Unicode', tahoma, sans-serif;
+  font-family: "lucida grande", "Lucida Sans Unicode", tahoma, sans-serif;
   font-size: 75%;
   line-height: 1.7em;
   background: #fff;
@@ -412,8 +412,12 @@ select {
   border-radius: 0;
   border-right-width: 0; }
   .NavBar > .Button:first-child {
+    -webkit-border-radius: 2px 0 0 2px;
+    -moz-border-radius: 2px 0 0 2px;
     border-radius: 2px 0 0 2px; }
   .NavBar > .Button:last-child {
+    -webkit-border-radius: 0 2px 2px 0;
+    -moz-border-radius: 0 2px 2px 0;
     border-radius: 0 2px 2px 0;
     border-right-width: 1px; }
 
@@ -549,9 +553,13 @@ select {
   display: inline-block;
   background: #bbb;
   /*background: rgba(0, 0, 0, .2);*/
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) inset;
+  -moz-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) inset;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) inset;
   border: solid 1px #ccc;
   width: 125px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   border-radius: 4px;
   padding: 1px;
   position: relative; }
@@ -588,27 +596,25 @@ select {
   border: 1px solid #dddddd;
   margin: 10px 0 0;
   padding: 6px 10px;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px; }
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px; }
 
 /* Note: Warning, Alert & Info are simple boxes that can be used to wrap message
-   strings & imply importance. */
-span.Warning,
-div.Warning {
+	 strings & imply importance. */
+span.Warning, div.Warning {
   background: #fee;
   border: 2px solid #fbb;
   color: #d00;
   padding: 6px 8px;
   margin: 10px 0;
-  border-radius: 2px;
+  -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -webkit-border-radius: 2px; }
+  border-radius: 2px; }
 
 .Count {
   background: #444;
   background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -622,15 +628,13 @@ div.Warning {
   background: #d00;
   color: #fff;
   padding: 1px 3px;
-  border-radius: .5ex;
-  -moz-border-radius: .5ex;
-  -webkit-border-radius: .5ex; }
-
-.Alert a {
-  color: #fff; }
-
-.Alert a:hover {
-  text-decoration: underline; }
+  -webkit-border-radius: 0.5ex;
+  -moz-border-radius: 0.5ex;
+  border-radius: 0.5ex; }
+  .Alert a {
+    color: #fff; }
+    .Alert a:hover {
+      text-decoration: underline; }
 
 .Info {
   font-size: 13px;
@@ -638,14 +642,13 @@ div.Warning {
   border: 2px solid #eee;
   border: 2px solid rgba(0, 0, 0, 0.1);
   color: #888;
-  -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
   border-radius: 2px;
   padding: 6px 8px;
   margin: 10px 0; }
-
-.Info strong {
-  font-weight: bold; }
+  .Info strong {
+    font-weight: bold; }
 
 .BreadcrumbWrap {
   clear: both;
@@ -664,25 +667,23 @@ div.Warning {
 
 .MorePager {
   text-align: right; }
-
-.MorePager a.Loading {
-  border: 0 !important;
-  padding: 0 20px !important;
-  background: url("images/progress.gif") center center no-repeat !important; }
+  .MorePager a.Loading {
+    border: 0 !important;
+    padding: 0 20px !important;
+    background: url("images/progress.gif") center center no-repeat !important; }
 
 .Pager {
   font-weight: bold;
   float: right; }
-
-.Pager a, .Pager span {
-  display: inline-block;
-  margin: 0 3px; }
-
-.Pager span {
-  color: #777; }
-
-.Pager .Highlight {
-  color: #000; }
+  .Pager a {
+    display: inline-block;
+    margin: 0 3px; }
+  .Pager span {
+    display: inline-block;
+    margin: 0 3px;
+    color: #777; }
+  .Pager .Highlight {
+    color: #000; }
 
 .MoreWrap {
   float: right; }
@@ -696,7 +697,6 @@ div.Warning {
 /* Small UserPhoto() images */
 a.Small:hover {
   text-decoration: none; }
-
 a.Small img {
   background: none;
   text-indent: -100px;
@@ -707,29 +707,8 @@ a.Small img {
   overflow: hidden; }
 
 /* Note: The MessageModule (in /applications/dashboard/modules) wraps all messages
-  that it renders in a div with this DismissMessage class. */
+	that it renders in a div with this DismissMessage class. */
 /* Messages */
-.DismissMessage a.Dismiss {
-  font-family: arial;
-  position: absolute;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1;
-  color: #777;
-  top: -1px;
-  right: -1px;
-  padding: 1px 3px;
-  text-decoration: none; }
-
-.DismissMessage a.Dismiss:hover {
-  border: none;
-  background: #333;
-  color: #fff; }
-
-.DismissMessage strong,
-.DismissMessage b {
-  font-weight: bold; }
-
 .DismissMessage {
   font-size: 13px;
   text-align: left;
@@ -741,23 +720,37 @@ a.Small img {
   -webkit-border-radius: 1;
   margin: 10px 0;
   padding: 10px; }
-
-.DismissMessage.Info {
-  background: #f3f4f8;
-  border: 1px solid #ddd; }
-
-.DismissMessage.Warning {
-  background: #ffebe9;
-  border: 1px solid #FFCCC9; }
-
-.DismissMessage.Box {
-  background: #fff8ce;
-  border: 1px solid #c5bea4;
-  box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  margin: 0 0 10px;
-  /* Make sure that .Box definitions don't override the base DismissMessage margin! */ }
+  .DismissMessage a.Dismiss {
+    font-family: arial;
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    color: #777;
+    top: -1px;
+    right: -1px;
+    padding: 1px 3px;
+    text-decoration: none; }
+    .DismissMessage a.Dismiss:hover {
+      border: none;
+      background: #333;
+      color: #fff; }
+  .DismissMessage strong, .DismissMessage b {
+    font-weight: bold; }
+  .DismissMessage.Info {
+    background: #f3f4f8;
+    border: 1px solid #ddd; }
+  .DismissMessage.Warning {
+    background: #ffebe9;
+    border: 1px solid #FFCCC9; }
+  .DismissMessage.Box {
+    background: #fff8ce;
+    border: 1px solid #c5bea4;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    margin: 0 0 10px;
+    /* Make sure that .Box definitions don't override the base DismissMessage margin! */ }
 
 .CasualMessage {
   background: #CFECFF;
@@ -776,6 +769,7 @@ a.Small img {
   background: #ffebe9;
   border: 1px solid #FFCCC9; }
 
+/* Done */
 /* =================================================================== Header */
 #Head {
   background: #38abe3;
@@ -903,9 +897,9 @@ body > #Frame > .Head {
   line-height: 100%;
   font-size: 11px;
   border: 1px solid #999;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
   background: #fff;
   padding: 5px 0;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -961,12 +955,12 @@ body > #Frame > .Head {
   width: 300px;
   background: #fff;
   color: #000;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-border-radius: 2px;
+  border-radius: 2px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   border: solid 1px #999; }
   .FlyoutMenu a {
     color: #00419b; }
@@ -2564,9 +2558,8 @@ body.Conversations a.Cancel {
   color: #fff;
   text-shadow: 0 1px 1px #333;
   border: 1px solid #0c3c7e;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
   border-radius: 2px; }
   .UploadProgress div {
     padding: 2px 0; }
@@ -2587,9 +2580,9 @@ body.Conversations a.Cancel {
 
 /* Container */
 .Border {
-  border-radius: 8px;
-  -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
   background: #ddd;
   background: rgba(82, 82, 82, 0.7);
   padding: 10px; }
@@ -2606,9 +2599,9 @@ ul.Tabs {
       margin-left: 4px;
       border: 1px solid #aaa;
       border-width: 1px 1px 0 1px;
-      border-radius: 3px 3px 0 0;
-      -moz-border-radius: 3px 3px 0 0;
       -webkit-border-radius: 3px 3px 0 0;
+      -moz-border-radius: 3px 3px 0 0;
+      border-radius: 3px 3px 0 0;
       background: #eee;
       color: #888;
       position: relative;

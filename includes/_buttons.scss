@@ -38,10 +38,10 @@
 	@include borderRadius(0);
 	border-right-width: 0;
 	&:first-child {
-		border-radius: 2px 0 0 2px;
+		@include borderRadius(2px 0 0 2px);
 	}
-	&:last-child {
-		border-radius: 0 2px 2px 0;
+	&:last-child {		
+		@include borderRadius(0 2px 2px 0);
 		border-right-width: 1px;
 	}
 }
