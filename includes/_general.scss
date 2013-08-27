@@ -1,7 +1,7 @@
 /* ============================================== General Styles & Typography */
 body {
 	color: #000;
-	font-family: $fontBody;
+	font-family: $font;
 	font-size: 75%;
 	line-height: 1.7em;
 	background: #fff;
@@ -47,7 +47,7 @@ body {
 	text-align: right;
 }
 h1, h2, h3, h4, h5, h6 {
-   font-family: "Helvetica Neue",Helvetica,arial,sans-serif;
+   font-family: $font;
    font-weight: bold;
    margin: 5px 0;
 }

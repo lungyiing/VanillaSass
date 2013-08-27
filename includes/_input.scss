@@ -1,7 +1,7 @@
 /* ============================================== Plugin styles */
 input {
 	&.DateBox, &.InputBox, &.SmallInput {
-		font-family: 'lucida grande','Lucida Sans Unicode', tahoma, sans-serif;
+		font-family: $font;
 		color: #333;
 		font-size: 15px;
 		padding: 3px;
@@ -23,7 +23,7 @@ input {
 	}
 }
 textarea {
-	font-family: 'lucida grande','Lucida Sans Unicode', tahoma, sans-serif;
+	font-family: $font;
 	color: #333;
 	font-size: 15px;
 	padding: 3px;
