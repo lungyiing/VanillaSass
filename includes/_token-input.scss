@@ -42,7 +42,7 @@ li {
 		line-height: 20px;
 		cursor: default;
 		border: 1px solid #999;
-		border-radius: 2px;
+		@include borderRadius(2px);
 		float: left;
 		font-size: 13px;
 		&.not-allowed {

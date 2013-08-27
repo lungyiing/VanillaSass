@@ -5,120 +5,133 @@ body.Entry form ul li label {
 	font-weight: bold;
 	padding: 6px 0 0;
 	display: block;
+	&.CheckBoxLabel, &.RadioLabel {
+		font-size: 12px;
+		font-weight: normal;
+		width: auto;
+	}
 }
-body.Entry form ul li label.CheckBoxLabel,
-body.Entry form ul li label.RadioLabel {
-	font-size: 12px;
-	font-weight: normal;
-   width: auto;
-}
+
 span.Incorrect {
-   display: block;
-   color: red;
+	display: block;
+	color: red;
 }
+
 .SingleEntryMethod {
 	margin: 0 auto;
 }
+
 .MultipleEntryMethods {
 	margin: 0 auto;
-   overflow: hidden;
+	overflow: hidden;
+	.MainForm {
+		float: left;
+		/* Fix mainform from shoving the other entry methods down when an error occurs during login */
+		width: 300px;
+	}
+	.Methods {
+		padding: 0 15px 5px;
+		line-height: 1;
+		margin-left: 300px;
+	}
 }
-.MultipleEntryMethods .MainForm {
-   float: left;
-   /* Fix mainform from shoving the other entry methods down when an error occurs during login */
-   width: 300px;
+
+body {
+	&#dashboard_entry_password #Content input.Password, &#dashboard_entry_signin #Content input.Password, &#dashboard_entry_index #Content input.Password {
+		width: 180px;
+	}
 }
-.MultipleEntryMethods .Methods {
- 	padding: 0 15px 5px;
-	line-height: 1;
-   margin-left: 300px;
-}
-body#dashboard_entry_password #Content input.Password,
-body#dashboard_entry_signin #Content input.Password,
-body#dashboard_entry_index #Content input.Password,
+
 .SignInPopup input.Password {
 	width: 180px;
 }
+
 .PasswordStrength {
-   position: relative;
-   margin-top: 2px;
-   padding-right: 8px;
-   margin-bottom: 4px;
-   height: 10px;
-}
-.PasswordStrength .Background {
-   height: 4px;
-   background-color: #e8e8e8;
-   width: 100%;
-   position: absolute;
-   left: 0;
-}
-.PasswordStrength .Strength {
-   height: 4px;
-   background-color: #c81818;
-   width: 0;
-   position: absolute;
-   left: 0;
-}
-.PasswordStrength .Separator {
-   height: 4px;
-   width: 2px;
-   background-color: #fff;
-   position: absolute;
-   left: 0;
-}
-.PasswordStrength .StrengthText {
-   padding-top: 2px;
-   text-align: right;
-   font-size: 12px;
-   margin-right: -8px;
-}
-
-.PasswordStrength.Score-0 .Strength {
-   width: 0;
-}
-.PasswordStrength.Score-0 .StrengthText {
-   color: #888888;
-}
-
-.PasswordStrength.Score-1 .Strength {
-   background-color: #C81818;
-   width: 20%;
-}
-.PasswordStrength.Score-1 .StrengthText {
-   color: #C81818;
-}
-
-.PasswordStrength.Score-2 .Strength {
-   background-color: #FF891D;
-   width: 40%;
-}
-.PasswordStrength.Score-2 .StrengthText {
-   color: #FF891D;
-}
-
-.PasswordStrength.Score-3 .Strength {
-   background-color: #FFAC1D;
-   width: 60%;
-}
-.PasswordStrength.Score-3 .StrengthText {
-   color: #FFAC1D;
-}
-
-.PasswordStrength.Score-4 .Strength {
-   background-color: #A6C060;
-   width: 80%;
-}
-.PasswordStrength.Score-4 .StrengthText {
-   color: #A6C060;
-}
-
-.PasswordStrength.Score-5 .Strength {
-   background-color: #27B30F;
-   width: 100%;
-}
-.PasswordStrength.Score-5 .StrengthText {
-   color: #27B30F;
+	position: relative;
+	margin-top: 2px;
+	padding-right: 8px;
+	margin-bottom: 4px;
+	height: 10px;
+	.Background {
+		height: 4px;
+		background-color: #e8e8e8;
+		width: 100%;
+		position: absolute;
+		left: 0;
+	}
+	.Strength {
+		height: 4px;
+		background-color: #c81818;
+		width: 0;
+		position: absolute;
+		left: 0;
+	}
+	.Separator {
+		height: 4px;
+		width: 2px;
+		background-color: #fff;
+		position: absolute;
+		left: 0;
+	}
+	.StrengthText {
+		padding-top: 2px;
+		text-align: right;
+		font-size: 12px;
+		margin-right: -8px;
+	}
+	&.Score-0 {
+		.Strength {
+			width: 0;
+		}
+		.StrengthText {
+			color: #888888;
+		}
+	}
+	&.Score-1 {
+		.Strength {
+			background-color: #C81818;
+			width: 20%;
+		}
+		.StrengthText {
+			color: #C81818;
+		}
+	}
+	&.Score-2 {
+		.Strength {
+			background-color: #FF891D;
+			width: 40%;
+		}
+		.StrengthText {
+			color: #FF891D;
+		}
+	}
+	&.Score-3 {
+		.Strength {
+			background-color: #FFAC1D;
+			width: 60%;
+		}
+		.StrengthText {
+			color: #FFAC1D;
+		}
+	}
+	&.Score-4 {
+		.Strength {
+			background-color: #A6C060;
+			width: 80%;
+		}
+		.StrengthText {
+			color: #A6C060;
+		}
+	}
+	&.Score-5 {
+		.Strength {
+			background-color: #27B30F;
+			width: 100%;
+		}
+		.StrengthText {
+			color: #27B30F;
+		}
+	}
 }
 a.ForgotPassword {
 	margin-left: 10px;
@@ -126,80 +139,109 @@ a.ForgotPassword {
 li.Buttons div a.ForgotPassword {
 	margin: 0;
 }
-body#dashboard_entry_password ul li label.CheckBoxLabel,
-body#dashboard_entry_signin ul li label.CheckBoxLabel,
-body#dashboard_entry_index ul li label.CheckBoxLabel,
-.SignInPopup ul li label.CheckBoxLabel {
-	display: inline;
-	font-size: 12px;
-	font-weight: normal;
-	margin: 10px 0 0 10px;
+
+body {
+	&#dashboard_entry_password ul li label.CheckBoxLabel, &#dashboard_entry_signin ul li label.CheckBoxLabel, &#dashboard_entry_index ul li label.CheckBoxLabel {
+		display: inline;
+		font-size: 12px;
+		font-weight: normal;
+		margin: 10px 0 0 10px;
+	}
 }
-.SignInPopup li.Buttons,
+
+.SignInPopup {
+	ul li label.CheckBoxLabel {
+		display: inline;
+		font-size: 12px;
+		font-weight: normal;
+		margin: 10px 0 0 10px;
+	}
+	li.Buttons {
+		text-align: left;
+		padding: 0 0 10px;
+	}
+}
+
 body.Entry li.Buttons {
 	text-align: left;
 	padding: 0 0 10px;
 }
+
 .Methods .Method {
-   margin: 5px 0;
+	margin: 5px 0;
 }
+
 .MainForm .InputBox {
-   max-width: 250px;
+	max-width: 250px;
 }
+
 /* Handshake */
-body#dashboard_entry_handshake #Content {
-	width: 720px;
+body#dashboard_entry_handshake {
+	#Content {
+		width: 720px;
+		form {
+			padding: 20px 30px 26px;
+		}
+	}
+	ul {
+		&.NewAccount {
+			float: left;
+			width: 315px;
+			margin-right: 44px;
+			border-right: 1px solid #A5D0E7;
+		}
+		&.LinkAccount {
+			margin-left: 315px;
+		}
+	}
 }
-body#dashboard_entry_handshake #Content form {
-	padding: 20px 30px 26px;
+
+ul {
+	&.NewAccount h2 {
+		padding-left: 36px !important;
+		background: url('images/dashboard-sprites.png') 0 -542px no-repeat;
+	}
+	&.LinkAccount h2 {
+		padding-left: 36px !important;
+		background: url('images/dashboard-sprites.png') 0 -542px no-repeat;
+		padding-left: 84px !important;
+		background-position: 45px -296px;
+	}
 }
-body#dashboard_entry_handshake ul.NewAccount {
-	float: left;
-	width: 315px;
-	margin-right: 44px;
-	border-right: 1px solid #A5D0E7;
-}
-body#dashboard_entry_handshake ul.LinkAccount {
-	margin-left: 315px;
-}
-ul.NewAccount h2,
-ul.LinkAccount h2 {
-	padding-left: 36px !important;
-	background: url('images/dashboard-sprites.png') 0 -542px no-repeat;
-}
-ul.LinkAccount h2 {
-	padding-left: 84px !important;
-	background-position: 45px -296px;
-}
-body#dashboard_entry_handshake .Info {
-	border: 1px solid #A5D0E7;
-	background: #D3F0FF;
-	color: #02475A;
-}
-body#dashboard_entry_handshake #Content h2 {
-   border: none;
-   color: #02475A;
-   font-size:140%;
-   font-weight:bold;
-   padding: 6px 0;
-	margin: 0;
-	text-align: left;
+
+body {
+	&#dashboard_entry_handshake {
+		.Info {
+			border: 1px solid #A5D0E7;
+			background: #D3F0FF;
+			color: #02475A;
+		}
+		#Content h2 {
+			border: none;
+			color: #02475A;
+			font-size: 140%;
+			font-weight: bold;
+			padding: 6px 0;
+			margin: 0;
+			text-align: left;
+		}
+	}
+	&#dashboard_entry_leave p {
+		margin: 0;
+		padding: 20px 10px;
+		&.Leaving {
+			background: url('images/progress.gif') left center no-repeat;
+			margin: 0 0 0 14px;
+			padding: 20px 0 20px 50px;
+		}
+	}
 }
 
 /* Leaving Page */
-body#dashboard_entry_leave p {
-	margin: 0;
-   padding: 20px 10px;
-}
-body#dashboard_entry_leave p.Leaving {
-   background: url('images/progress.gif') left center no-repeat;
-	margin: 0 0 0 14px;
-   padding: 20px 0 20px 50px;
-}
-.Connect form ul li#ConnectPassword label,
-.SignInPopup form ul li#ConnectPassword label {
+.Connect form ul li#ConnectPassword label, .SignInPopup form ul li#ConnectPassword label {
 	padding: 10px 0 0;
 }
+
 .FinePrint {
 	font-size: 11px;
 	color: #777;

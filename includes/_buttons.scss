@@ -1,226 +1,193 @@
 /* ===================================== Buttons and everything inbetween */
 .Button {
-   display: inline-block;
-   cursor: pointer;
-   margin: 0;
-   font-size: 12px;
-   line-height: 1;
-   font-weight: bold;
-   padding: 4px 6px;
+	display: inline-block;
+	cursor: pointer;
+	margin: 0;
+	font-size: 12px;
+	line-height: 1;
+	font-weight: bold;
+	padding: 4px 6px;
 	background: #f8f8f8;
-   border: 1px solid #999;
-   border-radius: 2px;
-   -moz-border-radius: 2px;
-   -webkit-border-radius: 2px;
+	border: 1px solid #999;
+	@include borderRadius(2px);
 	white-space: nowrap;
-   background-image: linear-gradient(bottom, #CCCCCC 0%, #FAFAFA 100%);
-   background-image: -o-linear-gradient(bottom, #CCCCCC 0%, #FAFAFA 100%);
-   background-image: -moz-linear-gradient(bottom, #CCCCCC 0%, #FAFAFA 100%);
-   background-image: -webkit-linear-gradient(bottom, #CCCCCC 0%, #FAFAFA 100%);
-   background-image: -ms-linear-gradient(bottom, #CCCCCC 0%, #FAFAFA 100%);
-   background-image: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      color-stop(0, #CCCCCC),
-      color-stop(1, #FAFAFA)
-   );
-   text-shadow: 0 1px 0 #fff;
-   box-shadow: inset 0 1px 0 #fff, inset 0 -1px 2px #bbb;
-   -moz-box-shadow: inset 0 1px 0 #fff, inset 0 -1px 2px #bbb;
-   -webkit-box-shadow: inset 0 1px 0 #fff, inset 0 -1px 2px #bbb;
-   border-color: #999;
-   color: #333;
-}
-.Button:hover {
-   color: #111;
-   border-color: #666;
-}
-
-.Button.Disabled {
-   opacity: .5;
+	@include whiteGradient;
+	text-shadow: 0 1px 0 #fff;
+	@include boxShadow( inset 0 1px 0 white, inset 0 -1px 2px #bbbbbb);
+	border-color: #999;
+	color: #333;
+	&:hover {
+		color: #111;
+		border-color: #666;
+	}
+	&.Disabled {
+		opacity: .5;
+	}
+	&.FileInput {
+		position: relative;
+		overflow: hidden;
+	}
 }
 
 .NavLabel {
-   font-weight: bold;
-   margin-right: 4px;
-}
-.NavBar > .Button {
-   border-radius: 0;
-   -moz-border-radius: 0;
-   -webkit-border-radius: 0;
-   border-right-width: 0;
-}
-.NavBar > .Button:first-child {
-   border-radius: 2px 0 0 2px;
-}
-.NavBar > .Button:last-child {
-   border-radius: 0 2px 2px 0;
-   border-right-width: 1px;
-}
-.Button.Active,
-.ButtonGroup.Open .Button.Handle,
-.Button:focus,
-.Button:active {
-   border-color: #aaa;
-   background: #f7f7f7;
-   box-shadow: none;
-   -moz-box-shadow: none;
-   -webkit-box-shadow: none;
-}
-.Button.FileInput > input {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 0;
-  border: solid transparent;
-  border-width: 0 0 100px 200px;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -moz-transform: translate(-300px, 0) scale(4);
-  direction: ltr;
-  cursor: pointer;
+	font-weight: bold;
+	margin-right: 4px;
 }
 
-.Button.FileInput {
-   position: relative;
-   overflow: hidden;
+.NavBar > .Button {
+	@include borderRadius(0);
+	border-right-width: 0;
+	&:first-child {
+		border-radius: 2px 0 0 2px;
+	}
+	&:last-child {
+		border-radius: 0 2px 2px 0;
+		border-right-width: 1px;
+	}
 }
+
+.Button.Active, .ButtonGroup.Open .Button.Handle {
+	border-color: #aaa;
+	background: #f7f7f7;
+	@include boxShadow(none);
+}
+
+.Button {
+	&:focus, &:active {
+		border-color: #aaa;
+		background: #f7f7f7;
+		@include boxShadow(none);
+	}
+	&.FileInput > input {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 0;
+		border: solid transparent;
+		border-width: 0 0 100px 200px;
+		opacity: 0;
+		filter: alpha(opacity = 0);
+		-moz-transform: translate(-300px, 0) scale(4);
+		direction: ltr;
+		cursor: pointer;
+	}
+}
+
 .BigButton {
-   display: block;
-   text-align: center;
-   margin: 0 0 10px;
-   font-size: 15px;
-   font-weight: bold;
-   padding: 8px 10px;
+	display: block;
+	text-align: center;
+	margin: 0 0 10px;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 8px 10px;
 }
 .Buttons {
-   margin-top: 10px;
+	margin-top: 10px;
 }
 .Buttons-Confirm {
-   text-align: center;
-}
-.Buttons-Confirm .Button {
-   min-width: 65px;
+	text-align: center;
+	.Button {
+		min-width: 65px;
+	}
 }
 
 .NavButton {
-   color: #333;
-   text-shadow: 0 0 1px #fff;
-   display: inline-block;
-   cursor: pointer;
-   font-size: 13px;
-   line-height: 16px;
-   font-weight: bold;
-   padding: 5px 8px;
+	color: #333;
+	text-shadow: 0 0 1px #fff;
+	display: inline-block;
+	cursor: pointer;
+	font-size: 13px;
+	line-height: 16px;
+	font-weight: bold;
+	padding: 5px 8px;
 	background: #fafafa;
-   border: 1px solid #999;
-   border-radius: 2px;
-   -moz-border-radius: 2px;
-   -webkit-border-radius: 2px;
+	border: 1px solid #999;
+	@include borderRadius(2px);
 	white-space: nowrap;
-   background: #fdfdfd;
-   background-image: linear-gradient(bottom, rgb(240,240,240) 0%, rgb(255,255,255) 31%);
-   background-image: -o-linear-gradient(bottom, rgb(240,240,240) 0%, rgb(255,255,255) 31%);
-   background-image: -moz-linear-gradient(bottom, rgb(240,240,240) 0%, rgb(255,255,255) 31%);
-   background-image: -webkit-linear-gradient(bottom, rgb(240,240,240) 0%, rgb(255,255,255) 31%);
-   background-image: -ms-linear-gradient(bottom, rgb(240,240,240) 0%, rgb(255,255,255) 31%);
-   background-image: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      color-stop(0, rgb(240,240,240)),
-      color-stop(0.31, rgb(255,255,255))
-   );
-   box-shadow: 0 1px 1px #ddd;
+	@include whiteGradient;
+	box-shadow: 0 1px 1px #ddd;
 }
-.ButtonGroup.Open .NavButton.Handle {
-   background: #eee;
+
+.ButtonGroup {
+	&.Open .NavButton.Handle {
+		background: #eee;
+	}
+	&.Multi > {
+		.NavButton:first-child, .Button:first-child {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+		.NavButton.Handle, .Button.Handle {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			border-left: 0;
+		}
+	}
 }
 
 /* Split Button Dropdown */
-.ButtonGroup.Multi > .NavButton:first-child,
-.ButtonGroup.Multi > .Button:first-child {
-   border-top-right-radius: 0;
-   border-bottom-right-radius: 0;
+.NavButton.Handle .Sprite, .Button.Handle .Sprite {
+	display: inline-block;
+	border-style: solid;
+	border-width: 4px;
+	border-color: #000 transparent transparent transparent;
+	position: relative;
+	top: 2px;
+	margin: 0;
+	height: initial;
+	width: initial;
+	vertical-align: middle;
 }
 
-.ButtonGroup.Multi > .NavButton.Handle,
-.ButtonGroup.Multi > .Button.Handle {
-   border-top-left-radius: 0;
-   border-bottom-left-radius: 0;
-   border-left: 0;
-}
-
-/*.Multi .Button:last {
-   border-top-left-radius: 0;
-   border-bottom-left-radius: 0;
-   font-size: 12px;
-   line-height: 1;
-   border-left: 0;
-}
-.Multi .NavButton.Handle {
-   border-top-left-radius: 0;
-   border-bottom-left-radius: 0;
-   border-left: 0;
-   margin: 0;
-}*/
-.NavButton.Handle .Sprite,
-.Button.Handle .Sprite {
-    display: inline-block;
-    border-style: solid;
-    border-width: 4px;
-    border-color: #000 transparent transparent transparent;
-    position: relative;
-    top: 2px;
-    margin: 0;
-    height: initial;
-    width: initial;
-    vertical-align: middle;
-}
-.ButtonGroup.Big .NavButton.Handle .Sprite,
-.ButtonGroup.Big .Button.Handle .Sprite {
-   top: 0;
-}
 .ButtonGroup {
-    position: relative;
-    display: inline-block;
-}
-.ButtonGroup .Dropdown {
-    display: none;
-    font-size: 12px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    margin-top: 1px;
-    z-index: 100;
+	&.Big {
+		.NavButton.Handle .Sprite, .Button.Handle .Sprite {
+			top: 0;
+		}
+	}
+	position: relative;
+	display: inline-block;
+	.Dropdown {
+		display: none;
+		font-size: 12px;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		margin-top: 1px;
+		z-index: 100;
+	}
+	&.DropRight .Dropdown {
+		right: 0;
+		left: auto;
+	}
 }
 
-.ButtonGroup.DropRight .Dropdown {
-   right: 0;
-   left: auto;
-}
 #Panel .ButtonGroup .Dropdown {
-   right: 0;
+	right: 0;
 }
+
 .ProfileOptions .ButtonGroup .Dropdown {
-   left: auto;
-   right: 0;
+	left: auto;
+	right: 0;
 }
-.ButtonGroup.Open .Dropdown {
-   display: block;
+
+.ButtonGroup {
+	&.Open .Dropdown {
+		display: block;
+	}
+	&.Big {
+		.NavButton, .Button {
+			font-size: 15px;
+			padding: 8px;
+			text-align: center;
+		}
+		display: block;
+		white-space: nowrap;
+	}
 }
-.ButtonGroup.Big .NavButton,
-.ButtonGroup.Big .Button {
-   font-size: 15px;
-   padding: 8px;
-   text-align: center;
-}
-.ButtonGroup.Big {
-    display: block;
-    white-space: nowrap;
-}
-#Panel .ButtonGroup.Big > .NavButton:first-child,
-#Panel .ButtonGroup.Big > .Button:first-child {
-    width: 78%;
+
+#Panel .ButtonGroup.Big > {
+	.NavButton:first-child, .Button:first-child {
+		width: 78%;
+	}
 }

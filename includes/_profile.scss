@@ -1,78 +1,87 @@
 /* ============================================================= Profile Page */
-a.ChangePicture {
-	position: absolute;
-	background: #333;
-   background: rgba(0,0,0,.7);
-	color: #fff;
-	font-size: 11px;
-	padding: 10px 0;
-   width: 100%;
-	display: none;
-   text-align: center;
+a {
+	&.ChangePicture {
+		position: absolute;
+		background: #333;
+		background: rgba(0, 0, 0, 0.7);
+		color: #fff;
+		font-size: 11px;
+		padding: 10px 0;
+		width: 100%;
+		display: none;
+		text-align: center;
+	}
+	&.ChangePicuture:hover {
+		color: #fff;
+		text-decoration: underline;
+	}
 }
-
 .PhotoWrap:hover a.ChangePicture {
 	display: block;
 }
 
-a.ChangePicuture:hover {
-   color: #fff;
-   text-decoration: underline;
-}
-
 .ProfileOptions {
 	float: right;
-   position: relative;
+	position: relative;
 }
+
 /* Hiding form headings with CSS in case the forms get popped */
 div.Popup .SmallPopup h1 {
 	display: none;
 }
+
 /* BGColor on profile forms */
 body.Profile.EditMode #Content form {
 	padding: 10px 20px 20px;
 	background: #f3f3f3;
 	background: rgba(0, 0, 0, 0.05);
 }
+
 form.Activity {
-   display: block;
-   margin: 0 0 10px;
+	display: block;
+	margin: 0 0 10px;
 	overflow: hidden;
+	textarea {
+		width: 100%;
+		margin-bottom: 2px;
+		height: 60px;
+		min-height: 60px;
+	}
+	.Button {
+		float: right;
+	}
 }
-form.Activity textarea {
-   width: 100%;
-   margin-bottom: 2px;
-   height: 60px;
-   min-height: 60px;
-}
-form.Activity .Button {
-   float: right;
-}
+
 .ActivityComments textarea {
-   height: 60px;
-   min-height: 60px;
+	height: 60px;
+	min-height: 60px;
 }
 
 /* Invitations Form */
-table.PreferenceGroup,
-#Form_Invitation table {
-   width: 100%;
-   border-collapse: collapse;
-   margin: 10px 0;
+table.PreferenceGroup, #Form_Invitation table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 10px 0;
 }
-table.PreferenceGroup th,
-table.PreferenceGroup td,
-#Form_Invitation th,
-#Form_Invitation td {
-   padding: 2px 6px;
-	border-bottom: 1px solid #ddd;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+table.PreferenceGroup {
+	th, td {
+		padding: 2px 6px;
+		border-bottom: 1px solid #ddd;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
 }
-table.PreferenceGroup th,
-#Form_Invitation table th {
-   font-weight: bold;
-   text-align: left;
+#Form_Invitation {
+	th, td {
+		padding: 2px 6px;
+		border-bottom: 1px solid #ddd;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
 }
+table.PreferenceGroup th, #Form_Invitation table th {
+	font-weight: bold;
+	text-align: left;
+}
+
 /* Preferences Form */
 .Preferences h3 {
 	margin: 0;
@@ -80,27 +89,40 @@ table.PreferenceGroup th,
 }
 
 /* About in content area */
-.ContentColumn .About h2 { display: none; }
-dl.About dt,
-dl.About dd {
-   padding: 0;
-   margin: 0;
-   float: none;
-   font-size: 11px;
-   line-height: 14px;
-   display: inline;
+.ContentColumn .About h2 {
+	display: none;
 }
-dl.About dt {
-   color: #666;
-   background: url('images/profile-sprites.png') 2px -139px no-repeat transparent;
-   padding-left: 14px;
-}
-dl.About dt.Name { background-position: 0 -26px; }
-dl.About dt.Email { background-position: 0 -53px; }
-dl.About dt.Joined,
-dl.About dt.LastActive { background-position: 0 3px; }
-dl.About dt.Roles { background-position: 1px -81px; }
-dl.About dt.Posts { background-position: 0 -113px; }
-dl.About dd {
-   padding: 0 8px 0 0;
+
+dl.About {
+	dt, dd {
+		padding: 0;
+		margin: 0;
+		float: none;
+		font-size: 11px;
+		line-height: 14px;
+		display: inline;
+	}
+	dt {
+		color: #666;
+		background: url('images/profile-sprites.png') 2px -139px no-repeat transparent;
+		padding-left: 14px;
+		&.Name {
+			background-position: 0 -26px;
+		}
+		&.Email {
+			background-position: 0 -53px;
+		}
+		&.Joined, &.LastActive {
+			background-position: 0 3px;
+		}
+		&.Roles {
+			background-position: 1px -81px;
+		}
+		&.Posts {
+			background-position: 0 -113px;
+		}
+	}
+	dd {
+		padding: 0 8px 0 0;
+	}
 }

@@ -376,57 +376,60 @@ select {
   padding: 4px 6px;
   background: #f8f8f8;
   border: 1px solid #999;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
   white-space: nowrap;
-  background-image: linear-gradient(bottom, #cccccc 0%, #fafafa 100%);
-  background-image: -o-linear-gradient(bottom, #cccccc 0%, #fafafa 100%);
-  background-image: -moz-linear-gradient(bottom, #cccccc 0%, #fafafa 100%);
-  background-image: -webkit-linear-gradient(bottom, #cccccc 0%, #fafafa 100%);
-  background-image: -ms-linear-gradient(bottom, #cccccc 0%, #fafafa 100%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #cccccc), color-stop(1, #fafafa));
+  background: #fdfdfd;
+  background-image: linear-gradient(bottom, #f0f0f0 0%, white 31%);
+  background-image: -o-linear-gradient(bottom, #f0f0f0 0%, white 31%);
+  background-image: -moz-linear-gradient(bottom, #f0f0f0 0%, white 31%);
+  background-image: -webkit-linear-gradient(bottom, #f0f0f0 0%, white 31%);
+  background-image: -ms-linear-gradient(bottom, #f0f0f0 0%, white 31%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f0f0f0), color-stop(0.31, white));
   text-shadow: 0 1px 0 #fff;
-  box-shadow: inset 0 1px 0 #fff, inset 0 -1px 2px #bbb;
-  -moz-box-shadow: inset 0 1px 0 #fff, inset 0 -1px 2px #bbb;
-  -webkit-box-shadow: inset 0 1px 0 #fff, inset 0 -1px 2px #bbb;
+  -webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 2px #bbbbbb;
+  -moz-box-shadow: inset 0 1px 0 white, inset 0 -1px 2px #bbbbbb;
+  box-shadow: inset 0 1px 0 white, inset 0 -1px 2px #bbbbbb;
   border-color: #999;
   color: #333; }
-
-.Button:hover {
-  color: #111;
-  border-color: #666; }
-
-.Button.Disabled {
-  opacity: .5; }
+  .Button:hover {
+    color: #111;
+    border-color: #666; }
+  .Button.Disabled {
+    opacity: .5; }
+  .Button.FileInput {
+    position: relative;
+    overflow: hidden; }
 
 .NavLabel {
   font-weight: bold;
   margin-right: 4px; }
 
 .NavBar > .Button {
-  border-radius: 0;
-  -moz-border-radius: 0;
   -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   border-right-width: 0; }
+  .NavBar > .Button:first-child {
+    border-radius: 2px 0 0 2px; }
+  .NavBar > .Button:last-child {
+    border-radius: 0 2px 2px 0;
+    border-right-width: 1px; }
 
-.NavBar > .Button:first-child {
-  border-radius: 2px 0 0 2px; }
-
-.NavBar > .Button:last-child {
-  border-radius: 0 2px 2px 0;
-  border-right-width: 1px; }
-
-.Button.Active,
-.ButtonGroup.Open .Button.Handle,
-.Button:focus,
-.Button:active {
+.Button.Active, .ButtonGroup.Open .Button.Handle {
   border-color: #aaa;
   background: #f7f7f7;
-  box-shadow: none;
+  -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  -webkit-box-shadow: none; }
+  box-shadow: none; }
 
+.Button:focus, .Button:active {
+  border-color: #aaa;
+  background: #f7f7f7;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
 .Button.FileInput > input {
   position: absolute;
   top: 0;
@@ -439,10 +442,6 @@ select {
   -moz-transform: translate(-300px, 0) scale(4);
   direction: ltr;
   cursor: pointer; }
-
-.Button.FileInput {
-  position: relative;
-  overflow: hidden; }
 
 .BigButton {
   display: block;
@@ -457,9 +456,8 @@ select {
 
 .Buttons-Confirm {
   text-align: center; }
-
-.Buttons-Confirm .Button {
-  min-width: 65px; }
+  .Buttons-Confirm .Button {
+    min-width: 65px; }
 
 .NavButton {
   color: #333;
@@ -472,9 +470,9 @@ select {
   padding: 5px 8px;
   background: #fafafa;
   border: 1px solid #999;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
   white-space: nowrap;
   background: #fdfdfd;
   background-image: linear-gradient(bottom, #f0f0f0 0%, white 31%);
@@ -487,34 +485,16 @@ select {
 
 .ButtonGroup.Open .NavButton.Handle {
   background: #eee; }
-
-/* Split Button Dropdown */
-.ButtonGroup.Multi > .NavButton:first-child,
-.ButtonGroup.Multi > .Button:first-child {
+.ButtonGroup.Multi > .NavButton:first-child, .ButtonGroup.Multi > .Button:first-child {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
-
-.ButtonGroup.Multi > .NavButton.Handle,
-.ButtonGroup.Multi > .Button.Handle {
+.ButtonGroup.Multi > .NavButton.Handle, .ButtonGroup.Multi > .Button.Handle {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-left: 0; }
 
-/*.Multi .Button:last {
-   border-top-left-radius: 0;
-   border-bottom-left-radius: 0;
-   font-size: 12px;
-   line-height: 1;
-   border-left: 0;
-}
-.Multi .NavButton.Handle {
-   border-top-left-radius: 0;
-   border-bottom-left-radius: 0;
-   border-left: 0;
-   margin: 0;
-}*/
-.NavButton.Handle .Sprite,
-.Button.Handle .Sprite {
+/* Split Button Dropdown */
+.NavButton.Handle .Sprite, .Button.Handle .Sprite {
   display: inline-block;
   border-style: solid;
   border-width: 4px;
@@ -526,26 +506,22 @@ select {
   width: initial;
   vertical-align: middle; }
 
-.ButtonGroup.Big .NavButton.Handle .Sprite,
-.ButtonGroup.Big .Button.Handle .Sprite {
-  top: 0; }
-
 .ButtonGroup {
   position: relative;
   display: inline-block; }
-
-.ButtonGroup .Dropdown {
-  display: none;
-  font-size: 12px;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  margin-top: 1px;
-  z-index: 100; }
-
-.ButtonGroup.DropRight .Dropdown {
-  right: 0;
-  left: auto; }
+  .ButtonGroup.Big .NavButton.Handle .Sprite, .ButtonGroup.Big .Button.Handle .Sprite {
+    top: 0; }
+  .ButtonGroup .Dropdown {
+    display: none;
+    font-size: 12px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 1px;
+    z-index: 100; }
+  .ButtonGroup.DropRight .Dropdown {
+    right: 0;
+    left: auto; }
 
 #Panel .ButtonGroup .Dropdown {
   right: 0; }
@@ -556,21 +532,18 @@ select {
 
 .ButtonGroup.Open .Dropdown {
   display: block; }
-
-.ButtonGroup.Big .NavButton,
-.ButtonGroup.Big .Button {
-  font-size: 15px;
-  padding: 8px;
-  text-align: center; }
-
 .ButtonGroup.Big {
   display: block;
   white-space: nowrap; }
+  .ButtonGroup.Big .NavButton, .ButtonGroup.Big .Button {
+    font-size: 15px;
+    padding: 8px;
+    text-align: center; }
 
-#Panel .ButtonGroup.Big > .NavButton:first-child,
-#Panel .ButtonGroup.Big > .Button:first-child {
+#Panel .ButtonGroup.Big > .NavButton:first-child, #Panel .ButtonGroup.Big > .Button:first-child {
   width: 78%; }
 
+/* Done */
 /* =================================================== Misc Styles */
 .ActivateSlider {
   display: inline-block;
@@ -807,14 +780,13 @@ a.Small img {
 #Head {
   background: #38abe3;
   color: #fff; }
+  #Head a {
+    color: #fff;
+    font-weight: bold; }
 
 /* Targetting the padding on head in this way b/c it was causing problems in older themes */
 body > #Frame > .Head {
   padding: 16px 3px 3px; }
-
-#Head a {
-  color: #fff;
-  font-weight: bold; }
 
 .SiteTitle {
   font-family: "helvetica neue", helvetica, arial, sans-serif;
@@ -825,59 +797,52 @@ body > #Frame > .Head {
 .SiteMenu {
   display: inline;
   white-space: nowrap; }
-
-.SiteMenu li {
-  display: inline; }
-
-.SiteMenu a {
-  font-size: 11px;
-  padding: 6px; }
-
-.SiteMenu a:hover {
-  text-decoration: underline; }
+  .SiteMenu li {
+    display: inline; }
+  .SiteMenu a {
+    font-size: 11px;
+    padding: 6px; }
+    .SiteMenu a:hover {
+      text-decoration: underline; }
 
 .SiteSearch {
   position: relative; }
-
-.SiteSearch .InputBox {
-  padding: 5px 25px 5px 5px;
-  font-size: 11px; }
-
-.SiteSearch .Button {
-  background: url("images/sprites.png") 0 -196px no-repeat transparent;
-  height: 16px;
-  width: 16px;
-  overflow: hidden;
-  line-height: 999px;
-  color: transparent;
-  font-size: 0;
-  border: none;
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  padding: 0; }
+  .SiteSearch .InputBox {
+    padding: 5px 25px 5px 5px;
+    font-size: 11px; }
+  .SiteSearch .Button {
+    background: url("images/sprites.png") 0 -196px no-repeat transparent;
+    height: 16px;
+    width: 16px;
+    overflow: hidden;
+    line-height: 999px;
+    color: transparent;
+    font-size: 0;
+    border: none;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 0; }
 
 #Head .SiteSearch {
   float: right; }
-
-#Head .SiteSearch .InputBox {
-  border: none;
-  width: 175px; }
+  #Head .SiteSearch .InputBox {
+    border: none;
+    width: 175px; }
 
 /* Option (dropdown) Menus, Bookmark stars, admin checkboxes */
-.ControlOptions,
-.Options {
+.ControlOptions, .Options {
   float: right; }
 
 .CategoryLink {
   padding: 2px 4px;
   font-size: 11px;
   background: #CFECFF;
-  -moz-border-radius: 1px;
   -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
   border-radius: 1px; }
 
 .PageTitle .Options {
@@ -906,21 +871,12 @@ body > #Frame > .Head {
   /* FF2 doesn’t like the above */
   cursor: pointer; }
 
-div.Discussion:hover .OptionsTitle:hover,
-.Item:hover .OptionsTitle:hover {
-  /*   background-position: 0 -121px;*/ }
-
-.Open > .OptionsTitle {
-  /*   background-position: 0 -141px !important;*/ }
-
 .Item .OptionsTitle {
   visibility: hidden; }
-
 .Item:hover .OptionsTitle, .Item.Open .OptionsTitle {
   visibility: visible; }
 
-.Flyout:before,
-.Flyout:after {
+.Flyout:before {
   border-bottom: 7px solid #444444;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
@@ -928,13 +884,18 @@ div.Discussion:hover .OptionsTitle:hover,
   left: 9px;
   position: absolute;
   top: -7px; }
-
 .Flyout:after {
+  border-bottom: 7px solid #444444;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  content: "";
+  left: 9px;
+  position: absolute;
+  top: -7px;
   border-bottom: 7px solid #fff;
   top: -6px; }
 
-.OptionsMenu .Flyout:before,
-.OptionsMenu .Flyout:after {
+.OptionsMenu .Flyout:before, .OptionsMenu .Flyout:after {
   left: inherit;
   right: 14px; }
 
@@ -947,47 +908,47 @@ div.Discussion:hover .OptionsTitle:hover,
   -webkit-border-radius: 2px;
   background: #fff;
   padding: 5px 0;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
-
-.MenuItems a, .MenuItems a:link, .MenuItems a:visited, .MenuItems a:active {
-  display: block;
-  text-decoration: none;
-  white-space: nowrap;
-  color: #333 !Important;
-  padding: 3px 15px;
-  line-height: 18px; }
-
-.MenuItems a:hover {
-  color: #ffffff !Important;
-  text-decoration: none;
-  background-color: #004D9F !Important; }
-
-.MenuItems a:hover .Gloss {
-  color: #ffffff !important; }
-
-.MenuItems li > strong {
-  font-size: 12px;
-  padding: 3px 10px;
-  line-height: 18px; }
-
-.MenuItems hr {
-  border: 0;
-  border-bottom: 1px solid #ddd; }
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+  .MenuItems a {
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #333 !Important;
+    padding: 3px 15px;
+    line-height: 18px; }
+    .MenuItems a:link, .MenuItems a:visited, .MenuItems a:active {
+      display: block;
+      text-decoration: none;
+      white-space: nowrap;
+      color: #333 !Important;
+      padding: 3px 15px;
+      line-height: 18px; }
+    .MenuItems a:hover {
+      color: #ffffff !Important;
+      text-decoration: none;
+      background-color: #004D9F !Important; }
+      .MenuItems a:hover .Gloss {
+        color: #ffffff !important; }
+  .MenuItems li > strong {
+    font-size: 12px;
+    padding: 3px 10px;
+    line-height: 18px; }
+  .MenuItems hr {
+    border: 0;
+    border-bottom: 1px solid #ddd; }
 
 .ToggleFlyout {
   position: relative; }
-
-.ToggleFlyout.Open {
-  z-index: 110;
-  /* above Item:hover */ }
-
-.ToggleFlyout .Flyout {
-  position: absolute;
-  top: 100%;
-  /* right: -10px; This causes text overflows when flyout items are long */
-  display: none; }
+  .ToggleFlyout.Open {
+    z-index: 110;
+    /* above Item:hover */ }
+  .ToggleFlyout .Flyout {
+    position: absolute;
+    top: 100%;
+    /* right: -10px; This causes text overflows when flyout items are long */
+    display: none; }
 
 .OptionsMenu .Flyout {
   top: 18px;
@@ -1007,9 +968,8 @@ div.Discussion:hover .OptionsTitle:hover,
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   border: solid 1px #999; }
-
-.FlyoutMenu a {
-  color: #00419b; }
+  .FlyoutMenu a {
+    color: #00419b; }
 
 .FlyoutButton {
   cursor: pointer; }
@@ -1030,28 +990,21 @@ div.Discussion:hover .OptionsTitle:hover,
 .SelectFlyout {
   display: inline-block;
   cursor: pointer; }
-
-.SelectFlyout .Flyout:before,
-.SelectFlyout .Flyout:after {
-  display: none; }
+  .SelectFlyout .Flyout:before, .SelectFlyout .Flyout:after {
+    display: none; }
 
 .MeBox .Flyout {
   right: inherit;
   left: -4px;
   top: 150%; }
-
 .MeBox.FlyoutRight .Flyout {
   left: inherit;
   right: -4px; }
+  .MeBox.FlyoutRight .Flyout:before, .MeBox.FlyoutRight .Flyout:after {
+    left: auto;
+    right: 9px; }
 
-.MeBox.FlyoutRight .Flyout:before,
-.MeBox.FlyoutRight .Flyout:after {
-  left: auto;
-  right: 9px; }
-
-a.Bookmark,
-a.Bookmarked,
-a.Bookmarking {
+a.Bookmark, a.Bookmarked, a.Bookmarking {
   display: inline-block;
   background: url("images/ui_sprites.png") 0 -2px no-repeat;
   height: 18px;
@@ -1061,19 +1014,16 @@ a.Bookmarking {
   overflow: hidden;
   text-indent: -1000px;
   font-size: 1px; }
-
 a.Bookmark:hover {
   background-position: 0 -22px; }
-
 a.Bookmarked {
   background-position: 0 -42px; }
-
-a.Bookmarked:hover {
-  background-position: 0 -82px; }
-
-a.Bookmarking,
-a.Bookmarking:hover {
+  a.Bookmarked:hover {
+    background-position: 0 -82px; }
+a.Bookmarking {
   background-position: 0 -62px; }
+  a.Bookmarking:hover {
+    background-position: 0 -62px; }
 
 .AdminCheck {
   vertical-align: top;
@@ -1092,6 +1042,7 @@ td.CheckBoxColumn {
 .Opts .ControlOptions .AdminCheck {
   padding: 0; }
 
+/* Done */
 /* ======================================================== Full Page Errors */
 .SplashMessage #Body h1 {
   font-size: 64px;
@@ -1306,9 +1257,9 @@ td.CheckBoxColumn {
 
 .PanelInfo .Meta strong {
   display: inline;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
   background: #FF0;
   color: #000;
   font-size: 9px;
@@ -1515,28 +1466,26 @@ td.CheckBoxColumn {
 /* Note: DataList is used in search results, vanilla discussions & drafts */
 .SearchForm {
   margin: 20px auto; }
-
-.SearchForm .InputBox {
-  width: 100%;
-  box-sizing: border-box;
-  font-size: 14px;
-  padding: 6px 25px 6px 8px;
-  border-radius: .35ex;
-  border: solid 1px #bbb; }
-
-.SearchForm .SiteSearch {
-  max-width: 600px;
-  margin: 0; }
-
-.SearchForm .SiteSearch .Button {
-  top: 8px;
-  right: 6px; }
+  .SearchForm .InputBox {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 6px 25px 6px 8px;
+    -webkit-border-radius: 0.35ex;
+    -moz-border-radius: 0.35ex;
+    border-radius: 0.35ex;
+    border: solid 1px #bbb; }
+  .SearchForm .SiteSearch {
+    max-width: 600px;
+    margin: 0; }
+    .SearchForm .SiteSearch .Button {
+      top: 8px;
+      right: 6px; }
 
 .Empty {
   margin: 10px 0; }
 
-.DataList .Item,
-.NarrowList .Item {
+.DataList .Item, .NarrowList .Item {
   margin: 0;
   padding: 8px;
   border: 0px solid #ddd;
@@ -1564,8 +1513,7 @@ td.CheckBoxColumn {
   font-weight: bold;
   margin: 0; }
 
-.ItemDiscussion .Meta,
-.DataList .Meta {
+.ItemDiscussion .Meta, .DataList .Meta {
   font-size: 11px;
   color: #70727c; }
 
@@ -1573,12 +1521,10 @@ td.CheckBoxColumn {
   margin-left: 8px;
   margin-right: 8px;
   white-space: nowrap; }
-
-.MItem:first-child {
-  margin-left: 0; }
-
-.MItem:last-child {
-  margin-right: 0; }
+  .MItem:first-child {
+    margin-left: 0; }
+  .MItem:last-child {
+    margin-right: 0; }
 
 .CommentInfo {
   line-height: 1.5; }
@@ -1590,15 +1536,14 @@ td.CheckBoxColumn {
   font-size: 12px;
   line-height: 1.4;
   margin: 5px 0; }
-
-.DataList .Excerpt p {
-  display: inline;
-  padding: 0; }
+  .DataList .Excerpt p {
+    display: inline;
+    padding: 0; }
 
 .HasNew {
-  border-radius: 2px;
-  -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
   background: #FF0;
   color: #000;
   font-size: 9px;
@@ -1615,47 +1560,24 @@ td.CheckBoxColumn {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
   filter: alpha(opacity=90);
   opacity: .9; }
-
-.Item.Read:hover {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: alpha(opacity=100);
-  opacity: 1; }
-
-.Item.Read .Title, .Item.Read .BlockTitle {
-  font-weight: normal; }
-
+  .Item.Read:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1; }
+  .Item.Read .Title, .Item.Read .BlockTitle {
+    font-weight: normal; }
 .Item.Checked {
   background: #ffc; }
-
 .Item.Open {
   z-index: 200;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(enabled=false)" !important;
   filter: alpha(enabled=false) !important;
   opacity: 1 !important; }
 
-/*
-.Read {
-    background: transparent;
-}
-.Read > * {
-    opacity: 0.4;
-}
-.Read:hover > * {
-    opacity: 1;
-}
-.Checked {
-    background: #ffc;
-    opacity: 1;
-}
-.Checked > *,
-.Read:hover > * {
-    opacity: 1;
-}
-*/
 .DataList a.Delete {
-  border-radius: 0;
-  -moz-border-radius: 0;
   -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   color: #333;
   display: block;
   height: 14px;
@@ -1667,13 +1589,12 @@ td.CheckBoxColumn {
   font-weight: bold;
   line-height: 1;
   visibility: hidden; }
-
-.DataList a.Delete:hover {
-  text-decoration: none;
-  border: none;
-  background: #333;
-  color: #fff;
-  visibility: visible; }
+  .DataList a.Delete:hover {
+    text-decoration: none;
+    border: none;
+    background: #333;
+    color: #fff;
+    visibility: visible; }
 
 .Item:hover a.Delete {
   visibility: visible; }
@@ -1681,23 +1602,19 @@ td.CheckBoxColumn {
 /* Condensed datalists make the main link & excerpt inline. */
 .DataList .Unfollow {
   background: #eee; }
-
-.DataList .Unfollow a {
-  color: #888; }
+  .DataList .Unfollow a {
+    color: #888; }
 
 .Item .Inset {
   border-top: 1px solid #bec8cc;
   padding: 5px 0; }
-
 .Item .Author a {
   font-size: 15px;
   font-weight: bold; }
 
-.Condensed .Title,
-.Condensed a.Title {
+.Condensed .Title, .Condensed a.Title {
   display: inline;
   padding: 0; }
-
 .Condensed .Excerpt {
   display: inline; }
 
@@ -1707,36 +1624,27 @@ td.CheckBoxColumn {
   overflow: hidden;
   border-bottom: 1px solid #ddd;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-
 .PopList .ItemContent {
   margin: 0 0 0 48px;
   line-height: 1.4; }
-
 .PopList .Meta {
   color: #777;
   font-size: 80%; }
-
 .PopList .Center {
   padding: 0; }
-
-.PopList .Center a {
-  display: block;
-  padding: 4px 0; }
-
+  .PopList .Center a {
+    display: block;
+    padding: 4px 0; }
 .PopList .Item:hover {
   background: rgba(0, 0, 0, 0.03); }
-
-.PopList .Item.Title:hover {
-  background: inherit; }
-
 .PopList .Item.Title {
   font-size: 12px;
   padding: 2px 4px; }
-
-.PopList .Item.Title a {
-  float: right;
-  font-size: 11px; }
-
+  .PopList .Item.Title:hover {
+    background: inherit; }
+  .PopList .Item.Title a {
+    float: right;
+    font-size: 11px; }
 .PopList .Empty {
   border: none; }
 
@@ -1746,10 +1654,8 @@ td.CheckBoxColumn {
   margin: 0 6px;
   font-size: 15px;
   font-weight: bold; }
-
 .MeAction .Item-Header {
   margin-bottom: 8px; }
-
 .MeAction .Message {
   display: none; }
 
@@ -1758,29 +1664,26 @@ td.CheckBoxColumn {
   background: rgba(0, 0, 0, 0.03);
   padding: 20px;
   margin: 10px 0 20px;
-  border-radius: 6px;
+  -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
-  -webkit-border-radius: 6px; }
-
-.Hero h3 {
-  font-size: 24px;
-  font-weight: normal; }
+  border-radius: 6px; }
+  .Hero h3 {
+    font-size: 24px;
+    font-weight: normal; }
 
 .ChildCategoryList {
   overflow: hidden;
   margin-bottom: 8px; }
+  .ChildCategoryList .Item {
+    float: left;
+    width: 50%;
+    padding: 0; }
+    .ChildCategoryList .Item:nth-child(odd) {
+      clear: left; }
+  .ChildCategoryList .ItemContent {
+    padding: 8px 0 0; }
 
-.ChildCategoryList .Item {
-  float: left;
-  width: 50%;
-  padding: 0; }
-
-.ChildCategoryList .Item:nth-child(odd) {
-  clear: left; }
-
-.ChildCategoryList .ItemContent {
-  padding: 8px 0 0; }
-
+/* Done */
 /* =============================================================== Activities */
 .Activities ul.DataList {
   margin-left: 50px; }
@@ -1977,13 +1880,12 @@ a.ChangePicture {
   width: 100%;
   display: none;
   text-align: center; }
-
-.PhotoWrap:hover a.ChangePicture {
-  display: block; }
-
 a.ChangePicuture:hover {
   color: #fff;
   text-decoration: underline; }
+
+.PhotoWrap:hover a.ChangePicture {
+  display: block; }
 
 .ProfileOptions {
   float: right;
@@ -2003,37 +1905,35 @@ form.Activity {
   display: block;
   margin: 0 0 10px;
   overflow: hidden; }
-
-form.Activity textarea {
-  width: 100%;
-  margin-bottom: 2px;
-  height: 60px;
-  min-height: 60px; }
-
-form.Activity .Button {
-  float: right; }
+  form.Activity textarea {
+    width: 100%;
+    margin-bottom: 2px;
+    height: 60px;
+    min-height: 60px; }
+  form.Activity .Button {
+    float: right; }
 
 .ActivityComments textarea {
   height: 60px;
   min-height: 60px; }
 
 /* Invitations Form */
-table.PreferenceGroup,
-#Form_Invitation table {
+table.PreferenceGroup, #Form_Invitation table {
   width: 100%;
   border-collapse: collapse;
   margin: 10px 0; }
 
-table.PreferenceGroup th,
-table.PreferenceGroup td,
-#Form_Invitation th,
-#Form_Invitation td {
+table.PreferenceGroup th, table.PreferenceGroup td {
   padding: 2px 6px;
   border-bottom: 1px solid #ddd;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
-table.PreferenceGroup th,
-#Form_Invitation table th {
+#Form_Invitation th, #Form_Invitation td {
+  padding: 2px 6px;
+  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+table.PreferenceGroup th, #Form_Invitation table th {
   font-weight: bold;
   text-align: left; }
 
@@ -2046,39 +1946,31 @@ table.PreferenceGroup th,
 .ContentColumn .About h2 {
   display: none; }
 
-dl.About dt,
-dl.About dd {
+dl.About dt, dl.About dd {
   padding: 0;
   margin: 0;
   float: none;
   font-size: 11px;
   line-height: 14px;
   display: inline; }
-
 dl.About dt {
   color: #666;
   background: url("images/profile-sprites.png") 2px -139px no-repeat transparent;
   padding-left: 14px; }
-
-dl.About dt.Name {
-  background-position: 0 -26px; }
-
-dl.About dt.Email {
-  background-position: 0 -53px; }
-
-dl.About dt.Joined,
-dl.About dt.LastActive {
-  background-position: 0 3px; }
-
-dl.About dt.Roles {
-  background-position: 1px -81px; }
-
-dl.About dt.Posts {
-  background-position: 0 -113px; }
-
+  dl.About dt.Name {
+    background-position: 0 -26px; }
+  dl.About dt.Email {
+    background-position: 0 -53px; }
+  dl.About dt.Joined, dl.About dt.LastActive {
+    background-position: 0 3px; }
+  dl.About dt.Roles {
+    background-position: 1px -81px; }
+  dl.About dt.Posts {
+    background-position: 0 -113px; }
 dl.About dd {
   padding: 0 8px 0 0; }
 
+/* Done */
 /* ======================================================== Thumbnail Cropper */
 .Popup .CurrentPicture {
   display: none; }
@@ -2137,9 +2029,9 @@ form.Thumbnail .Warning {
 .custom .jcrop-handle {
   border-color: black;
   background-color: #C7BB00;
-  border-radius: 3px;
+  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -webkit-border-radius: 3px; }
+  border-radius: 3px; }
 
 /* Done */
 /* ================================================= CommentForm */
@@ -2200,25 +2092,68 @@ div.Popup {
   top: 0;
   left: 0;
   text-align: center; }
+  div.Popup .Border {
+    margin: 0px auto;
+    text-align: left;
+    position: relative;
+    max-width: 600px;
+    display: inline-block; }
+  div.Popup .Body {
+    background: #fff;
+    padding: 10px;
+    float: left;
+    /* Put this here b/c background of form was not descending to bottom of popup. */ }
+  div.Popup .Loading {
+    text-align: center; }
+  div.Popup h1 {
+    margin-top: 0; }
+  div.Popup .Footer {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    text-align: right; }
+  div.Popup h3 {
+    font-size: 120%;
+    font-weight: bold;
+    padding: 20px 0 10px; }
+  div.Popup p {
+    padding: 6px 10px 10px; }
+  div.Popup .Legal p {
+    padding: 6px 0 10px; }
+  div.Popup small {
+    font-size: 11px; }
+  div.Popup form p {
+    padding: 0; }
+  div.Popup form ul li.Gender label.RadioLabel {
+    display: inline;
+    padding-right: 20px; }
+  div.Popup form ul li.Gender label.RadioLabel {
+    display: inline;
+    padding-right: 20px; }
+  div.Popup form ul li label.RadioLabel, div.Popup form ul li label.CheckBoxLabel {
+    font-weight: normal; }
+  div.Popup form ul li label.RadioLabel {
+    font-size: 12px; }
 
-div.Popup .Border {
-  margin: 0px auto;
-  text-align: left;
-  position: relative;
-  max-width: 600px;
-  display: inline-block; }
+body.Profile.EditMode ul li label, div.Popup form ul li label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0 0; }
 
-div.Popup .Body {
-  background: #fff;
-  padding: 10px;
-  float: left;
-  /* Put this here b/c background of form was not descending to bottom of popup. */ }
+body.Entry form ul li.Gender label.RadioLabel, body.Profile.EditMode ul li.Gender label.RadioLabel {
+  display: inline;
+  padding-right: 20px; }
 
-div.Popup .Loading {
-  text-align: center; }
+li.Gender {
+  margin-bottom: 10px; }
 
-div.Popup h1 {
-  margin-top: 0; }
+body.Profile.EditMode ul li label.RadioLabel, body.Profile.EditMode ul li label.CheckBoxLabel {
+  font-weight: normal; }
+
+body.Profile.EditMode .Warning {
+  margin: 10px 0; }
 
 a.Close {
   position: absolute;
@@ -2232,64 +2167,13 @@ a.Close {
   font-weight: bold;
   padding: 0; }
 
-div.Popup .Footer {
-  border: none;
-  background: none;
-  padding: 0;
-  margin: 0;
-  text-align: right; }
-
-div.Popup h3 {
-  font-size: 120%;
-  font-weight: bold;
-  padding: 20px 0 10px; }
-
-div.Popup p {
-  padding: 6px 10px 10px; }
-
-div.Popup .Legal p {
-  padding: 6px 0 10px; }
-
-div.Popup small {
-  font-size: 11px; }
-
-div.Popup form p {
-  padding: 0; }
-
-body.Profile.EditMode ul li label,
-div.Popup form ul li label {
-  display: block;
-  font-size: 14px;
-  font-weight: bold;
-  margin: 10px 0 0; }
-
-body.Entry form ul li.Gender label.RadioLabel,
-body.Profile.EditMode ul li.Gender label.RadioLabel,
-div.Popup form ul li.Gender label.RadioLabel {
-  display: inline;
-  padding-right: 20px; }
-
-li.Gender {
-  margin-bottom: 10px; }
-
-body.Profile.EditMode ul li label.RadioLabel,
-body.Profile.EditMode ul li label.CheckBoxLabel,
-div.Popup form ul li label.RadioLabel,
-div.Popup form ul li label.CheckBoxLabel {
-  font-weight: normal; }
-
-body.Profile.EditMode .Warning {
-  margin: 10px 0; }
-
-div.Popup form ul li label.RadioLabel {
-  font-size: 12px; }
-
 /* Serious Ajax Error Styles */
 .AjaxError {
   white-space: pre;
   overflow: auto;
   padding: 10px; }
 
+/* Done */
 /* ==================================================================== Legal */
 .Legal h3 {
   padding: 0;
@@ -2458,6 +2342,8 @@ tr.CategoryHeading td {
     padding: 0;
     width: 130px;
     border-top: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
     border-radius: 0; }
   .DiscussionSorter .Selected {
     padding: 0 0 0 15px;
@@ -2593,11 +2479,13 @@ textarea.MultiComplete {
   height: 20px;
   text-align: left; }
 
-#Panel input.InputBox,
-.AddPeople textarea.MultiComplete {
+#Panel input.InputBox {
   width: 100%;
   margin-bottom: 2px; }
 
+.AddPeople textarea.MultiComplete {
+  width: 100%;
+  margin-bottom: 2px; }
 .AddPeople form div {
   text-align: right; }
 
@@ -2608,33 +2496,31 @@ textarea.MultiComplete {
   background-color: white;
   overflow: hidden;
   z-index: 99999; }
-
-.ac_results ul {
-  width: 100%;
-  list-style-position: outside;
-  list-style: none;
-  padding: 0;
-  margin: 0; }
-
-.ac_results li {
-  margin: 0;
-  padding: 5px;
-  cursor: default;
-  display: block;
-  /* 
-  if width will be 100% horizontal scrollbar will apear 
-  when scroll mode will be used
-  */
-  /*width: 100%;*/
-  font-size: 12px;
-  /* 
-  it is very important, if line-height not setted or setted 
-  in relative units scroll will be broken in firefox
-  */
-  line-height: 16px;
-  overflow: hidden;
-  border-bottom: 1px solid #d7d8da;
-  text-align: left; }
+  .ac_results ul {
+    width: 100%;
+    list-style-position: outside;
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .ac_results li {
+    margin: 0;
+    padding: 5px;
+    cursor: default;
+    display: block;
+    /* 
+    if width will be 100% horizontal scrollbar will apear 
+    when scroll mode will be used
+    */
+    /*width: 100%;*/
+    font-size: 12px;
+    /* 
+    it is very important, if line-height not setted or setted 
+    in relative units scroll will be broken in firefox
+    */
+    line-height: 16px;
+    overflow: hidden;
+    border-bottom: 1px solid #d7d8da;
+    text-align: left; }
 
 .ac_lastitem {
   border-bottom: 0 !important; }
@@ -2643,13 +2529,12 @@ textarea.MultiComplete {
   font-weight: bold;
   background: #c7e2ff; }
 
-.ac_over strong {
-  font-weight: bold;
-  background: #216ebf; }
-
 .ac_over {
   background: #004D9F;
   color: #fff; }
+  .ac_over strong {
+    font-weight: bold;
+    background: #216ebf; }
 
 .AddPeople h4 {
   border-bottom: 0px; }
@@ -2661,7 +2546,6 @@ textarea.MultiComplete {
   color: #666666;
   font-size: 14px;
   font-weight: bold; }
-
 #ConversationForm .TextBox {
   width: 100%;
   height: 100px;
@@ -2684,27 +2568,22 @@ body.Conversations a.Cancel {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px; }
-
-.UploadProgress div {
-  padding: 2px 0; }
-
-.UploadProgress div strong {
-  font-weight: bold; }
-
-.UploadProgress .Foreground,
-.UploadProgress .Background {
-  position: absolute; }
-
-.UploadProgress .Background {
-  width: 0;
-  background: url("images/upload-bg.gif") repeat;
-  z-index: 1; }
-
-.UploadProgress .Foreground {
-  text-indent: 6px;
-  overflow: visible;
-  white-space: nowrap;
-  z-index: 2; }
+  .UploadProgress div {
+    padding: 2px 0; }
+    .UploadProgress div strong {
+      font-weight: bold; }
+  .UploadProgress .Foreground {
+    position: absolute; }
+  .UploadProgress .Background {
+    position: absolute;
+    width: 0;
+    background: url("images/upload-bg.gif") repeat;
+    z-index: 1; }
+  .UploadProgress .Foreground {
+    text-indent: 6px;
+    overflow: visible;
+    white-space: nowrap;
+    z-index: 2; }
 
 /* Container */
 .Border {
@@ -2720,40 +2599,36 @@ ul.Tabs {
   border-bottom: 1px solid #aaa;
   text-align: left;
   padding-left: 4px; }
+  ul.Tabs li {
+    display: inline-block; }
+    ul.Tabs li a {
+      display: inline-block;
+      margin-left: 4px;
+      border: 1px solid #aaa;
+      border-width: 1px 1px 0 1px;
+      border-radius: 3px 3px 0 0;
+      -moz-border-radius: 3px 3px 0 0;
+      -webkit-border-radius: 3px 3px 0 0;
+      background: #eee;
+      color: #888;
+      position: relative;
+      top: 1px;
+      padding: 2px 8px 1px;
+      /* Icons */ }
+      ul.Tabs li a:hover {
+        background: #f5f5f5;
+        color: #444; }
+      ul.Tabs li a.Active {
+        padding: 2px 8px;
+        background: #fff;
+        color: #000; }
+      ul.Tabs li a.EntryTabFor_password {
+        padding-left: 22px;
+        background-image: url("images/icon.png");
+        background-position: 3px 4px;
+        background-repeat: no-repeat; }
 
-ul.Tabs li {
-  display: inline-block; }
-
-ul.Tabs li a {
-  display: inline-block;
-  margin-left: 4px;
-  border: 1px solid #aaa;
-  border-width: 1px 1px 0 1px;
-  border-radius: 3px 3px 0 0;
-  -moz-border-radius: 3px 3px 0 0;
-  -webkit-border-radius: 3px 3px 0 0;
-  background: #eee;
-  color: #888;
-  position: relative;
-  top: 1px;
-  padding: 2px 8px 1px; }
-
-ul.Tabs li a:hover {
-  background: #f5f5f5;
-  color: #444; }
-
-ul.Tabs li a.Active {
-  padding: 2px 8px;
-  background: #fff;
-  color: #000; }
-
-/* Icons */
-ul.Tabs li a.EntryTabFor_password {
-  padding-left: 22px;
-  background-image: url("images/icon.png");
-  background-position: 3px 4px;
-  background-repeat: no-repeat; }
-
+/* Done */
 /* ============================================================ Entry Screens */
 body.Entry form ul li label {
   font-size: 14px;
@@ -2761,12 +2636,10 @@ body.Entry form ul li label {
   font-weight: bold;
   padding: 6px 0 0;
   display: block; }
-
-body.Entry form ul li label.CheckBoxLabel,
-body.Entry form ul li label.RadioLabel {
-  font-size: 12px;
-  font-weight: normal;
-  width: auto; }
+  body.Entry form ul li label.CheckBoxLabel, body.Entry form ul li label.RadioLabel {
+    font-size: 12px;
+    font-weight: normal;
+    width: auto; }
 
 span.Incorrect {
   display: block;
@@ -2778,20 +2651,18 @@ span.Incorrect {
 .MultipleEntryMethods {
   margin: 0 auto;
   overflow: hidden; }
+  .MultipleEntryMethods .MainForm {
+    float: left;
+    /* Fix mainform from shoving the other entry methods down when an error occurs during login */
+    width: 300px; }
+  .MultipleEntryMethods .Methods {
+    padding: 0 15px 5px;
+    line-height: 1;
+    margin-left: 300px; }
 
-.MultipleEntryMethods .MainForm {
-  float: left;
-  /* Fix mainform from shoving the other entry methods down when an error occurs during login */
-  width: 300px; }
+body#dashboard_entry_password #Content input.Password, body#dashboard_entry_signin #Content input.Password, body#dashboard_entry_index #Content input.Password {
+  width: 180px; }
 
-.MultipleEntryMethods .Methods {
-  padding: 0 15px 5px;
-  line-height: 1;
-  margin-left: 300px; }
-
-body#dashboard_entry_password #Content input.Password,
-body#dashboard_entry_signin #Content input.Password,
-body#dashboard_entry_index #Content input.Password,
 .SignInPopup input.Password {
   width: 180px; }
 
@@ -2801,74 +2672,58 @@ body#dashboard_entry_index #Content input.Password,
   padding-right: 8px;
   margin-bottom: 4px;
   height: 10px; }
-
-.PasswordStrength .Background {
-  height: 4px;
-  background-color: #e8e8e8;
-  width: 100%;
-  position: absolute;
-  left: 0; }
-
-.PasswordStrength .Strength {
-  height: 4px;
-  background-color: #c81818;
-  width: 0;
-  position: absolute;
-  left: 0; }
-
-.PasswordStrength .Separator {
-  height: 4px;
-  width: 2px;
-  background-color: #fff;
-  position: absolute;
-  left: 0; }
-
-.PasswordStrength .StrengthText {
-  padding-top: 2px;
-  text-align: right;
-  font-size: 12px;
-  margin-right: -8px; }
-
-.PasswordStrength.Score-0 .Strength {
-  width: 0; }
-
-.PasswordStrength.Score-0 .StrengthText {
-  color: #888888; }
-
-.PasswordStrength.Score-1 .Strength {
-  background-color: #C81818;
-  width: 20%; }
-
-.PasswordStrength.Score-1 .StrengthText {
-  color: #C81818; }
-
-.PasswordStrength.Score-2 .Strength {
-  background-color: #FF891D;
-  width: 40%; }
-
-.PasswordStrength.Score-2 .StrengthText {
-  color: #FF891D; }
-
-.PasswordStrength.Score-3 .Strength {
-  background-color: #FFAC1D;
-  width: 60%; }
-
-.PasswordStrength.Score-3 .StrengthText {
-  color: #FFAC1D; }
-
-.PasswordStrength.Score-4 .Strength {
-  background-color: #A6C060;
-  width: 80%; }
-
-.PasswordStrength.Score-4 .StrengthText {
-  color: #A6C060; }
-
-.PasswordStrength.Score-5 .Strength {
-  background-color: #27B30F;
-  width: 100%; }
-
-.PasswordStrength.Score-5 .StrengthText {
-  color: #27B30F; }
+  .PasswordStrength .Background {
+    height: 4px;
+    background-color: #e8e8e8;
+    width: 100%;
+    position: absolute;
+    left: 0; }
+  .PasswordStrength .Strength {
+    height: 4px;
+    background-color: #c81818;
+    width: 0;
+    position: absolute;
+    left: 0; }
+  .PasswordStrength .Separator {
+    height: 4px;
+    width: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0; }
+  .PasswordStrength .StrengthText {
+    padding-top: 2px;
+    text-align: right;
+    font-size: 12px;
+    margin-right: -8px; }
+  .PasswordStrength.Score-0 .Strength {
+    width: 0; }
+  .PasswordStrength.Score-0 .StrengthText {
+    color: #888888; }
+  .PasswordStrength.Score-1 .Strength {
+    background-color: #C81818;
+    width: 20%; }
+  .PasswordStrength.Score-1 .StrengthText {
+    color: #C81818; }
+  .PasswordStrength.Score-2 .Strength {
+    background-color: #FF891D;
+    width: 40%; }
+  .PasswordStrength.Score-2 .StrengthText {
+    color: #FF891D; }
+  .PasswordStrength.Score-3 .Strength {
+    background-color: #FFAC1D;
+    width: 60%; }
+  .PasswordStrength.Score-3 .StrengthText {
+    color: #FFAC1D; }
+  .PasswordStrength.Score-4 .Strength {
+    background-color: #A6C060;
+    width: 80%; }
+  .PasswordStrength.Score-4 .StrengthText {
+    color: #A6C060; }
+  .PasswordStrength.Score-5 .Strength {
+    background-color: #27B30F;
+    width: 100%; }
+  .PasswordStrength.Score-5 .StrengthText {
+    color: #27B30F; }
 
 a.ForgotPassword {
   margin-left: 10px; }
@@ -2876,16 +2731,21 @@ a.ForgotPassword {
 li.Buttons div a.ForgotPassword {
   margin: 0; }
 
-body#dashboard_entry_password ul li label.CheckBoxLabel,
-body#dashboard_entry_signin ul li label.CheckBoxLabel,
-body#dashboard_entry_index ul li label.CheckBoxLabel,
-.SignInPopup ul li label.CheckBoxLabel {
+body#dashboard_entry_password ul li label.CheckBoxLabel, body#dashboard_entry_signin ul li label.CheckBoxLabel, body#dashboard_entry_index ul li label.CheckBoxLabel {
   display: inline;
   font-size: 12px;
   font-weight: normal;
   margin: 10px 0 0 10px; }
 
-.SignInPopup li.Buttons,
+.SignInPopup ul li label.CheckBoxLabel {
+  display: inline;
+  font-size: 12px;
+  font-weight: normal;
+  margin: 10px 0 0 10px; }
+.SignInPopup li.Buttons {
+  text-align: left;
+  padding: 0 0 10px; }
+
 body.Entry li.Buttons {
   text-align: left;
   padding: 0 0 10px; }
@@ -2899,25 +2759,22 @@ body.Entry li.Buttons {
 /* Handshake */
 body#dashboard_entry_handshake #Content {
   width: 720px; }
-
-body#dashboard_entry_handshake #Content form {
-  padding: 20px 30px 26px; }
-
+  body#dashboard_entry_handshake #Content form {
+    padding: 20px 30px 26px; }
 body#dashboard_entry_handshake ul.NewAccount {
   float: left;
   width: 315px;
   margin-right: 44px;
   border-right: 1px solid #A5D0E7; }
-
 body#dashboard_entry_handshake ul.LinkAccount {
   margin-left: 315px; }
 
-ul.NewAccount h2,
-ul.LinkAccount h2 {
+ul.NewAccount h2 {
   padding-left: 36px !important;
   background: url("images/dashboard-sprites.png") 0 -542px no-repeat; }
-
 ul.LinkAccount h2 {
+  padding-left: 36px !important;
+  background: url("images/dashboard-sprites.png") 0 -542px no-repeat;
   padding-left: 84px !important;
   background-position: 45px -296px; }
 
@@ -2925,7 +2782,6 @@ body#dashboard_entry_handshake .Info {
   border: 1px solid #A5D0E7;
   background: #D3F0FF;
   color: #02475A; }
-
 body#dashboard_entry_handshake #Content h2 {
   border: none;
   color: #02475A;
@@ -2934,25 +2790,23 @@ body#dashboard_entry_handshake #Content h2 {
   padding: 6px 0;
   margin: 0;
   text-align: left; }
-
-/* Leaving Page */
 body#dashboard_entry_leave p {
   margin: 0;
   padding: 20px 10px; }
+  body#dashboard_entry_leave p.Leaving {
+    background: url("images/progress.gif") left center no-repeat;
+    margin: 0 0 0 14px;
+    padding: 20px 0 20px 50px; }
 
-body#dashboard_entry_leave p.Leaving {
-  background: url("images/progress.gif") left center no-repeat;
-  margin: 0 0 0 14px;
-  padding: 20px 0 20px 50px; }
-
-.Connect form ul li#ConnectPassword label,
-.SignInPopup form ul li#ConnectPassword label {
+/* Leaving Page */
+.Connect form ul li#ConnectPassword label, .SignInPopup form ul li#ConnectPassword label {
   padding: 10px 0 0; }
 
 .FinePrint {
   font-size: 11px;
   color: #777; }
 
+/* Done */
 /* ============================= Error Messages */
 * html .Errors {
   position: inherit;
@@ -4100,6 +3954,8 @@ li.token-input-token {
   line-height: 20px;
   cursor: default;
   border: 1px solid #999;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
   border-radius: 2px;
   float: left;
   font-size: 13px; }

@@ -3,43 +3,114 @@
 	margin-top: 10px;
 }
 .Overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5000;
 }
 .MSIE .Overlay {
-   background: gray;
-   filter: alpha(opacity=0);
-   position: static;
+	background: gray;
+	filter: alpha(opacity = 0);
+	position: static;
 }
+
 div.Popup {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  text-align: center;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	text-align: center;
+	.Border {
+		margin: 0px auto;
+		text-align: left;
+		position: relative;
+		max-width: 600px;
+		display: inline-block;
+	}
+	.Body {
+		background: #fff;
+		padding: 10px;
+		float: left;
+		/* Put this here b/c background of form was not descending to bottom of popup. */
+	}
+	.Loading {
+		text-align: center;
+	}
+	h1 {
+		margin-top: 0;
+	}
+	.Footer {
+		border: none;
+		background: none;
+		padding: 0;
+		margin: 0;
+		text-align: right;
+	}
+	h3 {
+		font-size: 120%;
+		font-weight: bold;
+		padding: 20px 0 10px;
+	}
+	p {
+		padding: 6px 10px 10px;
+	}
+	.Legal p {
+		padding: 6px 0 10px;
+	}
+	small {
+		font-size: 11px;
+	}
+	form p {
+		padding: 0;
+	}
+	form ul {
+		li.Gender label.RadioLabel {
+			display: inline;
+			padding-right: 20px;
+		}
+		li.Gender label.RadioLabel {
+			display: inline;
+			padding-right: 20px;
+		}
+		li label {
+			&.RadioLabel, &.CheckBoxLabel {
+				font-weight: normal;
+			}
+		}
+		li label.RadioLabel {
+			font-size: 12px;
+		}
+	}		
 }
-div.Popup .Border {
-  margin: 0px auto;
-  text-align: left;
-  position: relative;
-  max-width: 600px;
-  display: inline-block;
+
+body.Profile.EditMode ul li label, div.Popup form ul li label {
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 10px 0 0;
 }
-div.Popup .Body {
-  background: #fff;
-  padding: 10px;
-  float: left; /* Put this here b/c background of form was not descending to bottom of popup. */
+body {
+	&.Entry form ul li.Gender label.RadioLabel, &.Profile.EditMode ul li.Gender label.RadioLabel {
+		display: inline;
+		padding-right: 20px;
+	}
 }
-div.Popup .Loading {
-  text-align: center;
+
+li.Gender {
+	margin-bottom: 10px;
 }
-div.Popup h1 {
-   margin-top: 0;
+
+body.Profile.EditMode ul li label {
+	&.RadioLabel, &.CheckBoxLabel {
+		font-weight: normal;
+	}
 }
+body.Profile.EditMode .Warning {
+	margin: 10px 0;
+}
+
 a.Close {
 	position: absolute;
 	top: 16px;
@@ -51,58 +122,6 @@ a.Close {
 	font-size: 22px;
 	font-weight: bold;
 	padding: 0;
-}
-div.Popup .Footer {
-	border: none;
-	background: none;
-	padding: 0;
-	margin: 0;
-	text-align: right;
-}
-div.Popup h3 {
-	font-size: 120%;
-	font-weight: bold;
-	padding: 20px 0 10px;
-}
-div.Popup p {
-	padding: 6px 10px 10px;
-}
-div.Popup .Legal p {
-	padding: 6px 0 10px;
-}
-div.Popup small {
-	font-size: 11px;
-}
-div.Popup form p {
-	padding: 0;
-}
-body.Profile.EditMode ul li label,
-div.Popup form ul li label {
-	display:block;
-	font-size:14px;
-	font-weight:bold;
-	margin: 10px 0 0;
-}
-body.Entry form ul li.Gender label.RadioLabel,
-body.Profile.EditMode ul li.Gender label.RadioLabel,
-div.Popup form ul li.Gender label.RadioLabel {
-	display: inline;
-	padding-right: 20px;
-}
-li.Gender {
-	margin-bottom: 10px;
-}
-body.Profile.EditMode ul li label.RadioLabel,
-body.Profile.EditMode ul li label.CheckBoxLabel,
-div.Popup form ul li label.RadioLabel,
-div.Popup form ul li label.CheckBoxLabel {
-	font-weight: normal;
-}
-body.Profile.EditMode .Warning {
-	margin: 10px 0;
-}
-div.Popup form ul li label.RadioLabel {
-	font-size: 12px;
 }
 
 /* Serious Ajax Error Styles */

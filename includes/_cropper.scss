@@ -67,8 +67,6 @@ form.Thumbnail {
 	.jcrop-handle {
 		border-color: black;
 		background-color: #C7BB00;
-		border-radius: 3px;
-		-moz-border-radius: 3px;
-		-webkit-border-radius: 3px;
+		@include borderRadius(3px);
 	}
 }

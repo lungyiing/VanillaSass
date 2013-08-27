@@ -1,9 +1,23 @@
 // Mixins - mostly used for cross browser hacks in this case
-
 @mixin borderRadius($r) {
 	-webkit-border-radius: $r;
 	-moz-border-radius: $r;
 	border-radius: $r;
+}
+@mixin boxShadow($arg...) {
+	-webkit-box-shadow: $arg;
+	-moz-box-shadow: $arg;
+	box-shadow: $arg;
+}
+
+@mixin whiteGradient {
+	background: #fdfdfd;
+	background-image: linear-gradient(bottom, rgb(240, 240, 240) 0%, rgb(255, 255, 255) 31%);
+	background-image: -o-linear-gradient(bottom, rgb(240, 240, 240) 0%, rgb(255, 255, 255) 31%);
+	background-image: -moz-linear-gradient(bottom, rgb(240, 240, 240) 0%, rgb(255, 255, 255) 31%);
+	background-image: -webkit-linear-gradient(bottom, rgb(240, 240, 240) 0%, rgb(255, 255, 255) 31%);
+	background-image: -ms-linear-gradient(bottom, rgb(240, 240, 240) 0%, rgb(255, 255, 255) 31%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(240, 240, 240)), color-stop(0.31, rgb(255, 255, 255)));
 }
 
 // Variables - colours gradients etc.
