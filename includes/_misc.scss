@@ -174,11 +174,9 @@ a.Small {
 		overflow: hidden;
 	}
 }
-
 /* Note: The MessageModule (in /applications/dashboard/modules) wraps all messages
 	that it renders in a div with this DismissMessage class. */
 /* Messages */
-
 .DismissMessage {
 	a.Dismiss {
 		font-family: $fontAlt;
@@ -209,12 +207,10 @@ a.Small {
 	margin: 10px 0;
 	padding: 10px;
 	&.Info {
-		background: #f3f4f8;
-		border: 1px solid #ddd;
+		@include infoMessage;
 	}
 	&.Warning {
-		background: #ffebe9;
-		border: 1px solid #FFCCC9;
+		@include warningMessage;
 	}
 	&.Box {
 		background: #fff8ce;
@@ -226,22 +222,14 @@ a.Small {
 }
 
 .CasualMessage {
-	background: #CFECFF;
-	border: 1px solid #ABDAFB;
-	color: #1E79A7;
+	@include casualMessage;
 }
-
 .InfoMessage {
-	background: #F6F6F6;
-	border: 1px solid #ddd;
+	@include infoMessage;
 }
-
 .AlertMessage {
-	background: #fff8ce;
-	border: 1px solid #DEDDAF;
+	@include alertMessage;
 }
-
 .WarningMessage {
-	background: #ffebe9;
-	border: 1px solid #FFCCC9;
+	@include warningMessage;
 }

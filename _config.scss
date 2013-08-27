@@ -1,4 +1,6 @@
-// Mixins - mostly used for cross browser hacks in this case
+/////////////////// Mixins - In this case used for cross browser hacks .///////////////////
+
+// Browser hacks
 @mixin borderRadius($r) {
 	-webkit-border-radius: $r;
 	-moz-border-radius: $r;
@@ -10,6 +12,7 @@
 	box-shadow: $arg;
 }
 
+// Gradients
 @mixin whiteGradient {
 	background: #fdfdfd;
 	background-image: linear-gradient(bottom, rgb(240, 240, 240) 0%, rgb(255, 255, 255) 31%);
@@ -20,7 +23,30 @@
 	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(240, 240, 240)), color-stop(0.31, rgb(255, 255, 255)));
 }
 
-// Variables - colours gradients etc.
+// Dissmiss Message and X + Message
+
+@mixin infoMessage {
+	background: #F6F6F6;
+	border: 1px solid #ddd;
+}
+@mixin warningMessage {
+	background: #ffebe9;
+	border: 1px solid #FFCCC9;
+}
+@mixin alertMessage {
+	background: #fff8ce;
+	border: 1px solid #DEDDAF;
+}
+@mixin casualMessage {
+	background: #CFECFF;
+	border: 1px solid #ABDAFB;
+	color: #1E79A7;
+}
+
+
+///////////////////////////// Variables - colours gradients etc./////////////////////////////
+
+// Font Variables
 $font: 'lucida grande','Lucida Sans Unicode', tahoma, sans-serif;
 $fontAlt: "helvetica neue", helvetica, arial, sans-serif;
 $fontCode: monospace;

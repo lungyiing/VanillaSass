@@ -740,7 +740,7 @@ a.Small img {
   .DismissMessage strong, .DismissMessage b {
     font-weight: bold; }
   .DismissMessage.Info {
-    background: #f3f4f8;
+    background: #F6F6F6;
     border: 1px solid #ddd; }
   .DismissMessage.Warning {
     background: #ffebe9;
