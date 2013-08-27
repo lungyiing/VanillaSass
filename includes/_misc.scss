@@ -1,239 +1,249 @@
 /* =================================================== Misc Styles */
+
 .ActivateSlider {
-   display: inline-block;
-   background: #bbb;
-   /*background: rgba(0, 0, 0, .2);*/
-   box-shadow: 0 10px 30px rgba(0, 0, 0, .5) inset;
-   border: solid 1px #ccc;
-   width: 125px;
-   border-radius: 4px;
-   padding: 1px;
-   position: relative;
+	display: inline-block;
+	background: #bbb;
+	/*background: rgba(0, 0, 0, .2);*/
+	@include boxShadow( 0 10px 30px rgba(0, 0, 0, 0.5) inset);
+	border: solid 1px #ccc;
+	width: 125px;
+	@include borderRadius(4px);
+	padding: 1px;
+	position: relative;
 }
 
 .ActivateSlider-Active {
-   text-align: right;
+	text-align: right;
 }
 
 .Gloss {
-   font-size: 80%;
-   font-weight: normal;
-   color: #666;
+	font-size: 80%;
+	font-weight: normal;
+	color: #666;
 }
 
 .Loading {
-   height: 100px;
-   padding: 0 20px;
-   background: url('images/progress.gif') center center no-repeat;
+	height: 100px;
+	padding: 0 20px;
+	background: url('images/progress.gif') center center no-repeat;
 }
+
 .Progress {
-   padding: 10px 40px 10px 0;
-   background: url('images/progress.gif') center center no-repeat;
+	padding: 10px 40px 10px 0;
+	background: url('images/progress.gif') center center no-repeat;
 }
+
 .TinyProgress {
 	padding: 10px 40px 10px 0;
 	background: url('images/progress_sm.gif') center center no-repeat;
 }
+
 .InProgress {
-   opacity: .5;
+	opacity: .5;
 }
+
 .Conversations .Deleted {
-   text-decoration: line-through;
+	text-decoration: line-through;
 }
+
 .Deleted {
 	background: #f5f5f5;
 	border: 1px solid #dddddd;
 	margin: 10px 0 0;
 	padding: 6px 10px;
-   border-radius: 3px;
-   -moz-border-radius: 3px;
-   -webkit-border-radius: 3px;
+	@include borderRadius(2px);
 }
+
 /* Note: Warning, Alert & Info are simple boxes that can be used to wrap message
-   strings & imply importance. */
-span.Warning,
-div.Warning {
-   background: #fee;
-   border: 2px solid #fbb;
-   color: #d00;
-   padding: 6px 8px;
-   margin: 10px 0;
-   border-radius: 2px;
-   -moz-border-radius: 2px;
-   -webkit-border-radius: 2px;
+	 strings & imply importance. */
+
+span.Warning, div.Warning {
+	background: #fee;
+	border: 2px solid #fbb;
+	color: #d00;
+	padding: 6px 8px;
+	margin: 10px 0;
+	@include borderRadius(2px);
 }
+
 .Count {
-   background: #444;
-   background-color: rgba(0, 0, 0, 0.6);
-   border-radius: 3px;
-   -webkit-border-radius: 3px;
-   -moz-border-radius: 3px;
-   border-radius: 3px;
-   color: #fff;
-   font-size: 80%;
-   font-weight: normal;
-   padding: 1px .8ex;
+	background: #444;
+	background-color: rgba(0, 0, 0, 0.6);
+	@include borderRadius(3px);
+	color: #fff;
+	font-size: 80%;
+	font-weight: normal;
+	padding: 1px .8ex;
 }
+
 .Alert {
-   font-size: 80%;
-   background: #d00;
-   color: #fff;
-   padding: 1px 3px;
-   border-radius: .5ex;
-   -moz-border-radius: .5ex;
-   -webkit-border-radius: .5ex;
+	font-size: 80%;
+	background: #d00;
+	color: #fff;
+	padding: 1px 3px;
+	@include borderRadius(.5ex);
+	a {
+		color: #fff;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }
-.Alert a {
-   color: #fff;
-}
-.Alert a:hover {
-   text-decoration: underline;
-}
+
 .Info {
-   font-size: 13px;
-   background: #fafafa;
-   border: 2px solid #eee;
-	border: 2px solid rgba(0,0,0,0.1);
-   color: #888;
-   -moz-border-radius: 2px;
-   -webkit-border-radius: 2px;
-   border-radius: 2px;
-   padding: 6px 8px;
-   margin: 10px 0;
+	font-size: 13px;
+	background: #fafafa;
+	border: 2px solid #eee;
+	border: 2px solid rgba(0, 0, 0, 0.1);
+	color: #888;
+	@include borderRadius(2px);
+	padding: 6px 8px;
+	margin: 10px 0;
+	strong {
+		font-weight: bold;
+	}
 }
-.Info strong {
-	font-weight: bold;
-}
+
 .BreadcrumbWrap {
 	clear: both;
 	line-height: 2.4;
 	font-size: 12px;
 }
+
 #PagerLess {
-   -moz-border-radius-topright: 2px;
-   -moz-border-radius-topleft: 2px;
-   -webkit-border-top-right-radius: 2px;
-   -webkit-border-top-left-radius: 2px;
-   border-radius-topright: 2px;
-   border-radius-topleft: 2px;
-   margin-bottom: 1px;
+	-moz-border-radius-topright: 2px;
+	-moz-border-radius-topleft: 2px;
+	-webkit-border-top-right-radius: 2px;
+	-webkit-border-top-left-radius: 2px;
+	border-radius-topright: 2px;
+	border-radius-topleft: 2px;
+	margin-bottom: 1px;
 	text-align: left;
 }
+
 .MorePager {
-   text-align: right;
+	text-align: right;
+	a.Loading {
+		border: 0 !important;
+		padding: 0 20px !important;
+		background: url('images/progress.gif') center center no-repeat !important;
+	}
 }
-.MorePager a.Loading {
-	border: 0 !important;
-   padding: 0 20px !important;
-   background: url('images/progress.gif') center center no-repeat !important;
-}
+
 .Pager {
-   font-weight: bold;
-   float: right;
+	font-weight: bold;
+	float: right;
+	a {
+		display: inline-block;
+		margin: 0 3px;
+	}
+	span {
+		display: inline-block;
+		margin: 0 3px;
+		color: #777;
+	}
+	.Highlight {
+		color: #000;
+	}
 }
-.Pager a, .Pager span {
-   display: inline-block;
-   margin: 0 3px;
-}
-.Pager span {
-   color: #777;
-}
-.Pager .Highlight {
-	color: #000;
-}
+
 .MoreWrap {
-   float: right;
+	float: right;
 }
 
 .PagerNub {
-    overflow: hidden;
-    display: inline-block;
-    width: 1px;
-    margin-right: -1px;
+	overflow: hidden;
+	display: inline-block;
+	width: 1px;
+	margin-right: -1px;
 }
 
 /* Small UserPhoto() images */
-a.Small:hover {
-	text-decoration: none;
-}
-a.Small img {
-	background: none;
-	text-indent: -100px;
-	background: #ddd;
-	display: inline-block;
-	height: 24px;
-	width: 24px;
-	overflow: hidden;
+
+a.Small {
+	&:hover {
+		text-decoration: none;
+	}
+	img {
+		background: none;
+		text-indent: -100px;
+		background: #ddd;
+		display: inline-block;
+		height: 24px;
+		width: 24px;
+		overflow: hidden;
+	}
 }
 
 /* Note: The MessageModule (in /applications/dashboard/modules) wraps all messages
-  that it renders in a div with this DismissMessage class. */
+	that it renders in a div with this DismissMessage class. */
 /* Messages */
-.DismissMessage a.Dismiss {
-	font-family: arial;
-   position: absolute;
-	font-size:16px;
-	font-weight: bold;
-   line-height: 1;
-   color: #777;
-	top: -1px;
-	right: -1px;
-   padding:1px 3px;
-   text-decoration: none;
-}
-.DismissMessage a.Dismiss:hover {
-   border: none;
-   background: #333;
-   color: #fff;
-}
 
-
-.DismissMessage strong,
-.DismissMessage b {
-	font-weight: bold;
-}
 .DismissMessage {
+	a.Dismiss {
+		font-family: arial;
+		position: absolute;
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 1;
+		color: #777;
+		top: -1px;
+		right: -1px;
+		padding: 1px 3px;
+		text-decoration: none;
+		&:hover {
+			border: none;
+			background: #333;
+			color: #fff;
+		}
+	}
+	strong, b {
+		font-weight: bold;
+	}
 	font-size: 13px;
 	text-align: left;
 	position: relative;
-   color: #000;
-   border: none;
-   border-radius: 1;
-   -moz-border-radius: 1;
-   -webkit-border-radius: 1;
-   margin: 10px 0;
-   padding: 10px;
+	color: #000;
+	border: none;
+	border-radius: 1;
+	-moz-border-radius: 1;
+	-webkit-border-radius: 1;
+	margin: 10px 0;
+	padding: 10px;
+	&.Info {
+		background: #f3f4f8;
+		border: 1px solid #ddd;
+	}
+	&.Warning {
+		background: #ffebe9;
+		border: 1px solid #FFCCC9;
+	}
+	&.Box {
+		background: #fff8ce;
+		border: 1px solid #c5bea4;
+		@include boxShadow(none);
+		margin: 0 0 10px;
+		/* Make sure that .Box definitions don't override the base DismissMessage margin! */
+	}
 }
-.DismissMessage.Info {
-   background: #f3f4f8;
-   border: 1px solid #ddd;
-}
-.DismissMessage.Warning {
-   background: #ffebe9;
-   border: 1px solid #FFCCC9;
-}
-.DismissMessage.Box {
-   background: #fff8ce;
-   border: 1px solid #c5bea4;
-	box-shadow: none;
-	-moz-box-shadow: none;
-	-webkit-box-shadow: none;
-   margin: 0 0 10px; /* Make sure that .Box definitions don't override the base DismissMessage margin! */
-}
+
 .CasualMessage {
-   background: #CFECFF;
-   border: 1px solid #ABDAFB;
-   color: #1E79A7;
+	background: #CFECFF;
+	border: 1px solid #ABDAFB;
+	color: #1E79A7;
 }
+
 .InfoMessage {
-   background: #F6F6F6;
-   border: 1px solid #ddd;
+	background: #F6F6F6;
+	border: 1px solid #ddd;
 }
+
 .AlertMessage {
-   background: #fff8ce;
-   border: 1px solid #DEDDAF;
+	background: #fff8ce;
+	border: 1px solid #DEDDAF;
 }
+
 .WarningMessage {
-   background: #ffebe9;
-   border: 1px solid #FFCCC9;
+	background: #ffebe9;
+	border: 1px solid #FFCCC9;
 }
