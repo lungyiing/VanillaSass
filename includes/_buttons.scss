@@ -105,7 +105,7 @@
 	@include borderRadius(2px);
 	white-space: nowrap;
 	@include whiteGradient;
-	box-shadow: 0 1px 1px #ddd;
+	@include boxShadow (0 1px 1px #ddd);
 }
 
 .ButtonGroup {

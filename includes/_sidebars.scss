@@ -1,343 +1,466 @@
 /* ======================================================== Panels / Sidebars */
+
 #Panel {
-   width: 200px;
-   float: left;
-   
-/*   
-No overflow hidden on main elements. Causes too many bugs!
-overflow: hidden; 
-}
-#Panel > :first-child {
-	margin-top: 0;
-*/
-}
-.Box {
-   margin: 10px 0;
-}
-.Box dl {
-   overflow: hidden;
-}
-.Box dl dt {
-	font-size: 12px;
-   float: left;
-   width: 80px;
-   color: #555;
-	overflow: hidden;
-	white-space: nowrap;
-}
-.Box dl dd {
-	font-size: 12px;
-   margin-left: 80px;
-}
-/* Hiding until we figure out what to do with GuestWelcomeModule */
-.MeBox-SignIn {
-   display: none;
-}
-.Profile .MeBox {
-   display: none;
-}
-.UserBox,
-.MeBox {
-   margin: 10px 0;
-}
-.UserBox .PhotoWrap,
-.MeBox .PhotoWrap {
+	width: 200px;
 	float: left;
-   margin-right: 5px;
+	/*	 
+	No overflow hidden on main elements. Causes too many bugs!
+	overflow: hidden; 
+	}
+	#Panel > :first-child {
+		margin-top: 0;
+	*/
 }
-.UserBox .WhoIs,
-.MeBox .WhoIs {
+
+.Box {
+	margin: 10px 0;
+	dl {
+		overflow: hidden;
+		dt {
+			font-size: 12px;
+			float: left;
+			width: 80px;
+			color: #555;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+		dd {
+			font-size: 12px;
+			margin-left: 80px;
+		}
+	}
+}
+
+/* Hiding until we figure out what to do with GuestWelcomeModule */
+
+.MeBox-SignIn, .Profile .MeBox {
+	display: none;
+}
+
+.UserBox, .MeBox {
+	margin: 10px 0;
+}
+
+.UserBox .PhotoWrap, .MeBox .PhotoWrap {
+	float: left;
+	margin-right: 5px;
+}
+
+.UserBox .WhoIs, .MeBox .WhoIs {
 	min-height: 40px;
 	line-height: 1.3;
 }
-.UserBox .Username,
-.MeBox .Username {
+
+.UserBox .Username, .MeBox .Username {
 	font-weight: bold;
 	vertical-align: top;
-   font-size: 14px;
+	font-size: 14px;
 }
+
 .UserBox .Email {
-   white-space: nowrap;
-   overflow: hidden;
+	white-space: nowrap;
+	overflow: hidden;
 }
+
 .MeMenu {
-   line-height: 24px;
+	line-height: 24px;
 }
+
 .MeButton {
 	padding: 3px 5px;
-   border: solid 1px transparent;
+	border: solid 1px transparent;
 	position: relative;
 	line-height: 1;
-   display: inline-block;
+	display: inline-block;
+	&:hover {
+		background: #eee;
+		background: rgba(0, 0, 0, 0.07);
+		background: #eee;
+		background: rgba(0, 0, 0, 0.07);
+	}
+	.Alert {
+		position: absolute;
+		top: -2px;
+		right: -1px;
+		font-size: 9px;
+		line-height: 1;
+		padding: 2px;
+	}
 }
-.MeButton:hover {
-	background: #eee;
-	background: rgba(0,0,0,0.07);
-}
-.MeButton:hover {
-	background: #eee;
-	background: rgba(0,0,0,0.07);
-}
-.MeButton .Alert {
-	position: absolute;
-	top: -2px;
-	right: -1px;
-	font-size: 9px;
-	line-height: 1;
-	padding: 2px;
-}
+
 .MeMenu em {
 	display: none;
 }
-.MeBox.Inline,
-.MeBox.Inline .WhoIs,
-.MeBox.Inline .MeMenu {
-    display: inline;
-    line-height: 24px;
-}
-.MeBox.Inline > .PhotoWrap {
-    float: none;
-}
-.MeBox.Inline > .PhotoWrap .ProfilePhoto {
-    height: 24px;
-    width: 24px;
-}
-.MeBox.Inline .Username {
-   margin-right: 4px;
+
+.MeBox.Inline {
+	display: inline;
+	line-height: 24px;
+	.WhoIs, .MeMenu {
+		display: inline;
+		line-height: 24px;
+	}
+	> .PhotoWrap {
+		float: none;
+		.ProfilePhoto {
+			height: 24px;
+			width: 24px;
+		}
+	}
+	.Username {
+		margin-right: 4px;
+	}
 }
 
 .MeBox-SignIn.Inline * {
-    display: inline;
+	display: inline;
 }
 
 .MeBox.Inline .SignInIcons img {
-    vertical-align: top;
+	vertical-align: top;
 }
 
 .PanelActivity {
-   border-top: 1px solid #abdafb;
+	border-top: 1px solid #abdafb;
 	border-bottom: 0;
+	li {
+		background: #e3f4ff;
+		border-bottom: 1px solid #abdafb;
+		padding: 2px 4px;
+		color: #555;
+		font-size: 11px;
+		line-height: 1.6;
+		a {
+			font-size: 13px;
+			&.Name {
+				margin-right: 2px;
+			}
+		}
+	}
+	span {
+		padding: 0 4px;
+	}
+	p {
+		padding: 0 4px;
+		display: inline;
+		font-size: 90%;
+	}
+	li {
+		em {
+			padding-left: 5px;
+			color: #777;
+			font-size: 80%;
+		}
+		.Story {
+			font-size: 85%;
+		}
+	}
 }
-.PanelActivity li {
-   background: #e3f4ff;
-   border-bottom: 1px solid #abdafb;
-   padding: 2px 4px;
-	color: #555;
-	font-size: 11px;
-	line-height: 1.6;
-}
-.PanelActivity li a {
-	font-size: 13px;
-}
-.PanelActivity li a.Name {
-	margin-right: 2px;
-}
-.PanelActivity span {
-	padding: 0 4px;
-}
-.PanelActivity p {
-	padding: 0 4px;
-	display: inline;
-	font-size: 90%;
-}
-.PanelActivity li em {
-	padding-left: 5px;
-	color: #777;
-	font-size: 80%;
-}
-.PanelActivity li .Story {
-	font-size: 85%;
-}
+
 /* Compatibility for old custom themes that overrode this value */
-#Panel .PanelInfo li {
-   text-align: left;
+
+#Panel {
+	.PanelInfo li {
+		text-align: left;
+	}
+	.FilterMenu li {
+		border-bottom: 1px solid #ddd;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		padding: 2px 4px;
+	}
 }
-#Panel .FilterMenu li,
+
 .PanelInfo li {
 	border-bottom: 1px solid #ddd;
-   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-   padding: 2px 4px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 2px 4px;
 }
-#Panel .FilterMenu li:first-child,
-.PanelInfo li:first-child {
+
+#Panel .FilterMenu li:first-child, .PanelInfo li:first-child {
 	border-top: 1px solid #ddd;
-   border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /** Make standard items a bit more condensed when in the panel. **/
 
-.PanelColumn .Item {
-    padding: 2px;   
+.PanelColumn {
+	.Item {
+		padding: 2px;
+		.Title {
+			font-size: 13px;
+			font-weight: normal;
+		}
+	}
+	.Options {
+		display: none;
+	}
 }
 
-.PanelColumn .Item .Title {
-    font-size: 13px;
-    font-weight: normal;
+#Panel .FilterMenu .Aside, .PanelInfo .Aside, .Item .Aside {
+	float: right;
 }
 
-.PanelColumn .Options {
-    display: none;
+.PanelInfo {
+	.Heading {
+		/*color: #000;*/
+		font-weight: bold;
+	}
+	li {
+		strong {
+			font-weight: normal;
+			text-align: left;
+		}
+		.LastMessage {
+			float: right;
+		}
+	}
+	.Meta {
+	font-size: 11px;
+		span a {
+			margin-left: 8px;
+		}
+		strong {
+			@include borderRadius(2px);
+			display: inline;
+			background: #FF0;
+			color: #000;
+			font-size: 9px;
+			font-weight: bold;
+			padding: 3px;
+			line-height: 1;
+		}
+	}
+	.Parent {
+		text-align: left;
+		font-weight: bold;
+		background: none;
+		color: #333;
+		padding: 2px 0;
+	}
 }
 
-
-#Panel .FilterMenu .Aside,
-.PanelInfo .Aside,
-.Item .Aside {
-   float: right;
-}
-.PanelInfo .Heading {
-   /*color: #000;*/
-   font-weight: bold;
-}
-.PanelInfo li strong {
-   font-weight: normal;
-   text-align: left;
-}
-.PanelInfo li .LastMessage {
-   float: right;
-}
-.PanelInfo .Meta {
-   font-size: 11px;
-}
 /*
 .PanelInfo .Meta span,
 .PanelInfo .Meta strong {
-   margin-right: 8px;
+	 margin-right: 8px;
 }
 */
-.PanelInfo .Meta span a {
-   margin-left: 8px;
-}
-.PanelInfo .Meta strong {
-	display: inline;
-	@include borderRadius(2px);
-	background: #FF0;
-	color:#000;
-	font-size:9px;
-	font-weight:bold;
-	padding: 3px;
-	line-height: 1;
-}
-.PanelInfo .Parent {
-	text-align: left;
+
+#Panel .FilterMenu .Active {
+	background: #f7f7f7;
+	background: rgba(0, 0, 0, 0.03);
 	font-weight: bold;
-	background: none;
-	color: #333;
-	padding: 2px 0;
 }
-#Panel .FilterMenu .Active,
+
 .PanelInfo .Active {
 	background: #f7f7f7;
-   background: rgba(0, 0, 0, 0.03);
+	background: rgba(0, 0, 0, 0.03);
 	font-weight: bold;
+	strong {
+		font-weight: bold;
+	}
 }
-.PanelInfo .Active strong {
-   font-weight: bold;
-}
-.PanelActivity .ShowAll,
-.PanelInfo .ShowAll {
-   font-weight: bold;
-   border: 0;
-   text-align: right;
+
+.PanelActivity .ShowAll, .PanelInfo .ShowAll {
+	font-weight: bold;
+	border: 0;
+	text-align: right;
 	background: none;
 }
+
 #Content .BoxFilter {
 	margin: 0 0 6px;
 }
+
 #Panel .BoxFilter {
-   margin: 10px 0;
-}
-#Content .FilterMenu {
 	margin: 10px 0;
 }
-#Content .FilterMenu li,
-#Content .FilterMenu li.Active {
-	display: inline-block;
-   white-space: nowrap;
-	margin: 0 6px;
+
+#Content {
+	.FilterMenu {
+		margin: 10px 0;
+		li {
+			display: inline-block;
+			white-space: nowrap;
+			margin: 0 6px;
+			&.Active {
+				display: inline-block;
+				white-space: nowrap;
+				margin: 0 6px;
+			}
+			a {
+				padding: 4px 0;
+			}
+			&.Active a {
+				border-bottom: 2px solid #ddd;
+				border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+			}
+		}
+	}
+	.BoxFilter {
+		a {
+			margin: 0 10px 0 0;
+			padding: 4px 0;
+			display: block;
+		}
+		.Active a {
+			color: #000;
+			border-bottom: 2px solid #ddd;
+			border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+		}
+		display: none;
+	}
 }
-#Content .FilterMenu li a {
-	padding: 4px 0;
-}
-#Content .FilterMenu li.Active a {
-	border-bottom: 2px solid #ddd;
-	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-}
-#Content .BoxFilter a {
-	margin: 0 10px 0 0;
-	padding: 4px 0;
-	display: block;
-}
-#Content .BoxFilter .Active a {
-	color: #000;
-	border-bottom: 2px solid #ddd;
-	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-}
-#Content .BoxFilter { display: none; } /* Hide these by default, can be unhidden for backwards compat. */
+
+/* Hide these by default, can be unhidden for backwards compat. */
 /* End BoxFilter in #Content area */
+
 #UserOptions {
 	margin-bottom: 10px;
 }
+
 /* Category Depths */
-.CategoryFilterOptions .CurrentFilter { font-weight: bold; }
-.PanelCategories .Depth2 { padding-left: 8px; }
-.PanelCategories .Depth3 { padding-left: 12px; }
-.PanelCategories .Depth4 { padding-left: 16px; }
-.PanelCategories .Depth5 { padding-left: 20px; }
-.PanelCategories .Depth6 { padding-left: 24px; }
-.PanelCategories .Depth7 { padding-left: 28px; }
-.PanelCategories .Depth8 { padding-left: 32px; }
-.PanelCategories .Depth9 { padding-left: 36px; }
-.PanelCategories .Depth10 { padding-left: 40px; }
-.PanelCategories .Depth11 { padding-left: 44px; }
-.PanelCategories .Depth12 { padding-left: 48px; }
-.CategoryList .Depth2 { padding-left: 25px !important; }
-.CategoryList .Depth3 { padding-left: 50px !important; }
-.CategoryList .Depth4 { padding-left: 75px !important; }
-.CategoryList .Depth5 { padding-left: 100px !important; }
-.CategoryList .Depth6 { padding-left: 125px !important; }
-.CategoryList .Depth7 { padding-left: 150px !important; }
-.CategoryList .Depth8 { padding-left: 175px !important; }
-.CategoryList .Depth9 { padding-left: 200px !important; }
-.CategoryList .Depth10 { padding-left: 225px !important; }
-.CategoryList .Depth11 { padding-left: 250px !important; }
-.CategoryList .Depth12 { padding-left: 275px !important; }
-.CategoryListWithHeadings .Depth1 { padding-left: 0 !important; }
-.CategoryListWithHeadings .Depth2 { padding-left: 0 !important; }
-.CategoryListWithHeadings .Depth3 { padding-left: 25px !important; }
-.CategoryListWithHeadings .Depth4 { padding-left: 50px !important; }
-.CategoryListWithHeadings .Depth5 { padding-left: 75px !important; }
-.CategoryListWithHeadings .Depth6 { padding-left: 100px !important; }
-.CategoryListWithHeadings .Depth7 { padding-left: 125px !important; }
-.CategoryListWithHeadings .Depth8 { padding-left: 150px !important; }
-.CategoryListWithHeadings .Depth9 { padding-left: 175px !important; }
-.CategoryListWithHeadings .Depth10 { padding-left: 200px !important; }
-.CategoryListWithHeadings .Depth11 { padding-left: 225px !important; }
-.CategoryListWithHeadings .Depth12 { padding-left: 250px !important; }
+
+.CategoryFilterOptions .CurrentFilter {
+	font-weight: bold;
+}
+
+.PanelCategories {
+	.Depth2 {
+		padding-left: 8px;
+	}
+	.Depth3 {
+		padding-left: 12px;
+	}
+	.Depth4 {
+		padding-left: 16px;
+	}
+	.Depth5 {
+		padding-left: 20px;
+	}
+	.Depth6 {
+		padding-left: 24px;
+	}
+	.Depth7 {
+		padding-left: 28px;
+	}
+	.Depth8 {
+		padding-left: 32px;
+	}
+	.Depth9 {
+		padding-left: 36px;
+	}
+	.Depth10 {
+		padding-left: 40px;
+	}
+	.Depth11 {
+		padding-left: 44px;
+	}
+	.Depth12 {
+		padding-left: 48px;
+	}
+}
+
+.CategoryList {
+	.Depth2 {
+		padding-left: 25px !important;
+	}
+	.Depth3 {
+		padding-left: 50px !important;
+	}
+	.Depth4 {
+		padding-left: 75px !important;
+	}
+	.Depth5 {
+		padding-left: 100px !important;
+	}
+	.Depth6 {
+		padding-left: 125px !important;
+	}
+	.Depth7 {
+		padding-left: 150px !important;
+	}
+	.Depth8 {
+		padding-left: 175px !important;
+	}
+	.Depth9 {
+		padding-left: 200px !important;
+	}
+	.Depth10 {
+		padding-left: 225px !important;
+	}
+	.Depth11 {
+		padding-left: 250px !important;
+	}
+	.Depth12 {
+		padding-left: 275px !important;
+	}
+}
+
+.CategoryListWithHeadings {
+	.Depth1, .Depth2 {
+		padding-left: 0 !important;
+	}
+	.Depth3 {
+		padding-left: 25px !important;
+	}
+	.Depth4 {
+		padding-left: 50px !important;
+	}
+	.Depth5 {
+		padding-left: 75px !important;
+	}
+	.Depth6 {
+		padding-left: 100px !important;
+	}
+	.Depth7 {
+		padding-left: 125px !important;
+	}
+	.Depth8 {
+		padding-left: 150px !important;
+	}
+	.Depth9 {
+		padding-left: 175px !important;
+	}
+	.Depth10 {
+		padding-left: 200px !important;
+	}
+	.Depth11 {
+		padding-left: 225px !important;
+	}
+	.Depth12 {
+		padding-left: 250px !important;
+	}
+}
 
 .Box.RecentUsers {
 	float: left;
 }
-.Icons a {
-	display: block;
-	margin: 0 2px 2px 0;
-	float: left;
-}
-.Icons img {
-	display: block;
-	height: 44px;
-	width: 44px;
-	overflow: hidden;
-	background: #c4cde0;
-	color: #c4cde0;
-	text-indent: 50px;
+
+.Icons {
+	a {
+		display: block;
+		margin: 0 2px 2px 0;
+		float: left;
+	}
+	img {
+		display: block;
+		height: 44px;
+		width: 44px;
+		overflow: hidden;
+		background: #c4cde0;
+		color: #c4cde0;
+		text-indent: 50px;
+	}
 }
 
 /* Page Controls (new discussion button, pagers, etc) */
+
 #Content .BoxNewDiscussion {
-    display: none; /* display: block to reveal this */
+	display: none;
+	/* display: block to reveal this */
 }
+
 .PageControls {
-    margin: 5px 0;
-    min-height: 24px;
+	margin: 5px 0;
+	min-height: 24px;
 }

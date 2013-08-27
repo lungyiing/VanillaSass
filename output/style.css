@@ -485,7 +485,9 @@ select {
   background-image: -webkit-linear-gradient(bottom, #f0f0f0 0%, white 31%);
   background-image: -ms-linear-gradient(bottom, #f0f0f0 0%, white 31%);
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f0f0f0), color-stop(0.31, white));
-  box-shadow: 0 1px 1px #ddd; }
+  -webkit-box-shadow: 0 1px 1px #dddddd;
+  -moz-box-shadow: 0 1px 1px #dddddd;
+  box-shadow: 0 1px 1px #dddddd; }
 
 .ButtonGroup.Open .NavButton.Handle {
   background: #eee; }
@@ -715,9 +717,9 @@ a.Small img {
   position: relative;
   color: #000;
   border: none;
-  border-radius: 1;
-  -moz-border-radius: 1;
   -webkit-border-radius: 1;
+  -moz-border-radius: 1;
+  border-radius: 1;
   margin: 10px 0;
   padding: 10px; }
   .DismissMessage a.Dismiss {
@@ -1053,7 +1055,7 @@ td.CheckBoxColumn {
 #Panel {
   width: 200px;
   float: left;
-  /*   
+  /*	 
   No overflow hidden on main elements. Causes too many bugs!
   overflow: hidden; 
   }
@@ -1063,45 +1065,35 @@ td.CheckBoxColumn {
 
 .Box {
   margin: 10px 0; }
-
-.Box dl {
-  overflow: hidden; }
-
-.Box dl dt {
-  font-size: 12px;
-  float: left;
-  width: 80px;
-  color: #555;
-  overflow: hidden;
-  white-space: nowrap; }
-
-.Box dl dd {
-  font-size: 12px;
-  margin-left: 80px; }
+  .Box dl {
+    overflow: hidden; }
+    .Box dl dt {
+      font-size: 12px;
+      float: left;
+      width: 80px;
+      color: #555;
+      overflow: hidden;
+      white-space: nowrap; }
+    .Box dl dd {
+      font-size: 12px;
+      margin-left: 80px; }
 
 /* Hiding until we figure out what to do with GuestWelcomeModule */
-.MeBox-SignIn {
+.MeBox-SignIn, .Profile .MeBox {
   display: none; }
 
-.Profile .MeBox {
-  display: none; }
-
-.UserBox,
-.MeBox {
+.UserBox, .MeBox {
   margin: 10px 0; }
 
-.UserBox .PhotoWrap,
-.MeBox .PhotoWrap {
+.UserBox .PhotoWrap, .MeBox .PhotoWrap {
   float: left;
   margin-right: 5px; }
 
-.UserBox .WhoIs,
-.MeBox .WhoIs {
+.UserBox .WhoIs, .MeBox .WhoIs {
   min-height: 40px;
   line-height: 1.3; }
 
-.UserBox .Username,
-.MeBox .Username {
+.UserBox .Username, .MeBox .Username {
   font-weight: bold;
   vertical-align: top;
   font-size: 14px; }
@@ -1119,41 +1111,35 @@ td.CheckBoxColumn {
   position: relative;
   line-height: 1;
   display: inline-block; }
-
-.MeButton:hover {
-  background: #eee;
-  background: rgba(0, 0, 0, 0.07); }
-
-.MeButton:hover {
-  background: #eee;
-  background: rgba(0, 0, 0, 0.07); }
-
-.MeButton .Alert {
-  position: absolute;
-  top: -2px;
-  right: -1px;
-  font-size: 9px;
-  line-height: 1;
-  padding: 2px; }
+  .MeButton:hover {
+    background: #eee;
+    background: rgba(0, 0, 0, 0.07);
+    background: #eee;
+    background: rgba(0, 0, 0, 0.07); }
+  .MeButton .Alert {
+    position: absolute;
+    top: -2px;
+    right: -1px;
+    font-size: 9px;
+    line-height: 1;
+    padding: 2px; }
 
 .MeMenu em {
   display: none; }
 
-.MeBox.Inline,
-.MeBox.Inline .WhoIs,
-.MeBox.Inline .MeMenu {
+.MeBox.Inline {
   display: inline;
   line-height: 24px; }
-
-.MeBox.Inline > .PhotoWrap {
-  float: none; }
-
-.MeBox.Inline > .PhotoWrap .ProfilePhoto {
-  height: 24px;
-  width: 24px; }
-
-.MeBox.Inline .Username {
-  margin-right: 4px; }
+  .MeBox.Inline .WhoIs, .MeBox.Inline .MeMenu {
+    display: inline;
+    line-height: 24px; }
+  .MeBox.Inline > .PhotoWrap {
+    float: none; }
+    .MeBox.Inline > .PhotoWrap .ProfilePhoto {
+      height: 24px;
+      width: 24px; }
+  .MeBox.Inline .Username {
+    margin-right: 4px; }
 
 .MeBox-SignIn.Inline * {
   display: inline; }
@@ -1164,103 +1150,82 @@ td.CheckBoxColumn {
 .PanelActivity {
   border-top: 1px solid #abdafb;
   border-bottom: 0; }
-
-.PanelActivity li {
-  background: #e3f4ff;
-  border-bottom: 1px solid #abdafb;
-  padding: 2px 4px;
-  color: #555;
-  font-size: 11px;
-  line-height: 1.6; }
-
-.PanelActivity li a {
-  font-size: 13px; }
-
-.PanelActivity li a.Name {
-  margin-right: 2px; }
-
-.PanelActivity span {
-  padding: 0 4px; }
-
-.PanelActivity p {
-  padding: 0 4px;
-  display: inline;
-  font-size: 90%; }
-
-.PanelActivity li em {
-  padding-left: 5px;
-  color: #777;
-  font-size: 80%; }
-
-.PanelActivity li .Story {
-  font-size: 85%; }
+  .PanelActivity li {
+    background: #e3f4ff;
+    border-bottom: 1px solid #abdafb;
+    padding: 2px 4px;
+    color: #555;
+    font-size: 11px;
+    line-height: 1.6; }
+    .PanelActivity li a {
+      font-size: 13px; }
+      .PanelActivity li a.Name {
+        margin-right: 2px; }
+  .PanelActivity span {
+    padding: 0 4px; }
+  .PanelActivity p {
+    padding: 0 4px;
+    display: inline;
+    font-size: 90%; }
+  .PanelActivity li em {
+    padding-left: 5px;
+    color: #777;
+    font-size: 80%; }
+  .PanelActivity li .Story {
+    font-size: 85%; }
 
 /* Compatibility for old custom themes that overrode this value */
 #Panel .PanelInfo li {
   text-align: left; }
+#Panel .FilterMenu li {
+  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2px 4px; }
 
-#Panel .FilterMenu li,
 .PanelInfo li {
   border-bottom: 1px solid #ddd;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 2px 4px; }
 
-#Panel .FilterMenu li:first-child,
-.PanelInfo li:first-child {
+#Panel .FilterMenu li:first-child, .PanelInfo li:first-child {
   border-top: 1px solid #ddd;
   border-top: 1px solid rgba(0, 0, 0, 0.1); }
 
 /** Make standard items a bit more condensed when in the panel. **/
 .PanelColumn .Item {
   padding: 2px; }
-
-.PanelColumn .Item .Title {
-  font-size: 13px;
-  font-weight: normal; }
-
+  .PanelColumn .Item .Title {
+    font-size: 13px;
+    font-weight: normal; }
 .PanelColumn .Options {
   display: none; }
 
-#Panel .FilterMenu .Aside,
-.PanelInfo .Aside,
-.Item .Aside {
+#Panel .FilterMenu .Aside, .PanelInfo .Aside, .Item .Aside {
   float: right; }
 
 .PanelInfo .Heading {
   /*color: #000;*/
   font-weight: bold; }
-
 .PanelInfo li strong {
   font-weight: normal;
   text-align: left; }
-
 .PanelInfo li .LastMessage {
   float: right; }
-
 .PanelInfo .Meta {
   font-size: 11px; }
-
-/*
-.PanelInfo .Meta span,
-.PanelInfo .Meta strong {
-   margin-right: 8px;
-}
-*/
-.PanelInfo .Meta span a {
-  margin-left: 8px; }
-
-.PanelInfo .Meta strong {
-  display: inline;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  background: #FF0;
-  color: #000;
-  font-size: 9px;
-  font-weight: bold;
-  padding: 3px;
-  line-height: 1; }
-
+  .PanelInfo .Meta span a {
+    margin-left: 8px; }
+  .PanelInfo .Meta strong {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    display: inline;
+    background: #FF0;
+    color: #000;
+    font-size: 9px;
+    font-weight: bold;
+    padding: 3px;
+    line-height: 1; }
 .PanelInfo .Parent {
   text-align: left;
   font-weight: bold;
@@ -1268,17 +1233,25 @@ td.CheckBoxColumn {
   color: #333;
   padding: 2px 0; }
 
-#Panel .FilterMenu .Active,
-.PanelInfo .Active {
+/*
+.PanelInfo .Meta span,
+.PanelInfo .Meta strong {
+	 margin-right: 8px;
+}
+*/
+#Panel .FilterMenu .Active {
   background: #f7f7f7;
   background: rgba(0, 0, 0, 0.03);
   font-weight: bold; }
 
-.PanelInfo .Active strong {
+.PanelInfo .Active {
+  background: #f7f7f7;
+  background: rgba(0, 0, 0, 0.03);
   font-weight: bold; }
+  .PanelInfo .Active strong {
+    font-weight: bold; }
 
-.PanelActivity .ShowAll,
-.PanelInfo .ShowAll {
+.PanelActivity .ShowAll, .PanelInfo .ShowAll {
   font-weight: bold;
   border: 0;
   text-align: right;
@@ -1292,32 +1265,29 @@ td.CheckBoxColumn {
 
 #Content .FilterMenu {
   margin: 10px 0; }
-
-#Content .FilterMenu li,
-#Content .FilterMenu li.Active {
-  display: inline-block;
-  white-space: nowrap;
-  margin: 0 6px; }
-
-#Content .FilterMenu li a {
-  padding: 4px 0; }
-
-#Content .FilterMenu li.Active a {
-  border-bottom: 2px solid #ddd;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1); }
-
-#Content .BoxFilter a {
-  margin: 0 10px 0 0;
-  padding: 4px 0;
-  display: block; }
-
-#Content .BoxFilter .Active a {
-  color: #000;
-  border-bottom: 2px solid #ddd;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1); }
-
+  #Content .FilterMenu li {
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0 6px; }
+    #Content .FilterMenu li.Active {
+      display: inline-block;
+      white-space: nowrap;
+      margin: 0 6px; }
+    #Content .FilterMenu li a {
+      padding: 4px 0; }
+    #Content .FilterMenu li.Active a {
+      border-bottom: 2px solid #ddd;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.1); }
 #Content .BoxFilter {
   display: none; }
+  #Content .BoxFilter a {
+    margin: 0 10px 0 0;
+    padding: 4px 0;
+    display: block; }
+  #Content .BoxFilter .Active a {
+    color: #000;
+    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1); }
 
 /* Hide these by default, can be unhidden for backwards compat. */
 /* End BoxFilter in #Content area */
@@ -1330,103 +1300,70 @@ td.CheckBoxColumn {
 
 .PanelCategories .Depth2 {
   padding-left: 8px; }
-
 .PanelCategories .Depth3 {
   padding-left: 12px; }
-
 .PanelCategories .Depth4 {
   padding-left: 16px; }
-
 .PanelCategories .Depth5 {
   padding-left: 20px; }
-
 .PanelCategories .Depth6 {
   padding-left: 24px; }
-
 .PanelCategories .Depth7 {
   padding-left: 28px; }
-
 .PanelCategories .Depth8 {
   padding-left: 32px; }
-
 .PanelCategories .Depth9 {
   padding-left: 36px; }
-
 .PanelCategories .Depth10 {
   padding-left: 40px; }
-
 .PanelCategories .Depth11 {
   padding-left: 44px; }
-
 .PanelCategories .Depth12 {
   padding-left: 48px; }
 
 .CategoryList .Depth2 {
   padding-left: 25px !important; }
-
 .CategoryList .Depth3 {
   padding-left: 50px !important; }
-
 .CategoryList .Depth4 {
   padding-left: 75px !important; }
-
 .CategoryList .Depth5 {
   padding-left: 100px !important; }
-
 .CategoryList .Depth6 {
   padding-left: 125px !important; }
-
 .CategoryList .Depth7 {
   padding-left: 150px !important; }
-
 .CategoryList .Depth8 {
   padding-left: 175px !important; }
-
 .CategoryList .Depth9 {
   padding-left: 200px !important; }
-
 .CategoryList .Depth10 {
   padding-left: 225px !important; }
-
 .CategoryList .Depth11 {
   padding-left: 250px !important; }
-
 .CategoryList .Depth12 {
   padding-left: 275px !important; }
 
-.CategoryListWithHeadings .Depth1 {
+.CategoryListWithHeadings .Depth1, .CategoryListWithHeadings .Depth2 {
   padding-left: 0 !important; }
-
-.CategoryListWithHeadings .Depth2 {
-  padding-left: 0 !important; }
-
 .CategoryListWithHeadings .Depth3 {
   padding-left: 25px !important; }
-
 .CategoryListWithHeadings .Depth4 {
   padding-left: 50px !important; }
-
 .CategoryListWithHeadings .Depth5 {
   padding-left: 75px !important; }
-
 .CategoryListWithHeadings .Depth6 {
   padding-left: 100px !important; }
-
 .CategoryListWithHeadings .Depth7 {
   padding-left: 125px !important; }
-
 .CategoryListWithHeadings .Depth8 {
   padding-left: 150px !important; }
-
 .CategoryListWithHeadings .Depth9 {
   padding-left: 175px !important; }
-
 .CategoryListWithHeadings .Depth10 {
   padding-left: 200px !important; }
-
 .CategoryListWithHeadings .Depth11 {
   padding-left: 225px !important; }
-
 .CategoryListWithHeadings .Depth12 {
   padding-left: 250px !important; }
 
@@ -1437,7 +1374,6 @@ td.CheckBoxColumn {
   display: block;
   margin: 0 2px 2px 0;
   float: left; }
-
 .Icons img {
   display: block;
   height: 44px;
@@ -1456,6 +1392,7 @@ td.CheckBoxColumn {
   margin: 5px 0;
   min-height: 24px; }
 
+/* Done */
 /* ================================================ DataList */
 /* Note: DataList is used in search results, vanilla discussions & drafts */
 .SearchForm {
