@@ -44,14 +44,11 @@
 }
 
 // Basically Dropdowns
-
-
 .Button.Active, .ButtonGroup.Open .Button.Handle {
 	border-color: #aaa;
 	background: #f7f7f7;
 	@include boxShadow(none);
 }
-
 .Button {
 	&.FileInput > input {
 		position: absolute;
