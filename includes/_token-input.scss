@@ -4,9 +4,7 @@
 // - Add sprites using :before
 ul {
 	&.token-input-list {
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
+		@include boxSizing(border-box);
 		border: 1px solid #aaa;
 		color: #333;
 		font-size: 15px;

@@ -5,7 +5,7 @@
 	margin: 20px auto;
 	.InputBox {
 		width: 100%;
-		box-sizing: border-box;
+		@include boxSizing(border-box);
 		font-size: 14px;
 		padding: 6px 25px 6px 8px;
 		@include borderRadius(.35ex);

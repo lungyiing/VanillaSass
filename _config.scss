@@ -1,15 +1,20 @@
 /////////////////// Mixins - In this case used for cross browser hacks .///////////////////
 
 // Browser hacks
-@mixin borderRadius($r) {
-	-webkit-border-radius: $r;
-	-moz-border-radius: $r;
-	border-radius: $r;
+@mixin borderRadius($arg...) {
+	-webkit-border-radius: $arg;
+	-moz-border-radius: $arg;
+	border-radius: $arg;
 }
 @mixin boxShadow($arg...) {
 	-webkit-box-shadow: $arg;
 	-moz-box-shadow: $arg;
 	box-shadow: $arg;
+}
+@mixin boxSizing($arg...) {
+	-webkit-box-sizing: $arg;
+	-moz-box-sizing: $arg;
+	box-sizing: $arg;
 }
 
 // Gradients
@@ -43,6 +48,20 @@
 	color: #1E79A7;
 }
 
+// Repeated styles, needed to hack over Vanilla
+@mixin buttonBase($backgroundAlt) {	// This handles the base "white" style gradient you see on buttons in vanilla, $backgroundAlt is the colour that is shown if the browser doesn't support gradients
+	display: inline-block;
+	cursor: pointer;
+	font-weight: bold;
+	color: #333;
+	text-shadow: 0 0 1px #fff;
+	white-space: nowrap;
+	border-color: #999;
+	border: 1px solid #999;
+	background: $backgroundAlt;
+	@include borderRadius(2px);
+	@include whiteGradient;
+}
 
 ///////////////////////////// Variables - colours gradients etc./////////////////////////////
 
@@ -53,3 +72,6 @@ $fontCode: monospace;
 
 $link: #1e79a7;
 $linkHover: #ff0084;
+
+// General Styles
+$pageWidth: 960px;
