@@ -47,7 +47,6 @@ q:before, q:after {
 blockquote, q {
   quotes: "" ""; }
 
-/* Done */
 /* ===================================================================== Grid */
 .Row {
   margin: auto;
@@ -56,7 +55,6 @@ blockquote, q {
 #Body .ContentColumn {
   margin: 0 0 0 230px; }
 
-/* Done */
 /* ==================== Pages that hide the panel and have full-width content */
 body.NoPanel #Panel,
 body.Entry #Panel,
@@ -81,7 +79,6 @@ body.Entry #Content {
   margin: 0 auto;
   max-width: 500px; }
 
-/* Done */
 /* ============================================== General Styles & Typography */
 body {
   color: #000;
@@ -173,7 +170,6 @@ img.Thumbnail {
   float: left;
   margin: 0 16px 0 0; }
 
-/* Done */
 /* ============================================== Iputs and Form values */
 input.DateBox, input.InputBox, input.SmallInput {
   font-family: "lucida grande", "Lucida Sans Unicode", tahoma, sans-serif;
@@ -364,22 +360,20 @@ select {
   margin: 0;
   padding: 3px; }
 
-/* Done */
 /* ===================================== Buttons and everything inbetween */
 .Button {
   display: inline-block;
   cursor: pointer;
-  margin: 0;
-  font-size: 12px;
-  line-height: 1;
   font-weight: bold;
-  padding: 4px 6px;
-  background: #f8f8f8;
+  color: #333;
+  text-shadow: 0 0 1px #fff;
+  white-space: nowrap;
+  border-color: #999;
   border: 1px solid #999;
+  background: #f8f8f8;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  white-space: nowrap;
   background: #fdfdfd;
   background-image: linear-gradient(bottom, #f0f0f0 0%, white 31%);
   background-image: -o-linear-gradient(bottom, #f0f0f0 0%, white 31%);
@@ -387,12 +381,13 @@ select {
   background-image: -webkit-linear-gradient(bottom, #f0f0f0 0%, white 31%);
   background-image: -ms-linear-gradient(bottom, #f0f0f0 0%, white 31%);
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f0f0f0), color-stop(0.31, white));
-  text-shadow: 0 1px 0 #fff;
-  -webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 2px #bbbbbb;
-  -moz-box-shadow: inset 0 1px 0 white, inset 0 -1px 2px #bbbbbb;
-  box-shadow: inset 0 1px 0 white, inset 0 -1px 2px #bbbbbb;
-  border-color: #999;
-  color: #333; }
+  -webkit-box-shadow: nset 0 1px 0 white, inset 0 -1px 2px #bbbbbb;
+  -moz-box-shadow: nset 0 1px 0 white, inset 0 -1px 2px #bbbbbb;
+  box-shadow: nset 0 1px 0 white, inset 0 -1px 2px #bbbbbb;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1;
+  padding: 4px 6px; }
   .Button:hover {
     color: #111;
     border-color: #666; }
@@ -464,20 +459,18 @@ select {
     min-width: 65px; }
 
 .NavButton {
-  color: #333;
-  text-shadow: 0 0 1px #fff;
   display: inline-block;
   cursor: pointer;
-  font-size: 13px;
-  line-height: 16px;
   font-weight: bold;
-  padding: 5px 8px;
-  background: #fafafa;
+  color: #333;
+  text-shadow: 0 0 1px #fff;
+  white-space: nowrap;
+  border-color: #999;
   border: 1px solid #999;
+  background: #fafafa;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  white-space: nowrap;
   background: #fdfdfd;
   background-image: linear-gradient(bottom, #f0f0f0 0%, white 31%);
   background-image: -o-linear-gradient(bottom, #f0f0f0 0%, white 31%);
@@ -487,7 +480,10 @@ select {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f0f0f0), color-stop(0.31, white));
   -webkit-box-shadow: 0 1px 1px #dddddd;
   -moz-box-shadow: 0 1px 1px #dddddd;
-  box-shadow: 0 1px 1px #dddddd; }
+  box-shadow: 0 1px 1px #dddddd;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 5px 8px; }
 
 .ButtonGroup.Open .NavButton.Handle {
   background: #eee; }
@@ -549,7 +545,6 @@ select {
 #Panel .ButtonGroup.Big > .NavButton:first-child, #Panel .ButtonGroup.Big > .Button:first-child {
   width: 78%; }
 
-/* Done */
 /* =================================================== Misc Styles */
 .ActivateSlider {
   display: inline-block;
@@ -814,7 +809,6 @@ ul.Tabs {
         background-position: 3px 4px;
         background-repeat: no-repeat; }
 
-/* Done */
 /* =================================================================== Header */
 #Head {
   background: #38abe3;
@@ -1081,7 +1075,6 @@ td.CheckBoxColumn {
 .Opts .ControlOptions .AdminCheck {
   padding: 0; }
 
-/* Done */
 /* ======================================================== Full Page Errors */
 .SplashMessage #Body h1 {
   font-size: 64px;
@@ -1093,7 +1086,6 @@ td.CheckBoxColumn {
   max-width: 640px;
   margin: auto; }
 
-/* Done */
 /* ======================================================== Panels / Sidebars */
 #Panel {
   width: 200px;
@@ -1435,13 +1427,14 @@ td.CheckBoxColumn {
   margin: 5px 0;
   min-height: 24px; }
 
-/* Done */
 /* ================================================ DataList */
 /* Note: DataList is used in search results, vanilla discussions & drafts */
 .SearchForm {
   margin: 20px auto; }
   .SearchForm .InputBox {
     width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 14px;
     padding: 6px 25px 6px 8px;
@@ -1657,7 +1650,6 @@ td.CheckBoxColumn {
   .ChildCategoryList .ItemContent {
     padding: 8px 0 0; }
 
-/* Done */
 /* =============================================================== Activities */
 .Activities ul.DataList {
   margin-left: 50px; }
@@ -1701,7 +1693,6 @@ td.CheckBoxColumn {
   line-height: 100%;
   font-weight: normal; }
 
-/* Done - hg*/
 /* ============================================================== MessageList */
 .Author .PhotoWrap {
   margin: 0 10px 4px 0;
@@ -1813,7 +1804,6 @@ mark {
     cursor: pointer;
     margin-bottom: 10px; }
 
-/* Done */
 /* =============================================================== Categories */
 .ChildCategories {
   border-top: 1px dotted #ddd;
@@ -1842,7 +1832,6 @@ mark {
 .DataTable .RssButton {
   float: right; }
 
-/* Done */
 /* ============================================================= Profile Page */
 a.ChangePicture {
   position: absolute;
@@ -1944,7 +1933,6 @@ dl.About dt {
 dl.About dd {
   padding: 0 8px 0 0; }
 
-/* Done */
 /* ======================================================== Thumbnail Cropper */
 .Popup .CurrentPicture {
   display: none; }
@@ -2007,7 +1995,6 @@ form.Thumbnail .Warning {
   -moz-border-radius: 3px;
   border-radius: 3px; }
 
-/* Done */
 /* ================================================= CommentForm */
 .Preview {
   background: #fff;
@@ -2042,7 +2029,6 @@ form.Thumbnail .Warning {
   margin: 0;
   padding: 6px 0; }
 
-/* Done */
 /* =================================================================== Popups */
 .Popup .Info {
   margin-top: 10px; }
@@ -2147,7 +2133,6 @@ a.Close {
   overflow: auto;
   padding: 10px; }
 
-/* Done */
 /* ==================================================================== Legal */
 .Legal h3 {
   padding: 0;
@@ -2167,7 +2152,6 @@ a.Close {
 .Legal strong {
   font-weight: bold; }
 
-/* Done */
 /* =================================================================== Footer */
 #Foot {
   clear: both;
@@ -2193,7 +2177,6 @@ a.Close {
   overflow: hidden;
   font-size: 0; }
 
-/* Done */
 /* ================================ Vanilla ================================= */
 /* ============================================================== Discussions */
 /* Note: The Vanilla Discussion List has the following classes applied to
@@ -2241,7 +2224,6 @@ a.Close {
 .BeforeCommentHeading {
   float: right; }
 
-/* Done */
 /* ======================================= Category & Discussions Table Views */
 .DataTable {
   width: 100%;
@@ -2338,7 +2320,6 @@ tr.CategoryHeading td {
   .DiscussionSorter .ToggleFlyout .Flyout {
     top: 18px; }
 
-/* Done */
 /* ======================================= Blocks */
 .Block {
   line-height: 1; }
@@ -2358,7 +2339,6 @@ tr.CategoryHeading td {
   padding-bottom: 3px;
   font-size: 12px; }
 
-/* Done */
 /* ================================= Conversation, Discussion & Comment Forms */
 .SpNewConversation, .SpAskQuestion, .SpNewPoll, .SpNewDiscussion {
   display: inline-block;
@@ -2446,7 +2426,6 @@ label.B {
   .List.Inline * {
     line-height: 16px; }
 
-/* Done */
 /* ============================== Conversations ============================= */
 textarea.MultiComplete {
   width: 100%;
@@ -2529,7 +2508,6 @@ textarea.MultiComplete {
 body.Conversations a.Cancel {
   margin-left: 20px; }
 
-/* Done */
 /* ============================================================ Entry Screens */
 body.Entry form ul li label {
   font-size: 14px;
@@ -2707,7 +2685,6 @@ body#dashboard_entry_leave p {
   font-size: 11px;
   color: #777; }
 
-/* Done */
 /* ============================= Error Messages */
 * html .Errors {
   position: inherit;
@@ -2775,7 +2752,6 @@ div.Popup .Errors {
     border-radius: 2px;
     border: 1px solid #a00 !important; }
 
-/* Done */
 /* ==========================================  Inform Messages ( black box )*/
 .InformMessages {
   text-align: left;
@@ -3297,7 +3273,6 @@ span.InformSprite.Golf {
 span.InformSprite.Dice {
   background-position: -442px -586px; }
 
-/* Done */
 /* ============================= Sprites */
 .Sprite16 {
   background: url("images/sprites.png") 0 0 no-repeat;
@@ -3619,7 +3594,6 @@ span.InformSprite.Dice {
 .SpPlus {
   background-position: -80px -196px; }
 
-/* Done */
 /* ============================= Embedded Discussion & Comment Customizations */
 body.embed #Content {
   float: none;
@@ -3666,7 +3640,6 @@ body.embed .InformMessages {
 .Embed .Administration {
   display: none; }
 
-/* Done */
 /* ============================================== Reaction Sprites */
 .ReactSprite {
   display: inline-block;
@@ -3767,7 +3740,6 @@ body.embed .InformMessages {
   margin: 15px 0 5px;
   font-style: italic; }
 
-/* Done */
 /* ============================================== Videos & Media */
 /* Embedded Video Preview Hide/Reveal */
 .Video.YouTube .VideoPlayer {
@@ -3811,7 +3783,6 @@ body.embed .InformMessages {
 .Item h3 + .Media {
   margin-top: 0; }
 
-/* Done */
 /* ============================================== token-input */
 ul.token-input-list {
   -webkit-box-sizing: border-box;
@@ -3911,9 +3882,6 @@ div.token-input-dropdown {
       div.token-input-dropdown ul li.token-input-selected-dropdown-item {
         background-color: #eee; }
 
-/* Done */
 /* ============================================== Overrides*/
 .Hidden {
   display: none; }
-
-/* Done */

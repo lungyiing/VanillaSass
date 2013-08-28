@@ -3,7 +3,7 @@
 // Could be used to make the main content wider, if you prefer that style of forum
 .Row {
    margin: auto;
-   width: 960px;
+   width: $pageWidth;
 }
 #Body .ContentColumn {
    margin: 0 0 0 230px

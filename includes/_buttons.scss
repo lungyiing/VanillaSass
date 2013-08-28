@@ -1,22 +1,12 @@
 /* ===================================== Buttons and everything inbetween */
 // This is the styling for all the buttons "whiteGradient" can be edited in _config and is only used in this sub stylsheet, using an element inspector you can discover more elements to style that use the button base class "Button.Primary, Button.Cancel, Button.Preview" and a few others; you could also add sprites using the :before selector for the element that holds the text in a button
 .Button {
-	display: inline-block;
-	cursor: pointer;
+	@include buttonBase(#f8f8f8);
+	@include boxShadow (nset 0 1px 0 white, inset 0 -1px 2px #bbbbbb);
 	margin: 0;
 	font-size: 12px;
 	line-height: 1;
-	font-weight: bold;
-	padding: 4px 6px;
-	background: #f8f8f8;
-	border: 1px solid #999;
-	@include borderRadius(2px);
-	white-space: nowrap;
-	@include whiteGradient;
-	text-shadow: 0 1px 0 #fff;
-	@include boxShadow( inset 0 1px 0 white, inset 0 -1px 2px #bbbbbb);
-	border-color: #999;
-	color: #333;
+	padding: 4px 6px;	
 	&:hover {
 		color: #111;
 		border-color: #666;
@@ -99,20 +89,11 @@
 
 // The button on the profile page
 .NavButton {
-	color: #333;
-	text-shadow: 0 0 1px #fff;
-	display: inline-block;
-	cursor: pointer;
+	@include buttonBase(#fafafa);
+	@include boxShadow (0 1px 1px #ddd);
 	font-size: 13px;
 	line-height: 16px;
-	font-weight: bold;
-	padding: 5px 8px;
-	background: #fafafa;
-	border: 1px solid #999;
-	@include borderRadius(2px);
-	white-space: nowrap;
-	@include whiteGradient;
-	@include boxShadow (0 1px 1px #ddd);
+	padding: 5px 8px;	
 }
 
 // More Dropdowns
