@@ -1,6 +1,6 @@
 /////////////////// Mixins - In this case used for cross browser hacks .///////////////////
 // Browser hacks
-// Please not that the non prefixed tag sits at the bottom, this is to tell a browser to use it's newer tag if it's available after going through deprecated tags
+// Please note that the non prefixed tag sits at the bottom, this is to tell a browser to use it's newer tag if it's available after going through deprecated tags
 @mixin borderRadius($arg...) {
 	-webkit-border-radius: $arg;
 	-moz-border-radius: $arg;
