@@ -28,6 +28,16 @@
 	background-image: linear-gradient(bottom, rgb(240, 240, 240) 0%, rgb(255, 255, 255) 31%);
 }
 
+@mixin createGradient($alt,$start,$stop) { // A simple linear gradient construct, uses the vanilla button style as a base; to keep things consistent. Example usage : @include createGradient(#fdfdfd,#F0F0F0,#FFF); ( Note : doesn't currently support rgb according to some initial tests)
+	background: $alt;
+	background-image: -o-linear-gradient(bottom, $start 0%, $stop 31%);
+	background-image: -moz-linear-gradient(bottom, $start 0%, $stop 31%);
+	background-image: -webkit-linear-gradient(bottom, $start 0%, $stop 31%);
+	background-image: -ms-linear-gradient(bottom, $start 0%, $stop 31%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, $start), color-stop(0.31, $stop));
+	background-image: linear-gradient(bottom, $start 0%, $stop 31%);
+}
+
 // Dissmiss Message and X + Message
 
 @mixin infoMessage {
@@ -70,8 +80,12 @@ $font: 'lucida grande','Lucida Sans Unicode', tahoma, sans-serif;
 $fontAlt: "helvetica neue", helvetica, arial, sans-serif;
 $fontCode: monospace;
 
+$fontColour: #000;
+
 $link: #1e79a7;
 $linkHover: #ff0084;
 
 // General Styles
 $pageWidth: 960px;
+$pageBackground: #FFF;
+$codeBackground: #FF9;

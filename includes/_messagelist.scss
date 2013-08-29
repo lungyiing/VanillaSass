@@ -54,7 +54,7 @@ blockQuote.UserQuote {
 
 code {
   	@include borderRadius(2px);
-  	background: #ff9;
+  	background: $codeBackground;
   	padding: 4px 8px;
   	white-space: pre;
   	font-family: $fontCode;
@@ -64,7 +64,7 @@ code {
 
 pre {
   	@include borderRadius(2px);
-  	background: #ff9;
+  	background: $codeBackground;
   	padding: 4px 8px;
 	white-space: pre;
   	font-family: $fontCode;

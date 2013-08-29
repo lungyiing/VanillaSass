@@ -81,11 +81,11 @@ body.Entry #Content {
 
 /* ============================================== General Styles & Typography */
 body {
-  color: #000;
+  color: black;
   font-family: "lucida grande", "Lucida Sans Unicode", tahoma, sans-serif;
   font-size: 75%;
   line-height: 1.7em;
-  background: #fff;
+  background: white;
   margin: 0;
   padding: 0;
   font-size: small; }
@@ -1740,7 +1740,7 @@ code {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  background: #ff9;
+  background: #ffff99;
   padding: 4px 8px;
   white-space: pre;
   font-family: monospace;
@@ -1751,7 +1751,7 @@ pre {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  background: #ff9;
+  background: #ffff99;
   padding: 4px 8px;
   white-space: pre;
   font-family: monospace;
@@ -1997,8 +1997,8 @@ form.Thumbnail .Warning {
 
 /* ================================================= CommentForm */
 .Preview {
-  background: #fff;
-  color: #000;
+  background: white;
+  color: black;
   padding: 4px;
   min-height: 100px; }
 
@@ -2197,7 +2197,7 @@ a.Close {
   .Tag a {
     color: #fff; }
   .Tag.Closed {
-    background: #555555; }
+    background: #555; }
   .Tag.Category {
     background: #f0f0f0;
     font-weight: normal; }

@@ -1,8 +1,8 @@
 /* ================================================= CommentForm */
 // When posting a new comment, Vanilla uses this, only uses could be changing styling of .Preview , as a majority of the elements are utility based
-.Preview {
-	background: #fff;
-	color: #000;
+.Preview { // This is the wrapper that contains comment previews, don't change too many post elements such as h1 here; as it could confuse users!
+	background: $pageBackground;
+	color: $fontColour;
 	padding: 4px;
 	min-height: 100px;
 }
@@ -39,7 +39,7 @@
 .EditCommentForm .Buttons,
 .CommentForm .Buttons {
 	position: relative;
-   text-align: right; 
+   	text-align: right; 
 	margin: 0;
 	padding: 6px 0;
 }

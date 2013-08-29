@@ -1,11 +1,11 @@
 /* ============================================== General Styles & Typography */
 // Most themes will change alot of stuff here, 
 body {
-	color: #000;
+	color: $fontColour;
 	font-family: $font;
 	font-size: 75%;
 	line-height: 1.7em;
-	background: #fff;
+	background: $pageBackground;
 	margin: 0;
 	padding: 0;
 	font-size: small;

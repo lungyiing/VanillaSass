@@ -1,12 +1,13 @@
 // This is where you comment out using "//" what you have not modified, to help with keeping load speed high when creating a theme
 //
-// I recommend commenting out the following : _reset, _fperrors, _cropper, _legal,
-// _reactions ( won't be used on self hosted vanilla installs), _media ( same reason as _reactions)
+// I recommend commenting out the following :
+// _reset, _fperrors, _cropper, _legal, _reactions ( won't be used on self hosted vanilla installs),
+// _media ( same reason as _reactions), _blocks
 //
 // All configuration can be done via _config ( configuration options will be added as the project develops )
 // Remember to use the two compile options to turn these files into the .css format
 // If you are creating a theme, the compiler will output a cutom.css file,
-//however if you plan modifying vanilla core ( discouraged ) style.css will also be compiled
+// however if you plan modifying vanilla core ( discouraged ) style.css will also be compiled
 @import "_config";
 /* ================================ Garden ================================= */
 
