@@ -42,15 +42,12 @@ body.Profile.EditMode #Content form {
 form.Activity {
 	display: block;
 	margin: 0 0 10px;
-	overflow: hidden;
+	text-align: right;
 	textarea {
 		width: 100%;
 		margin-bottom: 2px;
 		height: 60px;
 		min-height: 60px;
-	}
-	.Button {
-		float: right;
 	}
 }
 

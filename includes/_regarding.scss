@@ -1,0 +1,162 @@
+/* ============================================================ Regarding */
+.RegardingEvent {
+	padding: 10px;
+	position: relative;
+	padding-left: 38px;
+	color: #fff !important;
+	text-shadow: 0 1px 1px #000;
+	text-align: left !important;
+	@include borderRadius(4px);
+	background: rgb(0, 0, 0) !important;
+	background: rgba(0, 0, 0, 0.7) !important;
+	span.InformSprite {
+		top: 5px;
+		left: 5px;
+	}
+	a {
+		&.ReportedUser, &.ReportingUser {
+			color: #CFECFF;
+		}
+	}
+	.ReportedReason {
+		padding: 5px;
+		font-style: italic;
+	}
+	.RegardingTime {
+		font-size: 9px;
+		text-transform: uppercase;
+		color: #B1B1B1;
+	}
+}
+
+.RegardingActions {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	padding: 0px 10px;
+	margin-bottom: 10px;
+	.ActionButton {
+		padding: 0px 5px 2px 5px;
+		display: inline-block;
+		margin-right: 4px;
+		color: #fff !important;
+		text-shadow: 0 1px 1px #000;
+		text-align: left !important;
+		-webkit-border-bottom-right-radius: 4px;
+		-webkit-border-bottom-left-radius: 4px;
+		-moz-border-radius-bottomright: 4px;
+		-moz-border-radius-bottomleft: 4px;
+		border-bottom-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		background: rgb(0, 0, 0) !important;
+		background: rgba(0, 0, 0, 0.7) !important;
+		a {
+			color: #CFECFF;
+			font-size: 10px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.PhotoWrap {
+	position: relative;
+	line-height: 1;
+}
+
+.ProfilePhoto {
+	height: 40px;
+	width: 40px;
+	vertical-align: bottom;
+}
+
+.ProfilePhotoSmall {
+	height: 24px;
+	width: 24px;
+	vertical-align: bottom;
+}
+
+.ProfilePhotoMedium {
+	height: 40px;
+	width: 40px;
+}
+
+.ProfilePhotoLarge {
+	width: 200px;
+}
+
+.PhotoGrid {
+	line-height: 32px;
+	margin: 2px -2px;
+	img {
+		margin: 2px;
+		vertical-align: text-bottom;
+		height: 32px;
+		width: 32px;
+	}
+}
+
+.PhotoGridSmall {
+	line-height: 24px;
+	margin: 1px -1px;
+	img {
+		margin: 1px;
+		vertical-align: text-bottom;
+		height: 24px;
+		width: 24px;
+	}
+}
+
+.CategoryPhoto {
+	max-height: 64px;
+}
+
+.PhotoGrid {
+	.UserPicture {
+		display: inline-block;
+		* {
+			vertical-align: bottom;
+		}
+	}
+	.Username {
+		display: inline-block;
+		line-height: 32px;
+	}
+}
+
+.PhotoGridSmall .Username {
+	line-height: 24px;
+}
+
+/* Reaction Buttons */
+
+.Reactions {
+	position: relative;
+	font-size: 11px;
+	line-height: 18px;
+	margin: 15px 0px 0px;
+	> a.React {
+		margin: 0 10px;
+		padding: 0;
+		> .ReactSprite {
+			margin-right: 2px;
+		}
+	}
+}
+
+.Flyout.Flags {
+	top: 25px;
+	z-index: 1000;
+}
+
+.SpEditProfile {
+	background-image: url("images/sprites-14-000000.png");
+	background-position: -245px -29px;
+}
+
+.Handle > .SpEditProfile, .NavButton > .SpEditProfile {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	line-height: 14px;
+	vertical-align: top;
+}
