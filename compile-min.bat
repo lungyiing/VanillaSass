@@ -1,1 +1,0 @@
-sass --watch style.scss:output/style.min.css style.scss:output/custom.min.css --style compressed

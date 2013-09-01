@@ -6,11 +6,10 @@
 //
 // All configuration can be done via _config ( configuration options will be added as the project develops )
 // Remember to use the two compile options to turn these files into the .css format
-// If you are creating a theme, the compiler will output a cutom.css file,
+// If you are creating a theme, the compiler will output a cutom.css file, all files are precompressed by the compile script
 // however if you plan modifying vanilla core ( discouraged ) style.css will also be compiled
 @import "_config";
 /* ================================ Garden ================================= */
-
 @import "includes/_reset"; // Done 
 @import "includes/_grid"; // Done 
 @import "includes/_panel"; // Done 
@@ -31,9 +30,7 @@
 @import "includes/_popups"; // Done 
 @import "includes/_legal"; // Done 
 @import "includes/_footer"; // Done 
-
 /* ================================ Vanilla ================================= */
-
 @import "includes/_discussions"; // Done 
 @import "includes/_tableview"; // Done 
 @import "includes/_blocks"; // Done 
