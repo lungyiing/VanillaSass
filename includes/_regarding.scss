@@ -133,7 +133,7 @@
 	position: relative;
 	font-size: 11px;
 	line-height: 18px;
-	margin: 15px 0px 0px;
+	margin-left: -10px;
 	> a.React {
 		margin: 0 10px;
 		padding: 0;
@@ -143,10 +143,6 @@
 	}
 }
 
-.Flyout.Flags {
-	top: 25px;
-	z-index: 1000;
-}
 
 .SpEditProfile {
 	background-image: url("images/sprites-14-000000.png");
