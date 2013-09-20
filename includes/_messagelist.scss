@@ -25,6 +25,11 @@ blockquote {
   }
 }
 
+.emoji {
+	margin-top: -2px;
+	margin-bottom: -2px; /* account for image padding */
+}
+
 blockQuote.UserQuote {
   	padding: 1ex 16px;
   	margin: 1em 0;
@@ -86,7 +91,7 @@ mark {
 
 // Styling here only applies in post containers, if you need to override any page elements for posts, make sure to do it here; to reduce conflicts with other pages.
 .Message {
-	line-height: 140%;
+	line-height: 1.7;
 	font-size: 100%;
 	word-wrap: break-word;
 	margin-top: 5px;

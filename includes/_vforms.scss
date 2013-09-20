@@ -36,20 +36,22 @@
 	background: #f7f7f7;
 	background: rgba(0, 0, 0, 0.03);
 	margin: 0;
-	padding: 13px 20px;
+	padding: 20px;
 	&.StructuredForm {
 		padding-top: 5px;
+	}
+}
+.FormWrapper-Condensed {
+	padding: 5px;
 }
 
+.FormWrapper-Condensed .Buttons {
+	text-align: right;
 }
-
 label.B {
 	font-weight: bold;
 }
 
-.FormWrapper-Condensed {
-	padding: 5px;
-}
 
 .DiscussionForm {
 	textarea {

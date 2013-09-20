@@ -46,3 +46,7 @@ q:before, q:after {
 blockquote, q {
    quotes: "" "";
 }
+
+textarea, input[type=text] {
+	@include boxSizing(border-box);
+}

@@ -12,6 +12,9 @@
 	background-position: 16px 16px;
 	background-repeat: no-repeat;
 }
+input + .ReactSprite {
+	vertical-align: middle;
+}
 
 .ReactEverything { background-position: -197px -53px; }
 .ReactAwesome { background-position: -269px -6px; }
@@ -38,6 +41,7 @@
 .ReactTwitter { background-position: -53px -124px; }
 .ReactGooglePlus { background-position: -77px -124px; }
 .ReactMessage { background-position: -101px -102px; }
+.ReactWarn { background-position: -222px -6px; }
 
 /* Switch to the white icons when hovering over a menuitem sprite */
 .MenuItems a:hover .ReactSprite,

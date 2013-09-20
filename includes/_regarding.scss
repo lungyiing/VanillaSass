@@ -128,12 +128,15 @@
 }
 
 /* Reaction Buttons */
-
 .Reactions {
 	position: relative;
 	font-size: 11px;
 	line-height: 18px;
-	margin-left: -10px;
+	margin: 15px 0px 0px;
+	.FlagMenu .MenuItems .ReactButton {
+		margin: 0px;
+		padding: 0px 15px;
+	}
 	> a.React {
 		margin: 0 10px;
 		padding: 0;
@@ -142,7 +145,17 @@
 		}
 	}
 }
+.ReactButton {
+	display: inline-block;
+	margin: 0px 2px;
+	line-height: 18px;
+	vertical-align: top;
+}
 
+.Flyout.Flags {
+	top: 25px;
+	z-index: 1000;
+}
 
 .SpEditProfile {
 	background-image: url("images/sprites-14-000000.png");

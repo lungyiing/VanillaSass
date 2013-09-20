@@ -221,9 +221,9 @@ textarea {
 
 .TextBoxWrapper {
 	width: auto;
-	padding-right: 8px;
 	textarea, input, .PasswordStrength {
 		width: 100%;
+		display: block;
 	}
 }
 #Popup textarea.TextBox {

@@ -96,8 +96,11 @@
 }
 
 .MeBox.Inline {
-	display: inline;
+	display: inline-block;
 	line-height: 24px;
+	margin: 0;
+	vertical-align: top;
+	min-height: 24px;
 	.WhoIs, .MeMenu {
 		display: inline;
 		line-height: 24px;

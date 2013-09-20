@@ -187,6 +187,21 @@ body > #Frame > .Head {
 	}
 }
 
+.MenuItems.Up:before,
+.MenuItems.Up:after {
+	border-top: 7px solid #444444;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	content: "";
+	left: 71px;
+	position: absolute;
+	bottom: -7px;
+}
+.MenuItems.Up:after {
+	border-top: 7px solid #fff;
+	bottom: -6px;
+}
+
 .ToggleFlyout {
 	position: relative;
 	&.Open {
